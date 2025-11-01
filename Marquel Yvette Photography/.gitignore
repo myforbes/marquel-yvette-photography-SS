@@ -1,0 +1,22 @@
+# Backup files
+*.backup
+*.bak
+*.bak2
+*.bak3
+*.tmp
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
