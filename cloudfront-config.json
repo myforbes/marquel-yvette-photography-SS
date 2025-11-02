@@ -1,0 +1,57 @@
+{
+  "CallerReference": "marquel-yvette-photography-2025-11-01",
+  "Comment": "Marquel Yvette Photography - CloudFront Distribution",
+  "Enabled": true,
+  "DefaultRootObject": "index.html",
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "S3-marquelyvette-website",
+        "DomainName": "marquelyvette-website.s3-website-us-east-1.amazonaws.com",
+        "CustomOriginConfig": {
+          "HTTPPort": 80,
+          "HTTPSPort": 443,
+          "OriginProtocolPolicy": "http-only",
+          "OriginSslProtocols": {
+            "Quantity": 3,
+            "Items": ["TLSv1", "TLSv1.1", "TLSv1.2"]
+          },
+          "OriginReadTimeout": 30,
+          "OriginKeepaliveTimeout": 5
+        }
+      }
+    ]
+  },
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "S3-marquelyvette-website",
+    "ViewerProtocolPolicy": "redirect-to-https",
+    "AllowedMethods": {
+      "Quantity": 2,
+      "Items": ["GET", "HEAD"],
+      "CachedMethods": {
+        "Quantity": 2,
+        "Items": ["GET", "HEAD"]
+      }
+    },
+    "Compress": true,
+    "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+    "TrustedSigners": {
+      "Enabled": false,
+      "Quantity": 0
+    }
+  },
+  "Aliases": {
+    "Quantity": 2,
+    "Items": ["www.marquelyvette.com", "marquelyvette.com"]
+  },
+  "ViewerCertificate": {
+    "ACMCertificateArn": "arn:aws:acm:us-east-1:976340105051:certificate/c4e1f30c-9745-4cdb-8f50-e25fd6f908cb",
+    "SSLSupportMethod": "sni-only",
+    "MinimumProtocolVersion": "TLSv1.2_2021",
+    "Certificate": "arn:aws:acm:us-east-1:976340105051:certificate/c4e1f30c-9745-4cdb-8f50-e25fd6f908cb",
+    "CertificateSource": "acm"
+  },
+  "PriceClass": "PriceClass_100",
+  "HttpVersion": "http2and3"
+}

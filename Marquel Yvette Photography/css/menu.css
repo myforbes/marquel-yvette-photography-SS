@@ -1,0 +1,68 @@
+/* Lightweight Mobile Menu Styles */
+/* Replaces Squarespace menu overlay system */
+
+/* Menu starts hidden off-screen */
+.header-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Menu visible state */
+.header-menu.menu-open {
+  transform: translateX(0);
+}
+
+/* Hamburger button animation */
+.header-burger-btn {
+  position: relative;
+  z-index: 1001; /* Above menu */
+}
+
+/* Accessibility: Focus states */
+.header-burger-btn:focus {
+  outline: 2px solid #f4ca78; /* Gold color from your brand */
+  outline-offset: 2px;
+}
+
+/* Ensure menu content is accessible */
+.header-menu-nav {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out 0.1s;
+}
+
+.header-menu.menu-open .header-menu-nav {
+  opacity: 1;
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .header-menu {
+    width: 100%;
+  }
+}
+
+/* Desktop - menu should be visible (not slide-in) */
+@media (min-width: 769px) {
+  .header-menu {
+    position: static;
+    transform: none;
+    overflow: visible;
+  }
+
+  .header-menu-nav {
+    opacity: 1;
+  }
+}

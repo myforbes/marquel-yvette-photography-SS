@@ -1,0 +1,151 @@
+{
+    "Location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/E50QXXWNUFNYT",
+    "ETag": "EG8GIY126HXT9",
+    "Distribution": {
+        "Id": "E50QXXWNUFNYT",
+        "ARN": "arn:aws:cloudfront::976340105051:distribution/E50QXXWNUFNYT",
+        "Status": "InProgress",
+        "LastModifiedTime": "2025-11-02T00:39:14.692000+00:00",
+        "InProgressInvalidationBatches": 0,
+        "DomainName": "d1pqc8zade8idc.cloudfront.net",
+        "ActiveTrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+        },
+        "ActiveTrustedKeyGroups": {
+            "Enabled": false,
+            "Quantity": 0
+        },
+        "DistributionConfig": {
+            "CallerReference": "marquel-yvette-photography-2025-11-01",
+            "Aliases": {
+                "Quantity": 2,
+                "Items": [
+                    "marquelyvette.com",
+                    "www.marquelyvette.com"
+                ]
+            },
+            "DefaultRootObject": "index.html",
+            "Origins": {
+                "Quantity": 1,
+                "Items": [
+                    {
+                        "Id": "S3-marquelyvette-website",
+                        "DomainName": "marquelyvette-website.s3-website-us-east-1.amazonaws.com",
+                        "OriginPath": "",
+                        "CustomHeaders": {
+                            "Quantity": 0
+                        },
+                        "CustomOriginConfig": {
+                            "HTTPPort": 80,
+                            "HTTPSPort": 443,
+                            "OriginProtocolPolicy": "http-only",
+                            "OriginSslProtocols": {
+                                "Quantity": 3,
+                                "Items": [
+                                    "TLSv1",
+                                    "TLSv1.1",
+                                    "TLSv1.2"
+                                ]
+                            },
+                            "OriginReadTimeout": 30,
+                            "OriginKeepaliveTimeout": 5
+                        },
+                        "ConnectionAttempts": 3,
+                        "ConnectionTimeout": 10,
+                        "OriginShield": {
+                            "Enabled": false
+                        },
+                        "OriginAccessControlId": ""
+                    }
+                ]
+            },
+            "OriginGroups": {
+                "Quantity": 0
+            },
+            "DefaultCacheBehavior": {
+                "TargetOriginId": "S3-marquelyvette-website",
+                "TrustedSigners": {
+                    "Enabled": false,
+                    "Quantity": 0
+                },
+                "TrustedKeyGroups": {
+                    "Enabled": false,
+                    "Quantity": 0
+                },
+                "ViewerProtocolPolicy": "redirect-to-https",
+                "AllowedMethods": {
+                    "Quantity": 2,
+                    "Items": [
+                        "HEAD",
+                        "GET"
+                    ],
+                    "CachedMethods": {
+                        "Quantity": 2,
+                        "Items": [
+                            "HEAD",
+                            "GET"
+                        ]
+                    }
+                },
+                "SmoothStreaming": false,
+                "Compress": true,
+                "LambdaFunctionAssociations": {
+                    "Quantity": 0
+                },
+                "FunctionAssociations": {
+                    "Quantity": 0
+                },
+                "FieldLevelEncryptionId": "",
+                "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+                "GrpcConfig": {
+                    "Enabled": false
+                }
+            },
+            "CacheBehaviors": {
+                "Quantity": 0
+            },
+            "CustomErrorResponses": {
+                "Quantity": 0
+            },
+            "Comment": "Marquel Yvette Photography - CloudFront Distribution",
+            "Logging": {
+                "Enabled": false,
+                "IncludeCookies": false,
+                "Bucket": "",
+                "Prefix": ""
+            },
+            "PriceClass": "PriceClass_100",
+            "Enabled": true,
+            "ViewerCertificate": {
+                "CloudFrontDefaultCertificate": false,
+                "ACMCertificateArn": "arn:aws:acm:us-east-1:976340105051:certificate/c4e1f30c-9745-4cdb-8f50-e25fd6f908cb",
+                "SSLSupportMethod": "sni-only",
+                "MinimumProtocolVersion": "TLSv1.2_2021",
+                "Certificate": "arn:aws:acm:us-east-1:976340105051:certificate/c4e1f30c-9745-4cdb-8f50-e25fd6f908cb",
+                "CertificateSource": "acm"
+            },
+            "Restrictions": {
+                "GeoRestriction": {
+                    "RestrictionType": "none",
+                    "Quantity": 0
+                }
+            },
+            "WebACLId": "",
+            "HttpVersion": "http2and3",
+            "IsIPV6Enabled": true,
+            "ContinuousDeploymentPolicyId": "",
+            "Staging": false
+        },
+        "AliasICPRecordals": [
+            {
+                "CNAME": "marquelyvette.com",
+                "ICPRecordalStatus": "APPROVED"
+            },
+            {
+                "CNAME": "www.marquelyvette.com",
+                "ICPRecordalStatus": "APPROVED"
+            }
+        ]
+    }
+}
