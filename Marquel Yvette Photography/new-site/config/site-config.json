@@ -1,0 +1,52 @@
+{
+  "site": {
+    "title": "Premium Headshots | Washington DC Metro | Marquel Yvette",
+    "description": "Elevate your image with premium headshots in DC Metro and Loudoun County. Easy booking, studio-quality lighting, and expert retouching.",
+    "url": "https://www.marquelyvette.com",
+    "language": "en"
+  },
+  "seo": {
+    "keywords": "headshots, professional photography, corporate headshots, DC Metro, Loudoun County, Virginia, headshot photographer",
+    "author": "Marquel Yvette Photography"
+  },
+  "openGraph": {
+    "siteName": "Professional Headshot Photographer | Loudoun County, VA",
+    "title": "Premium Headshots | Washington DC Metro | Marquel Yvette",
+    "description": "Elevate your image with premium headshots in DC Metro and Loudoun County. Easy booking, studio-quality lighting, and expert retouching.",
+    "type": "website",
+    "url": "https://www.marquelyvette.com",
+    "image": "https://www.marquelyvette.com/images/og-image.jpg"
+  },
+  "business": {
+    "name": "Marquel Yvette Photography",
+    "type": "ProfessionalService",
+    "description": "Loudoun County Virginia's Professional Headshot Photographer specializing in ERAS headshots, corporate headshots, Linkedin headshots, and office headshots. Serving the Loudoun County area, Virginia, Maryland and Washington DC.",
+    "phone": "(703)957-0643",
+    "email": "",
+    "logo": "https://images.squarespace-cdn.com/content/61d60619f1d2fa0fc9f54503/dc9e231d-27c5-40d4-a791-bdf03bfb41b1/Marquel_Yvette_logo_Black-Gray-Medium.png?format=1500w&content-type=image%2Fpng",
+    "address": {
+      "street": "42570 Unbridleds Song Place",
+      "city": "South Riding",
+      "state": "VA",
+      "zip": "20152",
+      "country": "US"
+    },
+    "location": {
+      "latitude": 38.90439543593189,
+      "longitude": -77.52974177231496
+    },
+    "hours": {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "social": {
+      "facebook": "https://www.facebook.com/marquelyvettephotography",
+      "instagram": "https://www.instagram.com/marquelyvettephotography",
+      "linkedin": "https://www.linkedin.com/in/marquelforbes/"
+    }
+  },
+  "assets": {
+    "favicon": "https://images.squarespace-cdn.com/content/v1/61d60619f1d2fa0fc9f54503/1750607382038-OK1Q4E4T07CVF3NGEWJC/favicon.ico?format=100w"
+  }
+}
