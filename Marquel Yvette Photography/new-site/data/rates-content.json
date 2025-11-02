@@ -92,14 +92,5 @@
         "image": "images/testimonials/everett.jpg"
       }
     ]
-  },
-  "finalCta": {
-    "title": "Ready to Elevate Your Professional Image?",
-    "subtitle": "Book your session today and let's create headshots that open doors.",
-    "buttonText": "REQUEST A PROPOSAL",
-    "buttonUrl": "request-proposal.html",
-    "contactText": "Questions? Call me at",
-    "phone": "(703) 957-0643",
-    "phoneLink": "+17039570643"
   }
 }
