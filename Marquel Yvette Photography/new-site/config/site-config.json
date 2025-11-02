@@ -22,7 +22,9 @@
     "type": "ProfessionalService",
     "description": "Loudoun County Virginia's Professional Headshot Photographer specializing in ERAS headshots, corporate headshots, Linkedin headshots, and office headshots. Serving the Loudoun County area, Virginia, Maryland and Washington DC.",
     "phone": "(703)957-0643",
-    "email": "",
+    "phoneLink": "tel:+17039570643",
+    "email": "marquel@marquelyvette.com",
+    "emailLink": "mailto:marquel@marquelyvette.com",
     "logo": "https://images.squarespace-cdn.com/content/61d60619f1d2fa0fc9f54503/dc9e231d-27c5-40d4-a791-bdf03bfb41b1/Marquel_Yvette_logo_Black-Gray-Medium.png?format=1500w&content-type=image%2Fpng",
     "address": {
       "street": "42570 Unbridleds Song Place",
@@ -42,11 +44,158 @@
     },
     "social": {
       "facebook": "https://www.facebook.com/marquelyvettephotography",
-      "instagram": "https://www.instagram.com/marquelyvettephotography",
-      "linkedin": "https://www.linkedin.com/in/marquelforbes/"
+      "instagram": "https://www.instagram.com/marquelyvettephoto",
+      "linkedin": "https://www.linkedin.com/in/marquelforbes"
     }
   },
   "assets": {
-    "favicon": "https://images.squarespace-cdn.com/content/v1/61d60619f1d2fa0fc9f54503/1750607382038-OK1Q4E4T07CVF3NGEWJC/favicon.ico?format=100w"
+    "favicon": "https://images.squarespace-cdn.com/content/v1/61d60619f1d2fa0fc9f54503/1750607382038-OK1Q4E4T07CVF3NGEWJC/favicon.ico?format=100w",
+    "headerLogo": "images/logos/MarquelYvette_Gold+Dk+Grey+Logo+11-3-24.png",
+    "footerLogo": "images/logos/MarquelYvette_Gold+White+Text+11-3-24.png"
+  },
+  "links": {
+    "rates": "rates-2.html",
+    "proposal": "request-proposal.html",
+    "privacyPolicy": "privacy-policy.html",
+    "termsOfService": "tos.html",
+    "disclaimer": "disclaimer.html",
+    "accessibility": "website-accessibility-statement.html",
+    "copyright": "copyright.html"
+  },
+  "heroGallery": [
+    {
+      "image": "images/portfolio/Dionne_Kindra_697-MarquelYvette0085.jpg",
+      "alt": "A professional woman with curly hair, smiling, dressed in a dark blazer and white top.",
+      "loading": "eager"
+    },
+    {
+      "image": "images/portfolio/Nakeisha+Neal+Jones-0134+(1).jpg",
+      "alt": "Female headshot for non-profit c suite employee",
+      "loading": "eager"
+    },
+    {
+      "image": "images/portfolio/Cerissa.jpg",
+      "alt": "lawyer high-end headshot in MD, female",
+      "loading": "eager"
+    },
+    {
+      "image": "images/portfolio/Thongpia-hughes_Gift_495-MarquelYvette0107-ig.jpg",
+      "alt": "A woman with long brown hair smiling, wearing a pink sleeveless top and a delicate necklace with a small pendant, against a dark background.",
+      "loading": "eager"
+    },
+    {
+      "image": "images/portfolio/Milestone-Title-0116.jpg",
+      "alt": "Female lawyer in MD; premium headshot",
+      "loading": "eager"
+    },
+    {
+      "image": "images/portfolio/L+Carroll-0146+1.jpg",
+      "alt": "male corporate headshot in DC",
+      "loading": "eager"
+    },
+    {
+      "image": "images/portfolio/Glynis.JPG",
+      "alt": "Close-up portrait of an African-American woman with gray curly hair, wearing a beige top, earrings, and lipstick, against a dark background.",
+      "loading": "eager"
+    },
+    {
+      "image": "images/portfolio/Newman_Tamara_832-MarquelYvette0072-ig.jpg",
+      "alt": "A woman with curly brown hair, wearing a black sleeveless top, smiling against a white background.",
+      "loading": "eager"
+    },
+    {
+      "image": "images/portfolio/Forbes_Lauryn_294-MarquelYvette0046.jpg",
+      "alt": "Professional woman in striped shirt smiling",
+      "loading": "eager"
+    },
+    {
+      "image": "images/portfolio/Lee_Eric_612-MarquelYvette0007+1.jpg",
+      "alt": "Man with glasses in professional suit",
+      "loading": "eager"
+    }
+  ],
+  "featuredTestimonial": {
+    "image": "images/portfolio/Dennis_Jennifer_161-MarquelYvette0063-retouched.jpg",
+    "alt": "Professional woman in white blazer"
+  },
+  "serviceCards": [
+    {
+      "title": "Corporate Headshots",
+      "image": "images/portfolio/CS-0205_500px.jpg",
+      "alt": "Corporate headshot"
+    },
+    {
+      "title": "Actor Headshots",
+      "image": "images/portfolio/Leonard_Taylor_331-MarquelYvette0050+500px.jpg",
+      "alt": "Actor headshot"
+    },
+    {
+      "title": "LinkedIn Headshots",
+      "image": "images/portfolio/Sireesha-Ganti-0103-(500px).jpg",
+      "alt": "LinkedIn headshot"
+    }
+  ],
+  "teamHeadshots": [
+    {
+      "image": "images/portfolio/VOF+-+5X4+Images+(14+x+8.5+in).jpg",
+      "alt": "Virginia Outdoors Foundation team headshots"
+    },
+    {
+      "image": "images/portfolio/LinkVisum+(1920+×+1080+px)+(1).jpg",
+      "alt": "LinkVisum team headshots"
+    }
+  ],
+  "clientTestimonials": [
+    {
+      "image": "images/portfolio/Hovis_Catherine_403-MarquelYvette0013-original200px.jpg",
+      "alt": "Cathy - Client testimonial"
+    },
+    {
+      "image": "images/portfolio/Nancy+(200px).jpg",
+      "alt": "Nancy - Client testimonial"
+    },
+    {
+      "image": "images/portfolio/Kahni+(200px).jpg",
+      "alt": "Kahni - Client testimonial"
+    }
+  ],
+  "aboutSection": {
+    "image": "images/portfolio/Marquel+Headshots9093+1.jpg",
+    "alt": "Marquel Forbes - Professional Headshot Photographer"
+  },
+  "processIcons": [
+    {
+      "image": "images/backgrounds/4365245_date_schedule_calendar_event_icon.png",
+      "alt": "Schedule icon"
+    },
+    {
+      "image": "images/backgrounds/2622595_female_photographer_icon.png",
+      "alt": "Photographer icon"
+    },
+    {
+      "image": "images/backgrounds/7680845_desktop_monitor_download_screen_device_icon.png",
+      "alt": "Download icon"
+    }
+  ],
+  "additionalServices": [
+    {
+      "title": "REALTOR Headshots",
+      "image": "images/portfolio/T-Fairfield-0297-(500px).jpg.jpg",
+      "alt": "Realtor headshot"
+    },
+    {
+      "title": "Executive Headshots",
+      "image": "images/portfolio/James_Lia_397-MarquelYvette0012-ig.jpg",
+      "alt": "Executive headshot"
+    },
+    {
+      "title": "Company Headshots",
+      "image": "images/portfolio/DrBess0561_eras_medical_loudoun_marquelyvette_500by500.jpg",
+      "alt": "Company headshots"
+    }
+  ],
+  "locationSection": {
+    "image": "images/portfolio/Studio.jpg",
+    "alt": "Marquel Yvette Photography Studio"
   }
 }
