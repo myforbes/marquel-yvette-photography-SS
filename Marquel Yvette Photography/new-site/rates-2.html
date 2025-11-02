@@ -118,7 +118,7 @@
 
                         <div class="package-pricing">
                             <span class="package-price">$1,895</span>
-                            <a href="request-proposal.html" class="package-button">Book The Executive</a>
+                            <button onclick="openExecutiveModal()" class="package-button">Book The Executive</button>
                         </div>
                     </div>
 
@@ -287,6 +287,17 @@
         </div>
     </div>
 
+    <!-- Booking Modal - Executive -->
+    <div id="executiveModal" class="booking-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeExecutiveModal()">&times;</button>
+            <div class="modal-body">
+                <iframe src="https://api.leadconnectorhq.com/booking/marquel-yvette-photography-7y55km7zujk/sv/68f6705e7576abd99edbd5ac?heightMode=fixed&showHeader=true" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="68f6705e7576abd99edbd5ac_1762113970038"></iframe>
+                <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript - Deferred for performance -->
     <script src="js/menu.js" defer></script>
     <script>
@@ -312,15 +323,29 @@
             document.body.style.overflow = 'auto';
         }
 
+        // Executive Modal Functions
+        function openExecutiveModal() {
+            document.getElementById('executiveModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeExecutiveModal() {
+            document.getElementById('executiveModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
         // Close modal when clicking outside of it
         window.onclick = function(event) {
             const expressModal = document.getElementById('bookingModal');
             const signatureModal = document.getElementById('signatureModal');
+            const executiveModal = document.getElementById('executiveModal');
 
             if (event.target === expressModal) {
                 closeBookingModal();
             } else if (event.target === signatureModal) {
                 closeSignatureModal();
+            } else if (event.target === executiveModal) {
+                closeExecutiveModal();
             }
         }
 
@@ -329,6 +354,7 @@
             if (event.key === 'Escape') {
                 closeBookingModal();
                 closeSignatureModal();
+                closeExecutiveModal();
             }
         });
     </script>
