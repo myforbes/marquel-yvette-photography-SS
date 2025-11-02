@@ -81,6 +81,7 @@
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     border-top-color: #d4af37;
+    background-color: #fafafa;
 }
 
 /* Featured Package Label */
@@ -129,6 +130,7 @@
 .package-included {
     border: none;
     border-left: 4px solid #d4af37; /* Thin left gold border to match original */
+    border-radius: 8px;
     padding: 25px 20px;
     margin-bottom: 30px;
     background-color: #f9f9f9;
