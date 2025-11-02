@@ -81,6 +81,15 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.rates-package-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    border-color: #d4af37;
 }
 
 /* Featured Package Label */
@@ -98,6 +107,13 @@
     text-transform: uppercase;
     border-radius: 20px;
     z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.rates-package-card:hover .featured-label {
+    background-color: #d4af37;
+    color: #1a1a1a;
+    transform: translateX(-50%) scale(1.05);
 }
 
 /* Package Title */
@@ -126,6 +142,12 @@
     margin-bottom: 30px;
     background-color: #fafafa;
     flex-grow: 1;
+    transition: all 0.3s ease;
+}
+
+.rates-package-card:hover .package-included {
+    background-color: #ffffff;
+    border-left-width: 10px;
 }
 
 .package-included h3 {
@@ -157,6 +179,12 @@
     font-weight: 700;
     color: #d4af37; /* Gold price */
     line-height: 1;
+    transition: all 0.3s ease;
+}
+
+.rates-package-card:hover .package-price {
+    transform: scale(1.1);
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
 }
 
 .package-button {
