@@ -45,17 +45,9 @@
     }
   });
 
-  // Close menu when clicking a navigation link
-  const menuLinks = menu.querySelectorAll('.header-menu-nav a');
-  menuLinks.forEach(function(link) {
-    link.addEventListener('click', function() {
-      menu.classList.remove('menu-open');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    });
-  });
-
   // Initialize aria-expanded
-  menuBtn.setAttribute('aria-expanded', 'false');
+  if (menuBtn) {
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }
 
 })();
