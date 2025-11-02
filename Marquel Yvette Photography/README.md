@@ -48,19 +48,28 @@ This project represents a complete migration from Squarespace to a custom-built,
 Marquel Yvette Photography/
 ├── README.md                    # This file
 ├── new-site/                    # Production website
-│   ├── index.html              # Main HTML file
+│   ├── index.html              # Homepage
+│   ├── rates-2.html            # Pricing & booking page
+│   ├── request-proposal.html   # Team proposal form
+│   ├── contact.html            # Contact form page
+│   ├── contact-thank-you.html  # Contact confirmation page
 │   ├── css/
 │   │   ├── main.css            # Primary stylesheet (12KB)
 │   │   ├── gallery.css         # Gallery-specific styles
-│   │   └── menu.css            # Mobile menu styles
+│   │   ├── menu.css            # Mobile menu styles
+│   │   ├── contact-form.css    # Contact form styles
+│   │   ├── thank-you.css       # Thank you page styles
+│   │   └── pricing.css         # Pricing page styles
 │   ├── js/
-│   │   ├── gallery.js          # Auto-advancing gallery
+│   │   ├── gallery-autoplay.js # Auto-advancing gallery
 │   │   ├── menu.js             # Mobile hamburger menu
-│   │   └── faq.js              # FAQ accordion
+│   │   ├── contact-form.js     # Contact form handling
+│   │   └── meta-loader.js      # Dynamic metadata loading
 │   ├── images/
 │   │   ├── portfolio/          # Portfolio images
+│   │   ├── banner-gallery/     # Banner headshot images
 │   │   ├── backgrounds/        # Background images
-│   │   └── icons/              # Icons and logos
+│   │   └── logos/              # Icons and logos
 │   └── components/
 │       ├── README.md           # Component documentation
 │       └── [component files]   # Modular HTML components
@@ -284,7 +293,31 @@ aws cloudfront create-invalidation --distribution-id E50QXXWNUFNYT --paths "/*"
 - **v2.0** - Complete rebuild with vanilla JS/CSS
   - Phase 1-4: Framework removal and core rebuilds
   - Phase 5: Visual design refinements
+- **v2.1** - Additional pages and optimization
+  - Contact page with simplified form
+  - Contact thank-you page with brand styling
+  - Portfolio image optimization (Dennis: 381K → 28K)
+  - Cache lifetime optimization (1-year cache headers)
 - **Current:** Deployed on AWS S3 + CloudFront
+
+## Pages Built
+
+### ✅ Completed Pages (5/11)
+1. **index.html** - Homepage with portfolio gallery, services, testimonials
+2. **rates-2.html** - Pricing page with 3 packages and booking modals
+3. **request-proposal.html** - Team proposal request form
+4. **contact.html** - General contact form
+5. **contact-thank-you.html** - Contact confirmation page
+
+### 🔄 In Progress
+6. **proposal-thank-you.html** - Proposal confirmation page (30 min)
+
+### 📋 Pending Pages (5)
+7. **privacy-policy.html** - Privacy policy
+8. **tos.html** - Terms of service
+9. **disclaimer.html** - Professional services disclaimer
+10. **website-accessibility-statement.html** - Accessibility statement
+11. **copyright.html** - Copyright notice
 
 ## Future Enhancements
 
