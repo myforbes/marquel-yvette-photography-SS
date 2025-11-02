@@ -85,7 +85,7 @@
 
                         <div class="package-pricing">
                             <span class="package-price">$525</span>
-                            <a href="request-proposal.html" class="package-button">Book The Express</a>
+                            <button onclick="openBookingModal()" class="package-button">Book The Express</button>
                         </div>
                     </div>
 
@@ -265,7 +265,44 @@
         </div>
     </footer>
 
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="booking-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+            <div class="modal-body">
+                <iframe src="https://api.leadconnectorhq.com/booking/marquel-yvette-photography-7y55km7zujk/sv/68b5a68c76a8d84159740d31?heightMode=fixed&showHeader=true" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="68b5a68c76a8d84159740d31_1762113546985"></iframe>
+                <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript - Deferred for performance -->
     <script src="js/menu.js" defer></script>
+    <script>
+        function openBookingModal() {
+            document.getElementById('bookingModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target === modal) {
+                closeBookingModal();
+            }
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeBookingModal();
+            }
+        });
+    </script>
 </body>
 </html>
