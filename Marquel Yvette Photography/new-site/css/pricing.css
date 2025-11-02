@@ -466,9 +466,9 @@
 .modal-content {
     background-color: #ffffff;
     border-radius: 8px;
-    max-width: 900px;
+    max-width: 700px;
     width: 100%;
-    max-height: 90vh;
+    max-height: 85vh;
     position: relative;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     overflow: hidden;
@@ -502,24 +502,31 @@
 }
 
 .modal-body {
-    padding: 20px;
+    padding: 15px;
     overflow-y: auto;
-    max-height: calc(90vh - 40px);
+    max-height: calc(85vh - 80px);
 }
 
 .modal-body iframe {
-    min-height: 600px;
+    min-height: 500px;
+    height: calc(85vh - 100px);
 }
 
 @media (max-width: 768px) {
     .modal-content {
         max-width: 100%;
-        max-height: 95vh;
+        max-height: 90vh;
         margin: 10px;
     }
 
     .modal-body {
-        padding: 15px;
+        padding: 10px;
+        max-height: calc(90vh - 60px);
+    }
+
+    .modal-body iframe {
+        min-height: 450px;
+        height: calc(90vh - 80px);
     }
 
     .modal-close {
