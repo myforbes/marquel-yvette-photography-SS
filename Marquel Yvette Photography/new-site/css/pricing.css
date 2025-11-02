@@ -8,14 +8,12 @@
 
 .banner-image-wrapper {
     width: 100%;
-    max-height: 250px;
-    overflow: hidden;
+    /* No height restriction - show full gallery */
 }
 
 .banner-image-wrapper img {
     width: 100%;
     height: auto;
-    object-fit: cover;
     display: block;
 }
 
@@ -250,9 +248,7 @@
         text-align: center;
     }
 
-    .banner-image-wrapper {
-        max-height: 150px;
-    }
+    /* Show full gallery on mobile too */
 
     .rates-final-cta h2 {
         font-size: 1.8rem;
