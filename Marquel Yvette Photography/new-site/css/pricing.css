@@ -77,19 +77,18 @@
 /* Package Card */
 .rates-package-card {
     background-color: #ffffff;
-    padding: 0;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     position: relative;
     transition: all 0.3s ease;
-    cursor: pointer;
-    border: 2px solid transparent;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .rates-package-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    border-color: #d4af37;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* Featured Package Label */
@@ -113,7 +112,7 @@
 .rates-package-card:hover .featured-label {
     background-color: #d4af37;
     color: #1a1a1a;
-    transform: translateX(-50%) scale(1.05);
+    transform: translateX(-50%) scale(1.02);
 }
 
 /* Package Title */
@@ -136,18 +135,18 @@
 
 /* Package Included Box - GOLD BORDER */
 .package-included {
-    border: 3px solid #d4af37; /* Gold border */
-    border-left: 6px solid #d4af37; /* Thicker left border like the screenshot */
+    border: none;
+    border-left: 4px solid #d4af37; /* Thin left gold border to match original */
     padding: 25px 20px;
     margin-bottom: 30px;
-    background-color: #fafafa;
+    background-color: #f9f9f9;
     flex-grow: 1;
     transition: all 0.3s ease;
 }
 
 .rates-package-card:hover .package-included {
     background-color: #ffffff;
-    border-left-width: 10px;
+    border-left-width: 5px;
 }
 
 .package-included h3 {
@@ -183,8 +182,7 @@
 }
 
 .rates-package-card:hover .package-price {
-    transform: scale(1.1);
-    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    transform: scale(1.05);
 }
 
 .package-button {
