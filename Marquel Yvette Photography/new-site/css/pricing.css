@@ -157,6 +157,60 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Session Journey Section */
+.session-journey-section {
+    padding: 80px 0;
+    background-color: #fafafa;
+}
+
+.journey-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: 1px;
+}
+
+.journey-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.journey-step {
+    text-align: center;
+}
+
+.step-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #d4af37;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.journey-step h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.journey-step p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555555;
+}
+
 /* FAQ Section */
 .rates-faq-section {
     padding: 80px 0;
@@ -216,6 +270,16 @@
     }
 
     .package-price {
+        font-size: 2rem;
+    }
+
+    .journey-steps {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        max-width: 400px;
+    }
+
+    .journey-title {
         font-size: 2rem;
     }
 }
