@@ -133,13 +133,13 @@
     border-radius: 8px;
     padding: 25px 20px;
     margin-bottom: 30px;
-    background-color: #f9f9f9;
+    background-color: #faf8f5;
     flex-grow: 1;
     transition: all 0.3s ease;
 }
 
 .rates-package-card:hover .package-included {
-    background-color: #ffffff;
+    background-color: #faf8f5;
     border-left-width: 5px;
 }
 
