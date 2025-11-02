@@ -1,443 +1,274 @@
-/* Pricing Page Styles */
+/* Pricing Page Styles - Matching Original Squarespace Design */
 
-/* Pricing Intro Section */
-.pricing-intro-section {
-    padding: 60px 0;
-    background-color: #ffffff;
+/* Hero Banner */
+.rates-hero-banner {
+    width: 100%;
+    overflow: hidden;
 }
 
-.pricing-intro-content {
-    max-width: 800px;
-    margin: 0 auto;
+.banner-image-wrapper {
+    width: 100%;
+    max-height: 150px;
+    overflow: hidden;
+}
+
+.banner-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Rates Intro Section */
+.rates-intro-section {
+    padding: 80px 0 60px;
+    background-color: #ffffff;
     text-align: center;
 }
 
-.pricing-intro-content p {
-    font-size: 1.1rem;
+.rates-main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.rates-subtitle {
+    font-size: 1.15rem;
     line-height: 1.8;
     color: #333333;
-    margin-bottom: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-/* Pricing Packages Grid */
-.pricing-packages-section {
-    padding: 80px 0;
-    background-color: #f8f8f8;
-}
-
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.pricing-card {
+/* Rates Packages Section */
+.rates-packages-section {
+    padding: 60px 0 100px;
     background-color: #ffffff;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 40px 30px;
+}
+
+.rates-packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+/* Package Card */
+.rates-package-card {
+    background-color: #ffffff;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
 }
 
-.pricing-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* Featured Pricing Card */
-.pricing-card-featured {
-    border-color: #f4ca78;
-    border-width: 3px;
-    box-shadow: 0 5px 20px rgba(244, 202, 120, 0.3);
-}
-
-.featured-badge {
+/* Featured Package Label */
+.featured-label {
     position: absolute;
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #f4ca78;
-    color: #1a1a1a;
-    padding: 8px 24px;
-    border-radius: 20px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 6px 20px;
+    font-size: 0.75rem;
     font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-}
-
-.pricing-header {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.package-name {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-}
-
-.package-subtitle {
-    font-size: 0.95rem;
-    color: #666666;
-    line-height: 1.5;
-}
-
-.pricing-price {
-    text-align: center;
-    margin: 30px 0;
-    padding: 20px 0;
-    border-top: 2px solid #f4ca78;
-    border-bottom: 2px solid #f4ca78;
-}
-
-.price-amount {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #1a1a1a;
-}
-
-.pricing-features {
-    flex-grow: 1;
-    margin-bottom: 30px;
-}
-
-.pricing-features h4 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 20px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    border-radius: 20px;
+    z-index: 10;
 }
 
-.pricing-features ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.pricing-features li {
-    padding: 12px 0;
-    color: #333333;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-}
-
-.pricing-features li i {
-    color: #f4ca78;
-    margin-top: 3px;
-    flex-shrink: 0;
-}
-
-.pricing-cta {
-    text-align: center;
-}
-
-/* Team Pricing Section */
-.team-pricing-section {
-    padding: 80px 0;
-    background-color: #ffffff;
-}
-
-.team-pricing-content {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.team-pricing-content > p {
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #333333;
-    margin-bottom: 40px;
-}
-
-.team-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-}
-
-.team-feature {
-    text-align: center;
-    padding: 30px 20px;
-}
-
-.team-feature i {
-    font-size: 2.5rem;
-    color: #f4ca78;
-    margin-bottom: 15px;
-}
-
-.team-feature h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 8px;
-}
-
-.team-feature p {
-    font-size: 0.95rem;
-    color: #666666;
-}
-
-.team-pricing-details {
-    background-color: #f8f8f8;
-    padding: 40px;
-    border-radius: 8px;
-    margin: 40px 0;
-}
-
-.team-pricing-details h4 {
+/* Package Title */
+.package-title {
     font-size: 1.5rem;
     font-weight: 700;
     color: #1a1a1a;
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.3;
 }
 
-.team-pricing-details ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.team-pricing-details li {
-    padding: 12px 0;
-    font-size: 1.1rem;
+/* Package Description */
+.package-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
     color: #333333;
-    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+    min-height: 48px;
 }
 
-.team-pricing-details li:last-child {
-    border-bottom: none;
+/* Package Included Box - GOLD BORDER */
+.package-included {
+    border: 3px solid #d4af37; /* Gold border */
+    border-left: 6px solid #d4af37; /* Thicker left border like the screenshot */
+    padding: 25px 20px;
+    margin-bottom: 30px;
+    background-color: #fafafa;
+    flex-grow: 1;
 }
 
-.team-note {
+.package-included h3 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.package-included p {
     font-size: 0.9rem;
-    color: #666666;
-    text-align: center;
-    font-style: italic;
-    margin-top: 20px;
+    line-height: 1.8;
+    color: #444444;
 }
 
-.team-cta {
-    text-align: center;
-    margin-top: 40px;
+/* Package Pricing Section */
+.package-pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 20px;
 }
 
-/* Add-Ons Section */
-.addons-section {
+.package-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #d4af37; /* Gold price */
+    line-height: 1;
+}
+
+.package-button {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    letter-spacing: 0.5px;
+}
+
+.package-button:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Section */
+.rates-faq-section {
     padding: 80px 0;
     background-color: #f8f8f8;
 }
 
-.addons-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.addon-card {
-    background-color: #ffffff;
-    padding: 40px 30px;
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.addon-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.addon-card i {
-    font-size: 2.5rem;
-    color: #f4ca78;
-    margin-bottom: 20px;
-}
-
-.addon-card h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 10px;
-}
-
-.addon-price {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #f4ca78;
-    margin: 15px 0;
-}
-
-.addon-card p:last-child {
-    font-size: 0.9rem;
-    color: #666666;
-    line-height: 1.6;
-}
-
-/* Booking Process Section */
-.booking-process-section {
+/* Final CTA Section */
+.rates-final-cta {
     padding: 80px 0;
-    background-color: #ffffff;
-}
-
-.booking-subtitle {
+    background-color: #1a1a1a;
     text-align: center;
-    font-size: 1.2rem;
-    color: #666666;
-    margin-top: 10px;
-    margin-bottom: 50px;
+    color: #ffffff;
 }
 
-.booking-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin: 50px 0;
-}
-
-.booking-step {
-    text-align: center;
-    padding: 30px 20px;
-}
-
-.step-number {
-    width: 80px;
-    height: 80px;
-    background-color: #f4ca78;
-    color: #1a1a1a;
+.rates-final-cta h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
+    color: #d4af37;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
-.booking-step h4 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 15px;
+.rates-final-cta p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 40px;
 }
 
-.booking-step p {
+.cta-contact {
+    margin-top: 30px;
     font-size: 1rem;
-    color: #666666;
-    line-height: 1.6;
+    color: #cccccc;
 }
 
-.booking-cta {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.booking-note {
-    margin-top: 20px;
-    font-size: 0.95rem;
-    color: #666666;
-}
-
-.booking-note a {
-    color: #f4ca78;
+.cta-contact a {
+    color: #d4af37;
     text-decoration: none;
     font-weight: 600;
 }
 
-.booking-note a:hover {
+.cta-contact a:hover {
     text-decoration: underline;
 }
 
-/* Final CTA Section */
-.final-cta-section {
-    padding: 80px 0;
-    background-color: #1a1a1a;
-    text-align: center;
-}
-
-.final-cta-section h2 {
-    color: #f4ca78;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-}
-
-.final-cta-section p {
-    color: #ffffff;
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 /* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .pricing-grid {
+@media (max-width: 1024px) {
+    .rates-packages-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 60px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .package-name {
-        font-size: 1.5rem;
-    }
-
-    .price-amount {
+    .rates-main-title {
         font-size: 2.5rem;
     }
 
-    .team-features {
-        grid-template-columns: 1fr;
+    .package-price {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .rates-intro-section {
+        padding: 60px 20px 40px;
+    }
+
+    .rates-main-title {
+        font-size: 2rem;
+    }
+
+    .rates-subtitle {
+        font-size: 1rem;
+    }
+
+    .package-title {
+        font-size: 1.3rem;
+    }
+
+    .package-pricing {
+        flex-direction: column;
         gap: 20px;
+        align-items: stretch;
     }
 
-    .team-pricing-details {
-        padding: 30px 20px;
+    .package-button {
+        width: 100%;
+        text-align: center;
     }
 
-    .addons-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .banner-image-wrapper {
+        max-height: 100px;
     }
 
-    .booking-steps {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .rates-final-cta h2 {
+        font-size: 1.8rem;
     }
 
-    .final-cta-section h2 {
-        font-size: 1.6rem;
-    }
-
-    .final-cta-section p {
+    .rates-final-cta p {
         font-size: 1rem;
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .pricing-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .rates-packages-grid {
+        gap: 30px;
     }
 
-    .addons-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .package-included {
+        padding: 20px 15px;
     }
 }
