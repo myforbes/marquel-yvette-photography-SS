@@ -73,12 +73,14 @@
     position: relative;
     transition: all 0.3s ease;
     border: none;
+    border-top: 4px solid transparent;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .rates-package-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-top-color: #d4af37;
 }
 
 /* Featured Package Label */
