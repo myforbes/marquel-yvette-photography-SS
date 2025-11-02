@@ -123,8 +123,39 @@ Marquel Yvette Photography/
 - **Image Gallery** - Portfolio showcase with client examples
 - **Reviews Section** - Client testimonials and success stories
 - **Contact Information** - Easy booking and inquiry forms
-- **Analytics Integration** - Google Analytics, Hotjar, Facebook Pixel, LinkedIn tracking
+- **Analytics Integration** - Google Analytics, Facebook Pixel (optimized)
 - **SEO Optimized** - Schema markup for local business and professional services
+
+## ⚡ Performance Optimizations
+
+This repository includes significant performance improvements over the original Squarespace export:
+
+### Image Optimization
+- **63% reduction** in total image size (19MB → 7.1MB)
+- All portfolio images resized to 2000px max (optimal for web + Retina displays)
+- 85% JPEG quality compression (no visible quality loss)
+- PNG photos converted to JPEG for better compression
+- **Key improvements:**
+  - `Hovis_Catherine_403...jpg`: 6.6MB → 858KB (87% reduction)
+  - `Studio.jpg`: 4.8MB → 848KB (82% reduction)
+  - `LinkVisum.png → .jpg`: 1.4MB → 411KB (71% reduction)
+  - `VOF.png → .jpg`: 2.0MB → 464KB (77% reduction)
+
+### CSS & JavaScript Optimization
+- **440ms render-blocking CSS eliminated**
+- Site CSS (1.5MB) and static CSS (429KB) deferred with media="print" technique
+- Google Fonts optimized with `display=swap` for immediate text rendering
+- Removed unnecessary tracking scripts (Hotjar, Metricool)
+- Font loading optimized to match live site appearance
+
+### Performance Metrics
+- **Original PageSpeed Score:** ~27%
+- **Expected Score (Squarespace):** 60-70% (with image optimization)
+- **Expected Score (AWS hosting):** 90-95% (with full optimizations)
+
+### Backups
+- Original high-resolution images: `images-original-backup/`
+- Original HTML versions: `index.html.backup`, `index.html.css-backup`
 
 ## 🚀 Getting Started
 
