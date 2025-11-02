@@ -56,11 +56,17 @@
         if (!config.heroGallery) return;
 
         const galleryItems = document.querySelectorAll('.gallery-grid-item img');
+        const isMobile = window.innerWidth < 768;
+
         config.heroGallery.forEach((item, index) => {
             if (galleryItems[index]) {
                 galleryItems[index].src = item.image;
                 galleryItems[index].alt = item.alt;
-                galleryItems[index].loading = item.loading;
+
+                // On mobile, only load first 3 images eagerly, rest lazy
+                // On desktop, load first 6 eagerly
+                const eagerLoadCount = isMobile ? 3 : 6;
+                galleryItems[index].loading = index < eagerLoadCount ? 'eager' : 'lazy';
             }
         });
     }

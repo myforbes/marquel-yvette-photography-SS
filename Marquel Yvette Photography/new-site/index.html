@@ -14,21 +14,24 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="">
 
-    <!-- Google Fonts - Montserrat (Original Squarespace Font) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome for social icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preload LCP image for faster initial render -->
+    <link rel="preload" as="image" href="images/portfolio/Dionne_Kindra_697-MarquelYvette0085.jpg" fetchpriority="high">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/gallery.css">
 
-    <!-- Meta Tags Loader - Loads SEO data from config/site-config.json -->
-    <script src="js/meta-loader.js"></script>
+    <!-- Google Fonts - Montserrat with font-display swap for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- Font Awesome - Deferred loading -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <!-- Meta Tags Loader - Deferred for performance -->
+    <script src="js/meta-loader.js" defer></script>
 </head>
 <body>
     <!-- Header / Navigation -->
@@ -496,8 +499,8 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/menu.js"></script>
-    <script src="js/content-loader.js"></script>
+    <!-- JavaScript - Deferred for performance -->
+    <script src="js/menu.js" defer></script>
+    <script src="js/content-loader.js" defer></script>
 </body>
 </html>
