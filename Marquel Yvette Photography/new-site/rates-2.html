@@ -26,6 +26,16 @@
 
     <!-- Font Awesome - Deferred loading -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <!-- Page-specific styles -->
+    <style>
+        /* Hide CTA button on mobile since user is already on rates page */
+        @media (max-width: 768px) {
+            .header-menu {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header / Navigation -->
