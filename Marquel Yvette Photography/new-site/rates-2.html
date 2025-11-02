@@ -102,7 +102,7 @@
 
                         <div class="package-pricing">
                             <span class="package-price">$995</span>
-                            <a href="request-proposal.html" class="package-button">Book The Signature</a>
+                            <button onclick="openSignatureModal()" class="package-button">Book The Signature</button>
                         </div>
                     </div>
 
@@ -265,7 +265,7 @@
         </div>
     </footer>
 
-    <!-- Booking Modal -->
+    <!-- Booking Modal - Express -->
     <div id="bookingModal" class="booking-modal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeBookingModal()">&times;</button>
@@ -276,9 +276,21 @@
         </div>
     </div>
 
+    <!-- Booking Modal - Signature -->
+    <div id="signatureModal" class="booking-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeSignatureModal()">&times;</button>
+            <div class="modal-body">
+                <iframe src="https://api.leadconnectorhq.com/booking/marquel-yvette-photography-7y55km7zujk/sv/68b5a68d76a8d8e9bd740da7?heightMode=fixed&showHeader=true" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="68b5a68d76a8d8e9bd740da7_1762113925263"></iframe>
+                <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript - Deferred for performance -->
     <script src="js/menu.js" defer></script>
     <script>
+        // Express Modal Functions
         function openBookingModal() {
             document.getElementById('bookingModal').style.display = 'flex';
             document.body.style.overflow = 'hidden';
@@ -289,11 +301,26 @@
             document.body.style.overflow = 'auto';
         }
 
+        // Signature Modal Functions
+        function openSignatureModal() {
+            document.getElementById('signatureModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSignatureModal() {
+            document.getElementById('signatureModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
         // Close modal when clicking outside of it
         window.onclick = function(event) {
-            const modal = document.getElementById('bookingModal');
-            if (event.target === modal) {
+            const expressModal = document.getElementById('bookingModal');
+            const signatureModal = document.getElementById('signatureModal');
+
+            if (event.target === expressModal) {
                 closeBookingModal();
+            } else if (event.target === signatureModal) {
+                closeSignatureModal();
             }
         }
 
@@ -301,6 +328,7 @@
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closeBookingModal();
+                closeSignatureModal();
             }
         });
     </script>
