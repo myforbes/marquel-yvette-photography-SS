@@ -1,0 +1,429 @@
+/* Contact Form Page Styles */
+
+/* Contact Intro Section */
+.contact-intro-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.contact-intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-intro-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+.form-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.proposal-form {
+    display: block;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.required {
+    color: #d32f2f;
+    margin-left: 3px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #333333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="date"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f4ca78;
+    box-shadow: 0 0 0 3px rgba(244, 202, 120, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999999;
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    padding-right: 45px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    margin-top: 20px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 12px;
+    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-label span {
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.6;
+}
+
+/* Form Actions */
+.form-actions {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999999;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Form Messages */
+.form-message {
+    text-align: center;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.form-success {
+    background-color: #e8f5e9;
+    border: 2px solid #4caf50;
+}
+
+.form-success i {
+    font-size: 3rem;
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+
+.form-success h3 {
+    color: #2e7d32;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.form-success p {
+    color: #1b5e20;
+    font-size: 1rem;
+}
+
+.form-error {
+    background-color: #ffebee;
+    border: 2px solid #f44336;
+}
+
+.form-error i {
+    font-size: 3rem;
+    color: #f44336;
+    margin-bottom: 20px;
+}
+
+.form-error h3 {
+    color: #c62828;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.form-error p {
+    color: #b71c1c;
+    font-size: 1rem;
+}
+
+.form-error a {
+    color: #b71c1c;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Alternative Contact Section */
+.alternative-contact-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.contact-method {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.contact-method i {
+    font-size: 2.5rem;
+    color: #f4ca78;
+    margin-bottom: 20px;
+}
+
+.contact-method h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.contact-method p {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.contact-method a {
+    color: #f4ca78;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-method a:hover {
+    color: #d4aa58;
+    text-decoration: underline;
+}
+
+.contact-hours {
+    font-size: 0.9rem;
+    color: #666666;
+    margin-top: 10px;
+}
+
+/* Expectations Section */
+.expectations-section {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+.expectation-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.expectation-step {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.expectation-step .step-number {
+    width: 60px;
+    height: 60px;
+    background-color: #f4ca78;
+    color: #1a1a1a;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.expectation-step h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.expectation-step p {
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.6;
+}
+
+/* Social Proof Section */
+.social-proof-section {
+    padding: 80px 0;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.social-proof-section .section-title {
+    color: #f4ca78;
+}
+
+.trust-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.trust-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #f4ca78;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form Validation Styles */
+.form-group input:invalid:not(:placeholder-shown),
+.form-group select:invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+    border-color: #f44336;
+}
+
+.form-group input:valid:not(:placeholder-shown),
+.form-group select:valid,
+.form-group textarea:valid {
+    border-color: #4caf50;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-methods {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .expectation-steps {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .trust-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .form-wrapper {
+        padding: 40px 30px;
+    }
+
+    .contact-methods {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .expectation-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Loading State */
+.form-loading .proposal-form {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.form-loading .cta-button::after {
+    content: "...";
+    animation: loading 1s infinite;
+}
+
+@keyframes loading {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
