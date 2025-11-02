@@ -14,6 +14,9 @@
     <!-- Preload critical images for LCP -->
     <link rel="preload" as="image" href="images/banner-gallery/headshot-1.jpg" fetchpriority="high">
     <link rel="preload" as="image" href="images/banner-gallery/headshot-2.jpg" fetchpriority="high">
+    <!-- Preload images 3-4 only on desktop (4-column grid) -->
+    <link rel="preload" as="image" href="images/banner-gallery/headshot-3.jpg" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="images/banner-gallery/headshot-4.jpg" media="(min-width: 769px)">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
@@ -59,8 +62,8 @@
                 <div class="banner-headshots-grid">
                     <img src="images/banner-gallery/headshot-1.jpg" alt="Professional headshot by Marquel Yvette Photography" width="500" height="400" loading="eager" fetchpriority="high">
                     <img src="images/banner-gallery/headshot-2.jpg" alt="Professional headshot by Marquel Yvette Photography" width="500" height="400" loading="eager" fetchpriority="high">
-                    <img src="images/banner-gallery/headshot-3.jpg" alt="Professional headshot by Marquel Yvette Photography" width="500" height="400" loading="eager">
-                    <img src="images/banner-gallery/headshot-4.jpg" alt="Professional headshot by Marquel Yvette Photography" width="500" height="400" loading="eager">
+                    <img src="images/banner-gallery/headshot-3.jpg" alt="Professional headshot by Marquel Yvette Photography" width="500" height="400" loading="lazy">
+                    <img src="images/banner-gallery/headshot-4.jpg" alt="Professional headshot by Marquel Yvette Photography" width="500" height="400" loading="lazy">
                     <img src="images/banner-gallery/headshot-5.jpg" alt="Professional headshot by Marquel Yvette Photography" width="500" height="400" loading="lazy">
                     <img src="images/banner-gallery/headshot-6.jpg" alt="Professional headshot by Marquel Yvette Photography" width="500" height="400" loading="lazy">
                     <img src="images/banner-gallery/headshot-7.jpg" alt="Professional headshot by Marquel Yvette Photography" width="500" height="400" loading="lazy">
