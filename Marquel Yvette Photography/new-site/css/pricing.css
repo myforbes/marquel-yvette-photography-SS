@@ -1,20 +1,41 @@
 /* Pricing Page Styles - Matching Original Squarespace Design */
 
-/* Hero Banner */
+/* Hero Banner Gallery */
 .rates-hero-banner {
     width: 100%;
-    overflow: hidden;
+    background-color: #ffffff;
+    padding: 40px 0 0;
 }
 
-.banner-image-wrapper {
-    width: 100%;
-    /* No height restriction - show full gallery */
+.banner-gallery-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.banner-image-wrapper img {
-    width: 100%;
+.banner-logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.banner-logo img {
+    max-width: 400px;
     height: auto;
+}
+
+.banner-headshots-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin: 0;
+}
+
+.banner-headshots-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
+    aspect-ratio: 1 / 1;
 }
 
 /* Rates Intro Section */
@@ -344,6 +365,14 @@
 }
 
 @media (max-width: 768px) {
+    .banner-headshots-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner-logo img {
+        max-width: 280px;
+    }
+
     .rates-intro-section {
         padding: 60px 20px 40px;
     }
@@ -370,8 +399,6 @@
         width: 100%;
         text-align: center;
     }
-
-    /* Show full gallery on mobile too */
 
     .rates-final-cta h2 {
         font-size: 1.8rem;
