@@ -10,6 +10,12 @@ Simply edit the `rates-content.json` file to update:
 - **title**: Browser tab title and SEO title
 - **description**: Meta description for SEO
 
+### Banner Gallery
+Edit the `banner.images` array to update the hero banner gallery images:
+- List of image paths for the 8 headshots displayed at the top
+- Images should be optimized to 500x500px for best performance
+- Images are displayed in a 4-column grid (2 columns on mobile)
+
 ### Hero Section
 - **title**: Main heading on the page
 - **subtitle**: Introductory paragraph below the title
@@ -43,15 +49,6 @@ Edit the `testimonials.reviews` array:
 - **name**: Client name
 - **text**: Testimonial quote
 - **image**: Path to client photo
-
-### Final CTA (Call-to-Action)
-- **title**: Main CTA heading
-- **subtitle**: CTA description
-- **buttonText**: Button text
-- **buttonUrl**: Where the button links
-- **contactText**: Phone label text
-- **phone**: Display phone number
-- **phoneLink**: Phone number for tel: link
 
 ## Important Notes
 

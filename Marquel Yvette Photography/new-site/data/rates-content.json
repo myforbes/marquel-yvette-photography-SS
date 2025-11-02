@@ -3,6 +3,18 @@
     "title": "Rates | Book Your Session — Professional Headshot Photographer | Loudoun County, VA",
     "description": "Explore individual pricing and services for professional headshots in Loudoun County, VA. Book now for expert coaching and image retouching."
   },
+  "banner": {
+    "images": [
+      "images/banner-gallery/headshot-1.jpg",
+      "images/banner-gallery/headshot-2.jpg",
+      "images/banner-gallery/headshot-3.jpg",
+      "images/banner-gallery/headshot-4.jpg",
+      "images/banner-gallery/headshot-5.jpg",
+      "images/banner-gallery/headshot-6.jpg",
+      "images/banner-gallery/headshot-7.jpg",
+      "images/banner-gallery/headshot-8.jpg"
+    ]
+  },
   "hero": {
     "title": "Choose Your Perfect Package",
     "subtitle": "Your headshot is your digital first impression. In a relaxed, guided session, we'll create images that elevate your brand and feel authentically you."
