@@ -22,13 +22,73 @@
             margin: 0 auto;
         }
 
-        h1 {
+        .header-section {
             text-align: center;
-            color: #f4ca78;
             margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #f4ca78;
+            margin-bottom: 20px;
             font-size: 2.5rem;
             text-transform: uppercase;
             letter-spacing: 3px;
+        }
+
+        .download-config-btn {
+            background: #f4ca78;
+            color: #1a1a1a;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s ease;
+            display: none;
+        }
+
+        .download-config-btn.active {
+            display: inline-block;
+        }
+
+        .download-config-btn:hover {
+            background: #e6b960;
+        }
+
+        .instructions {
+            background: #2d2d2d;
+            border: 2px solid #f4ca78;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: none;
+        }
+
+        .instructions.active {
+            display: block;
+        }
+
+        .instructions h3 {
+            color: #f4ca78;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .instructions ol {
+            color: #ffffff;
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        .instructions code {
+            background: #1a1a1a;
+            padding: 2px 8px;
+            border-radius: 3px;
+            color: #f4ca78;
+            font-family: monospace;
         }
 
         .photo-grid {
@@ -41,9 +101,15 @@
             position: relative;
             overflow: hidden;
             border-radius: 8px;
-            cursor: pointer;
-            aspect-ratio: 1 / 1;
             background: #2d2d2d;
+            padding-bottom: 50px;
+        }
+
+        .photo-container {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            cursor: pointer;
         }
 
         .photo-item img {
@@ -53,7 +119,7 @@
             transition: transform 0.3s ease;
         }
 
-        .photo-item:hover img {
+        .photo-container:hover img {
             transform: scale(1.05);
         }
 
@@ -68,7 +134,7 @@
             transition: opacity 0.3s ease;
         }
 
-        .photo-item:hover .photo-overlay {
+        .photo-container:hover .photo-overlay {
             opacity: 1;
         }
 
@@ -80,6 +146,51 @@
             letter-spacing: 0.5px;
         }
 
+        .photo-path {
+            color: #999;
+            font-size: 0.7rem;
+            margin-top: 5px;
+            font-family: monospace;
+        }
+
+        .update-photo-btn {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #f4ca78;
+            color: #1a1a1a;
+            border: none;
+            padding: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s ease;
+        }
+
+        .update-photo-btn:hover {
+            background: #e6b960;
+        }
+
+        .photo-item.updated {
+            border: 3px solid #4CAF50;
+        }
+
+        .photo-item.updated .update-photo-btn {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .photo-item.updated .update-photo-btn::after {
+            content: ' ✓';
+        }
+
+        .file-input {
+            display: none;
+        }
+
         @media (max-width: 768px) {
             .photo-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -89,12 +200,37 @@
             h1 {
                 font-size: 1.8rem;
             }
+
+            .update-photo-btn {
+                font-size: 0.8rem;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Portfolio Gallery</h1>
+        <div class="header-section">
+            <h1>Portfolio Gallery</h1>
+            <button class="download-config-btn" id="downloadConfigBtn">Download Updated Config</button>
+        </div>
+
+        <div class="instructions" id="uploadInstructions">
+            <h3>Next Steps: Upload Your Changes</h3>
+            <ol>
+                <li>Download the updated <code>photos.json</code> file using the button above</li>
+                <li>Upload your new image(s) to the appropriate folder in S3:
+                    <ul>
+                        <li>Portfolio photos → <code>s3://marquelyvette-website/images/portfolio/</code></li>
+                        <li>Banner gallery → <code>s3://marquelyvette-website/images/banner-gallery/</code></li>
+                        <li>Testimonials → <code>s3://marquelyvette-website/images/testimonials/</code></li>
+                    </ul>
+                </li>
+                <li>Upload the new <code>photos.json</code> to: <code>s3://marquelyvette-website/config/photos.json</code></li>
+                <li>Run: <code>aws cloudfront create-invalidation --distribution-id E50QXXWNUFNYT --paths "/config/photos.json"</code></li>
+                <li>Wait 1-2 minutes, then refresh your website to see the changes!</li>
+            </ol>
+        </div>
 
         <div class="photo-grid">
             <!-- Photos will be loaded dynamically from config/photos.json -->
