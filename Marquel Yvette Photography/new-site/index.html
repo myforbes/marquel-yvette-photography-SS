@@ -37,6 +37,9 @@
     <!-- Meta Tags Loader - Deferred for performance -->
     <script src="js/meta-loader.js" defer></script>
 
+    <!-- Photo Loader - Loads all photos from config/photos.json -->
+    <script src="js/photo-loader.js" defer></script>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -103,7 +106,7 @@
     <header class="site-header">
         <div class="header-container">
             <a href="/" class="logo">
-                <img src="images/logos/MarquelYvette_Gold+Dk+Grey+Logo+11-3-24.png" alt="Professional Headshot Photographer | Loudoun County, VA" class="header-logo-img">
+                <img data-photo="logo-header" src="images/logos/MarquelYvette_Gold+Dk+Grey+Logo+11-3-24.png" alt="Professional Headshot Photographer | Loudoun County, VA" class="header-logo-img">
             </a>
 
             <button class="header-burger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -124,52 +127,52 @@
             <div class="gallery-grid-wrapper">
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img src="images/portfolio/Dionne_Kindra_697-MarquelYvette0085.jpg" alt="A professional woman with curly hair, smiling, dressed in a dark blazer and white top." loading="eager">
+                        <img data-photo="gallery-1" src="images/portfolio/Dionne_Kindra_697-MarquelYvette0085.jpg" alt="A professional woman with curly hair, smiling, dressed in a dark blazer and white top." loading="eager">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img src="images/portfolio/Nakeisha+Neal+Jones-0134+(1).jpg" alt="Female headshot for non-profit c suite employee" loading="eager">
+                        <img data-photo="gallery-2" src="images/portfolio/Nakeisha+Neal+Jones-0134+(1).jpg" alt="Female headshot for non-profit c suite employee" loading="eager">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img src="images/portfolio/Cerissa.jpg" alt="lawyer high-end headshot in MD, female" loading="lazy">
+                        <img data-photo="gallery-3" src="images/portfolio/Cerissa.jpg" alt="lawyer high-end headshot in MD, female" loading="lazy">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img src="images/portfolio/Thongpia-hughes_Gift_495-MarquelYvette0107-ig.jpg" alt="A woman with long brown hair smiling, wearing a pink sleeveless top and a delicate necklace with a small pendant, against a dark background." loading="lazy">
+                        <img data-photo="gallery-4" src="images/portfolio/Thongpia-hughes_Gift_495-MarquelYvette0107-ig.jpg" alt="A woman with long brown hair smiling, wearing a pink sleeveless top and a delicate necklace with a small pendant, against a dark background." loading="lazy">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img src="images/portfolio/Milestone-Title-0116.jpg" alt="Female lawyer in MD; premium headshot" loading="lazy">
+                        <img data-photo="gallery-5" src="images/portfolio/Milestone-Title-0116.jpg" alt="Female lawyer in MD; premium headshot" loading="lazy">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img src="images/portfolio/L+Carroll-0146+1.jpg" alt="male corporate headshot in DC" loading="lazy">
+                        <img data-photo="gallery-6" src="images/portfolio/L+Carroll-0146+1.jpg" alt="male corporate headshot in DC" loading="lazy">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img src="images/portfolio/Glynis.JPG" alt="Close-up portrait of an African-American woman with gray curly hair, wearing a beige top, earrings, and lipstick, against a dark background." loading="lazy">
+                        <img data-photo="gallery-7" src="images/portfolio/Glynis.JPG" alt="Close-up portrait of an African-American woman with gray curly hair, wearing a beige top, earrings, and lipstick, against a dark background." loading="lazy">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img src="images/portfolio/Newman_Tamara_832-MarquelYvette0072-ig.jpg" alt="A woman with curly brown hair, wearing a black sleeveless top, smiling against a white background." loading="lazy">
+                        <img data-photo="gallery-8" src="images/portfolio/Newman_Tamara_832-MarquelYvette0072-ig.jpg" alt="A woman with curly brown hair, wearing a black sleeveless top, smiling against a white background." loading="lazy">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img src="images/portfolio/Forbes_Lauryn_294-MarquelYvette0046.jpg" alt="Professional woman in striped shirt smiling" loading="lazy">
+                        <img data-photo="gallery-9" src="images/portfolio/Forbes_Lauryn_294-MarquelYvette0046.jpg" alt="Professional woman in striped shirt smiling" loading="lazy">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img src="images/portfolio/Lee_Eric_612-MarquelYvette0007+1.jpg" alt="Man with glasses in professional suit" loading="lazy">
+                        <img data-photo="gallery-10" src="images/portfolio/Lee_Eric_612-MarquelYvette0007+1.jpg" alt="Man with glasses in professional suit" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -193,7 +196,7 @@
             <div class="container">
                 <div class="testimonial-two-col">
                     <div class="testimonial-image">
-                        <img src="images/portfolio/Dennis_Jennifer_161-MarquelYvette0063-retouched.jpg" alt="Professional woman in white blazer" loading="lazy">
+                        <img data-photo="testimonial-featured" src="images/portfolio/Dennis_Jennifer_161-MarquelYvette0063-retouched.jpg" alt="Professional woman in white blazer" loading="lazy">
                     </div>
                     <div class="testimonial-content">
                         <blockquote>
@@ -232,21 +235,21 @@
                         <h3>CORPORATE<br>HEADSHOTS</h3>
                         <p>Corporate headshots should communicate confidence, credibility, and leadership.</p>
                         <div class="service-img-wrapper">
-                            <img src="images/portfolio/CS-0205_500px.jpg" alt="Corporate headshot" loading="lazy">
+                            <img data-photo="service-corporate" src="images/portfolio/CS-0205_500px.jpg" alt="Corporate headshot" loading="lazy">
                         </div>
                     </div>
                     <div class="service-card">
                         <h3>ACTOR<br>HEADSHOTS</h3>
                         <p>Your headshot is your first audition—make it unforgettable. Let's capture the look that gets you noticed and booked.</p>
                         <div class="service-img-wrapper">
-                            <img src="images/portfolio/Leonard_Taylor_331-MarquelYvette0050+500px.jpg" alt="Actor headshot" loading="lazy">
+                            <img data-photo="service-actor" src="images/portfolio/Leonard_Taylor_331-MarquelYvette0050+500px.jpg" alt="Actor headshot" loading="lazy">
                         </div>
                     </div>
                     <div class="service-card">
                         <h3>LINKEDIN<br>HEADSHOTS</h3>
                         <p>Before they read your resume, they see your photo.. Ensure your image presents you at your very best.</p>
                         <div class="service-img-wrapper">
-                            <img src="images/portfolio/Sireesha-Ganti-0103-(500px).jpg" alt="LinkedIn headshot" loading="lazy">
+                            <img data-photo="service-linkedin" src="images/portfolio/Sireesha-Ganti-0103-(500px).jpg" alt="LinkedIn headshot" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -259,12 +262,16 @@
         <!-- SECTION 7: Team Headshots -->
         <section class="team-headshots-section">
             <div class="container">
+                <h2 class="section-title">Team Headshots</h2>
+                <p class="team-intro">Time is precious and efficiency is essential.</p>
+                <p class="team-description">Team headshots are valuable and useful <strong>marketing tools</strong> for your company. Your clients want to know who they will be working with – impress them!</p>
+
                 <div class="team-images-grid">
                     <div class="team-image">
-                        <img src="images/portfolio/VOF+-+5X4+Images+(14+x+8.5+in).jpg" alt="Virginia Outdoors Foundation team headshots" loading="lazy">
+                        <img data-photo="team-1" src="images/portfolio/VOF+-+5X4+Images+(14+x+8.5+in).jpg" alt="Virginia Outdoors Foundation team headshots" loading="lazy">
                     </div>
                     <div class="team-image">
-                        <img src="images/portfolio/LinkVisum+(1920+×+1080+px)+(1).jpg" alt="LinkVisum team headshots" loading="lazy">
+                        <img data-photo="team-2" src="images/portfolio/LinkVisum+(1920+×+1080+px)+(1).jpg" alt="LinkVisum team headshots" loading="lazy">
                     </div>
                 </div>
 
@@ -283,21 +290,21 @@
                 <h2 class="section-title">Client Success Stories</h2>
                 <div class="testimonials-grid-3col">
                     <div class="testimonial-card">
-                        <img src="images/portfolio/Hovis_Catherine_403-MarquelYvette0013-original200px.jpg" alt="Cathy - Client testimonial" loading="lazy">
+                        <img data-photo="testimonial-1" src="images/portfolio/Hovis_Catherine_403-MarquelYvette0013-original200px.jpg" alt="Cathy - Client testimonial" loading="lazy">
                         <blockquote>
                             <p>"Fantastic all around experience. I am thrilled with my headshots and had a great time having them done. 100% recommend Marquel for professionalism of the process and end product."</p>
                             <cite>— Cathy</cite>
                         </blockquote>
                     </div>
                     <div class="testimonial-card">
-                        <img src="images/portfolio/Nancy+(200px).jpg" alt="Nancy - Client testimonial" loading="lazy">
+                        <img data-photo="testimonial-2" src="images/portfolio/Nancy+(200px).jpg" alt="Nancy - Client testimonial" loading="lazy">
                         <blockquote>
                             <p>"If you are looking for someone to bring out your best, Marquel is your photographer. She is professional and helps you relax in order to bring out your true essence. Highly recommend!"</p>
                             <cite>— Nancy</cite>
                         </blockquote>
                     </div>
                     <div class="testimonial-card">
-                        <img src="images/portfolio/Kahni+(200px).jpg" alt="Kahni - Client testimonial" loading="lazy">
+                        <img data-photo="testimonial-3" src="images/portfolio/DrBess0561_eras_medical_loudoun_marquelyvette_500by500.jpg" alt="Kahni - Client testimonial" loading="lazy">
                         <blockquote>
                             <p>"Marquel responded quickly and delivered print ready headshots. She has a level of professionalism and service that allows the session to flow easily! I highly recommend Marquel!"</p>
                             <cite>— Kahni</cite>
@@ -313,7 +320,7 @@
                 <h2 class="section-title">LOUDOUN COUNTY HEADSHOT PHOTOGRAPHER</h2>
                 <div class="about-two-col">
                     <div class="about-image">
-                        <img src="images/portfolio/Marquel+Headshots9093+1.jpg" alt="Marquel Forbes - Professional Headshot Photographer" loading="lazy">
+                        <img data-photo="about-photographer" src="images/portfolio/Marquel+Headshots9093+1.jpg" alt="Marquel Forbes - Professional Headshot Photographer" loading="lazy">
                     </div>
                     <div class="about-content">
                         <div class="bio-text">
@@ -334,7 +341,7 @@
                 <div class="process-steps">
                     <div class="process-step">
                         <div class="process-icon">
-                            <img src="images/backgrounds/4365245_date_schedule_calendar_event_icon.png" alt="Schedule icon" loading="lazy">
+                            <img data-photo="process-icon-2" src="images/backgrounds/4365245_date_schedule_calendar_event_icon.png" alt="Schedule icon" loading="lazy">
                         </div>
                         <h3>SCHEDULE</h3>
                         <p>Give the Calendar a Tap</p>
@@ -342,7 +349,7 @@
                     </div>
                     <div class="process-step">
                         <div class="process-icon">
-                            <img src="images/backgrounds/2622595_female_photographer_icon.png" alt="Photographer icon" loading="lazy">
+                            <img data-photo="process-icon-1" src="images/backgrounds/2622595_female_photographer_icon.png" alt="Photographer icon" loading="lazy">
                         </div>
                         <h3>SHOOT</h3>
                         <p>It's easier than it looks</p>
@@ -350,7 +357,7 @@
                     </div>
                     <div class="process-step">
                         <div class="process-icon">
-                            <img src="images/backgrounds/7680845_desktop_monitor_download_screen_device_icon.png" alt="Download icon" loading="lazy">
+                            <img data-photo="process-icon-3" src="images/backgrounds/7680845_desktop_monitor_download_screen_device_icon.png" alt="Download icon" loading="lazy">
                         </div>
                         <h3>DOWNLOAD</h3>
                         <p>Download Your Images</p>
@@ -367,7 +374,7 @@
                     <div class="service-card-detailed">
                         <h3>REALTOR Headshots</h3>
                         <p>Is your current headshot impressive? A polished, professional headshot helps you stand out in a crowded market.</p>
-                        <img src="images/portfolio/T-Fairfield-0297-(500px).jpg.jpg" alt="Realtor headshot" loading="lazy">
+                        <img data-photo="service-event" src="images/portfolio/T-Fairfield-0297-(500px).jpg.jpg" alt="Realtor headshot" loading="lazy">
                         <ul class="service-types">
                             <li>High-End Realtor Headshots</li>
                             <li>Realtor Portraits</li>
@@ -377,7 +384,7 @@
                     <div class="service-card-detailed">
                         <h3>Executive Headshots</h3>
                         <p>Authenticity is vital in executive headshots. Ensure that you communicate trust. Be perceived as an authority!</p>
-                        <img src="images/portfolio/James_Lia_397-MarquelYvette0012-ig.jpg" alt="Executive headshot" loading="lazy">
+                        <img data-photo="service-branding" src="images/portfolio/James_Lia_397-MarquelYvette0012-ig.jpg" alt="Executive headshot" loading="lazy">
                         <ul class="service-types">
                             <li>C Suite Headshots</li>
                             <li>Executive Portraits</li>
@@ -404,7 +411,7 @@
                 <h2 class="section-title">HIGH-END HEADSHOT PHOTOGRAPHER</h2>
                 <div class="location-two-col">
                     <div class="location-image">
-                        <img src="images/portfolio/Studio.jpg" alt="Marquel Yvette Photography Studio" loading="lazy">
+                        <img data-photo="about-studio" src="images/portfolio/Studio.jpg" alt="Marquel Yvette Photography Studio" loading="lazy">
                     </div>
                     <div class="location-content">
                         <p>My studio is in located in Chantilly, VA and my client come from all over the DC Metro area.</p>
@@ -524,7 +531,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column footer-brand">
-                    <img src="images/logos/MarquelYvette_Gold+White+Text+11-3-24.png" alt="Marquel Yvette Photography Logo" class="footer-logo">
+                    <img data-photo="logo-footer" src="images/logos/MarquelYvette_Gold+White+Text+11-3-24.png" alt="Marquel Yvette Photography Logo" class="footer-logo">
                     <p class="footer-tagline">Capturing life's precious moments with artistry and elegance</p>
                 </div>
 
