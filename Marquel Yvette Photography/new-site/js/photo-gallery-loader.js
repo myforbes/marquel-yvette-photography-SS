@@ -158,6 +158,22 @@
         });
       }
 
+      // Team photography page
+      if (photos.teamPhotographyPage) {
+        Object.entries(photos.teamPhotographyPage).forEach(([key, photo]) => {
+          // Skip the _comment field
+          if (key.startsWith('_')) return;
+
+          photoItems.push({
+            section: 'teamPhotographyPage',
+            key: key,
+            src: photo.src,
+            alt: photo.alt,
+            location: photo.usedOn || 'Team Photography Page'
+          });
+        });
+      }
+
       // Create photo items and add to gallery
       photoItems.forEach((photo, index) => {
         const photoItem = createPhotoItem(photo, index);
