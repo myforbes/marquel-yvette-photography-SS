@@ -453,7 +453,9 @@
             line-height: 1.8;
         }
 
-        /* Responsive */
+        /* Responsive Design - Mobile & Tablet Optimizations */
+
+        /* Tablet Landscape (1024px and below) */
         @media (max-width: 1024px) {
             .team-hero-container {
                 grid-template-columns: 1fr;
@@ -468,9 +470,30 @@
                 max-width: 600px;
                 margin: 0 auto;
             }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .team-grids-showcase {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .why-choose-highlights {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gift-features {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
         }
 
+        /* Tablet Portrait (768px and below) */
         @media (max-width: 768px) {
+            /* Hero Section */
             .team-hero {
                 min-height: auto;
                 padding: 100px 20px 60px;
@@ -478,6 +501,7 @@
 
             .team-hero h1 {
                 font-size: 2rem;
+                letter-spacing: 0.05em;
             }
 
             .team-hero-subtitle {
@@ -486,31 +510,280 @@
 
             .team-hero-description {
                 font-size: 1rem;
+                line-height: 1.7;
             }
 
             .hero-cta-group {
                 flex-direction: column;
+                gap: 15px;
             }
 
+            .cta-button-large {
+                padding: 16px 35px;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 350px;
+            }
+
+            /* Section Padding */
+            .benefits-section,
+            .how-it-works-section,
+            .portfolio-grid-section,
+            .why-choose-section,
+            .employee-gift-section {
+                padding: 60px 20px;
+            }
+
+            .final-cta-section {
+                padding: 70px 20px;
+            }
+
+            /* Section Titles */
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 35px;
+            }
+
+            /* Benefits Grid */
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .benefit-card {
+                padding: 35px 25px;
+            }
+
+            .benefit-icon {
+                font-size: 2.5rem;
+            }
+
+            .benefit-card h3 {
+                font-size: 1.2rem;
+            }
+
+            /* How It Works */
             .step {
                 flex-direction: column;
                 text-align: center;
+                gap: 20px;
             }
 
             .step-number {
                 margin: 0 auto;
+                min-width: 70px;
+                height: 70px;
+                font-size: 1.8rem;
             }
 
+            .step-content h3 {
+                font-size: 1.3rem;
+            }
+
+            .step-content p {
+                font-size: 1rem;
+            }
+
+            /* Portfolio Grids */
             .team-grids-showcase {
                 grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            /* Stats */
+            .why-choose-highlights {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
             }
 
             .highlight-stat {
                 font-size: 2rem;
             }
 
+            .highlight-label {
+                font-size: 1rem;
+            }
+
+            /* Gift Features */
+            .gift-features {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            /* Final CTA */
             .final-cta-section h2 {
                 font-size: 1.8rem;
+            }
+
+            .final-cta-section p {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Mobile (480px and below) */
+        @media (max-width: 480px) {
+            /* Hero Section */
+            .team-hero {
+                padding: 90px 15px 50px;
+            }
+
+            .team-hero h1 {
+                font-size: 1.6rem;
+                line-height: 1.3;
+            }
+
+            .team-hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .team-hero-description {
+                font-size: 0.95rem;
+            }
+
+            .team-hero-image-placeholder {
+                gap: 2px;
+                padding: 2px;
+            }
+
+            .team-hero-image-label {
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                padding: 12px 15px;
+            }
+
+            .team-hero-image-label p {
+                font-size: 0.8rem;
+            }
+
+            /* Section Padding */
+            .benefits-section,
+            .how-it-works-section,
+            .portfolio-grid-section,
+            .why-choose-section,
+            .employee-gift-section {
+                padding: 50px 15px;
+            }
+
+            .final-cta-section {
+                padding: 60px 15px;
+            }
+
+            /* Section Titles */
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+                line-height: 1.3;
+            }
+
+            /* Buttons */
+            .cta-button {
+                font-size: 0.9rem;
+                padding: 14px 30px;
+            }
+
+            .cta-button-large {
+                padding: 15px 30px;
+                font-size: 0.95rem;
+            }
+
+            /* Benefits */
+            .benefit-card {
+                padding: 30px 20px;
+            }
+
+            .benefit-icon {
+                font-size: 2.2rem;
+                margin-bottom: 15px;
+            }
+
+            .benefit-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .benefit-card p {
+                font-size: 0.95rem;
+            }
+
+            /* Steps */
+            .step {
+                margin-bottom: 40px;
+            }
+
+            .step-number {
+                min-width: 60px;
+                height: 60px;
+                font-size: 1.6rem;
+            }
+
+            .step-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .step-content p {
+                font-size: 0.95rem;
+            }
+
+            /* Stats - Stack on Mobile */
+            .why-choose-highlights {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .highlight-stat {
+                font-size: 2.5rem;
+            }
+
+            .highlight-label {
+                font-size: 0.95rem;
+            }
+
+            /* Gift Features */
+            .gift-feature i {
+                font-size: 2rem;
+            }
+
+            .gift-feature h4 {
+                font-size: 1rem;
+            }
+
+            .gift-feature p {
+                font-size: 0.9rem;
+            }
+
+            /* Final CTA */
+            .final-cta-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .final-cta-section p {
+                font-size: 1rem;
+            }
+
+            .final-cta-section > div {
+                flex-direction: column !important;
+            }
+        }
+
+        /* Touch Device Optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            /* Larger touch targets */
+            .cta-button {
+                min-height: 48px;
+                min-width: 48px;
+            }
+
+            /* Remove hover effects on touch devices */
+            .benefit-card:hover,
+            .team-grid-item:hover,
+            .hero-grid-cell:hover,
+            .grid-cell:hover {
+                transform: none;
+            }
+
+            /* Better spacing for touch */
+            .hero-cta-group {
+                gap: 20px;
             }
         }
     </style>
