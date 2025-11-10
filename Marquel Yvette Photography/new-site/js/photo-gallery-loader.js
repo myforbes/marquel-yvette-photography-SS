@@ -225,7 +225,7 @@
     fileInput.accept = 'image/*';
     fileInput.className = 'file-input';
 
-    fileInput.onchange = (e) => {
+    fileInput.onchange = async (e) => {
       const file = e.target.files[0];
       if (!file) return;
 
@@ -235,94 +235,140 @@
         return;
       }
 
-      // Read file and preview
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        // Update preview image
-        imgElement.src = event.target.result;
+      // Determine folder based on current path
+      let folder = 'images/portfolio/';
+      if (photoData.src.includes('banner-gallery')) {
+        folder = 'images/banner-gallery/';
+      } else if (photoData.src.includes('testimonials')) {
+        folder = 'images/testimonials/';
+      } else if (photoData.src.includes('logos')) {
+        folder = 'images/logos/';
+      } else if (photoData.src.includes('backgrounds')) {
+        folder = 'images/backgrounds/';
+      }
 
-        // Determine folder based on current path
-        let folder = 'images/portfolio/';
-        if (photoData.src.includes('banner-gallery')) {
-          folder = 'images/banner-gallery/';
-        } else if (photoData.src.includes('testimonials')) {
-          folder = 'images/testimonials/';
-        } else if (photoData.src.includes('logos')) {
-          folder = 'images/logos/';
-        } else if (photoData.src.includes('backgrounds')) {
-          folder = 'images/backgrounds/';
+      // Upload photo to server
+      const formData = new FormData();
+      formData.append('photo', file);
+      formData.append('section', photoData.section);
+      formData.append('key', photoData.key);
+      formData.append('folder', folder);
+
+      try {
+        // Show loading state
+        photoItem.style.opacity = '0.6';
+
+        const response = await fetch('http://localhost:3000/api/upload-photo', {
+          method: 'POST',
+          body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          // Update preview image
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            imgElement.src = event.target.result;
+          };
+          reader.readAsDataURL(file);
+
+          // Update config in memory
+          if (photosConfig[photoData.section] && photosConfig[photoData.section][photoData.key]) {
+            photosConfig[photoData.section][photoData.key].src = result.path;
+
+            // Track the update
+            updatedPhotos.set(`${photoData.section}.${photoData.key}`, {
+              oldPath: result.oldPath,
+              newPath: result.path,
+              file: file
+            });
+
+            // Mark as updated
+            photoItem.classList.add('updated');
+            photoItem.style.opacity = '1';
+            hasUpdates = true;
+
+            // Show deploy button and instructions
+            document.getElementById('deployBtn').classList.add('active');
+            document.getElementById('uploadInstructions').classList.add('active');
+
+            console.log(`✓ Photo uploaded and saved!`);
+            console.log(`  Section: ${photoData.section}.${photoData.key}`);
+            console.log(`  Old: ${result.oldPath}`);
+            console.log(`  New: ${result.path}`);
+            console.log(`  Location: ${photoData.location}`);
+          }
+        } else {
+          alert('Upload failed: ' + result.error);
+          photoItem.style.opacity = '1';
         }
-
-        // Generate new path with original filename or new filename
-        const newFileName = file.name;
-        const newPath = folder + newFileName;
-
-        // Update config in memory
-        if (photosConfig[photoData.section] && photosConfig[photoData.section][photoData.key]) {
-          const oldPath = photosConfig[photoData.section][photoData.key].src;
-          photosConfig[photoData.section][photoData.key].src = newPath;
-
-          // Track the update
-          updatedPhotos.set(`${photoData.section}.${photoData.key}`, {
-            oldPath: oldPath,
-            newPath: newPath,
-            file: file
-          });
-
-          // Mark as updated
-          photoItem.classList.add('updated');
-          hasUpdates = true;
-
-          // Show download button and instructions
-          document.getElementById('downloadConfigBtn').classList.add('active');
-          document.getElementById('uploadInstructions').classList.add('active');
-
-          console.log(`Updated: ${photoData.section}.${photoData.key}`);
-          console.log(`Old: ${oldPath}`);
-          console.log(`New: ${newPath}`);
-        }
-      };
-
-      reader.readAsDataURL(file);
+      } catch (error) {
+        console.error('Upload error:', error);
+        alert('Upload failed. Make sure the photo gallery server is running on port 3000.');
+        photoItem.style.opacity = '1';
+      }
     };
 
     // Trigger file selection
     fileInput.click();
   }
 
-  // Setup download button
+  // Setup deploy button
   function setupDownloadButton() {
-    const downloadBtn = document.getElementById('downloadConfigBtn');
+    const deployBtn = document.getElementById('deployBtn');
 
-    downloadBtn.onclick = () => {
+    deployBtn.onclick = async () => {
       if (!hasUpdates) {
-        alert('No updates to download');
+        alert('No updates to deploy');
         return;
       }
 
-      // Create downloadable JSON
-      const dataStr = JSON.stringify(photosConfig, null, 2);
-      const dataBlob = new Blob([dataStr], { type: 'application/json' });
+      if (!confirm('Deploy all changes to CloudFront? This will update your live website.')) {
+        return;
+      }
 
-      // Create download link
-      const url = URL.createObjectURL(dataBlob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = 'photos.json';
+      // Disable button and show loading
+      deployBtn.disabled = true;
+      deployBtn.textContent = 'Deploying...';
+      deployBtn.style.opacity = '0.6';
 
-      // Trigger download
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
+      try {
+        // Collect all updated file paths
+        const updatedFiles = Array.from(updatedPhotos.values()).map(update => update.newPath);
 
-      console.log('✓ Downloaded updated photos.json');
+        const response = await fetch('http://localhost:3000/api/deploy', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ updatedFiles })
+        });
 
-      // Show file upload summary
-      console.log('\n📸 Files to upload to S3:');
-      updatedPhotos.forEach((update, key) => {
-        console.log(`- ${update.file.name} → ${update.newPath}`);
-      });
+        const result = await response.json();
+
+        if (result.success) {
+          alert(`✅ Successfully deployed to CloudFront!\n\nInvalidation ID: ${result.invalidationId}\n\nYour live website will update in 1-2 minutes.`);
+
+          deployBtn.textContent = 'Deployed ✓';
+          deployBtn.style.background = '#4CAF50';
+
+          console.log('✓ Deployment complete!');
+          console.log(`  Invalidation ID: ${result.invalidationId}`);
+          console.log(`  Updated files:`, updatedFiles);
+        } else {
+          alert('Deployment failed: ' + result.error);
+          deployBtn.disabled = false;
+          deployBtn.textContent = 'Deploy to CloudFront';
+          deployBtn.style.opacity = '1';
+        }
+      } catch (error) {
+        console.error('Deploy error:', error);
+        alert('Deployment failed. Make sure the photo gallery server is running and AWS CLI is configured.');
+        deployBtn.disabled = false;
+        deployBtn.textContent = 'Deploy to CloudFront';
+        deployBtn.style.opacity = '1';
+      }
     };
   }
 

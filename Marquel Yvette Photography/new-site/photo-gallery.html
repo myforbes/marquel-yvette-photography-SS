@@ -58,6 +58,10 @@
             background: #e6b960;
         }
 
+        .download-config-btn:disabled {
+            cursor: not-allowed;
+        }
+
         .instructions {
             background: #2d2d2d;
             border: 2px solid #f4ca78;
@@ -212,24 +216,18 @@
     <div class="container">
         <div class="header-section">
             <h1>Portfolio Gallery</h1>
-            <button class="download-config-btn" id="downloadConfigBtn">Download Updated Config</button>
+            <button class="download-config-btn" id="deployBtn">Deploy to CloudFront</button>
         </div>
 
         <div class="instructions" id="uploadInstructions">
-            <h3>Next Steps: Upload Your Changes</h3>
+            <h3>✅ Photos Saved Locally!</h3>
+            <p style="color: #4CAF50; font-size: 1.1rem; margin-bottom: 15px;">Your photos have been automatically saved to the correct directories and <code>photos.json</code> has been updated.</p>
             <ol>
-                <li>Download the updated <code>photos.json</code> file using the button above</li>
-                <li>Upload your new image(s) to the appropriate folder in S3:
-                    <ul>
-                        <li>Portfolio photos → <code>s3://marquelyvette-website/images/portfolio/</code></li>
-                        <li>Banner gallery → <code>s3://marquelyvette-website/images/banner-gallery/</code></li>
-                        <li>Testimonials → <code>s3://marquelyvette-website/images/testimonials/</code></li>
-                    </ul>
-                </li>
-                <li>Upload the new <code>photos.json</code> to: <code>s3://marquelyvette-website/config/photos.json</code></li>
-                <li>Run: <code>aws cloudfront create-invalidation --distribution-id E50QXXWNUFNYT --paths "/config/photos.json"</code></li>
-                <li>Wait 1-2 minutes, then refresh your website to see the changes!</li>
+                <li><strong>Click "Deploy to CloudFront"</strong> to upload everything to S3 and update your live website</li>
+                <li>Wait 1-2 minutes for CloudFront cache invalidation</li>
+                <li>Your live website will automatically show the new photos!</li>
             </ol>
+            <p style="margin-top: 15px; color: #999; font-size: 0.9rem;">Or manually upload later using AWS CLI commands</p>
         </div>
 
         <div class="photo-grid">

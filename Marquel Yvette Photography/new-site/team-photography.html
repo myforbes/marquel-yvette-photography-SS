@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Team Photography Services | Professional Headshots On-Site | Marquel Yvette Photography</title>
+    <meta name="description" content="Professional team photography services in Loudoun County, VA. We come to you for efficient, stress-free team headshots. Perfect employee gift and morale booster.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Google Fonts - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <style>
+        /* Team Photography Specific Styles */
+
+        .team-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            color: white;
+            padding: 120px 20px 80px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            min-height: 600px;
+        }
+
+        .team-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(244,202,120,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .team-hero-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .team-hero-content {
+            text-align: left;
+        }
+
+        .team-hero-image {
+            position: relative;
+            aspect-ratio: 4 / 3;
+            background: #2c2c2c;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .team-hero-image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 3px;
+            padding: 3px;
+            background: #1a1a1a;
+        }
+
+        .hero-grid-cell {
+            background: linear-gradient(135deg, #4a4a4a 0%, #3d3d3d 100%);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-grid-cell:hover {
+            background: linear-gradient(135deg, #5a5a5a 0%, #4d4d4d 100%);
+            transform: scale(0.95);
+        }
+
+        .team-hero-image-label {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(26, 26, 26, 0.9);
+            padding: 15px 20px;
+            border-radius: 6px;
+            border-left: 4px solid #f4ca78;
+        }
+
+        .team-hero-image-label p {
+            color: #f4ca78;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+        }
+
+        .team-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #f4ca78;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            line-height: 1.2;
+        }
+
+        .team-hero-subtitle {
+            font-size: 1.5rem;
+            color: #cccccc;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .team-hero-description {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button-large {
+            padding: 18px 40px;
+            font-size: 1.1rem;
+        }
+
+        .cta-button-outline {
+            background: transparent;
+            border: 2px solid #f4ca78;
+            color: #f4ca78;
+        }
+
+        .cta-button-outline:hover {
+            background: #f4ca78;
+            color: #1a1a1a;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 80px 20px;
+            background: #f8f8f8;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            color: #f4ca78;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            color: #2c2c2c;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .benefit-card p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        /* How It Works Section */
+        .how-it-works-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .steps-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            min-width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f4ca78 0%, #b9914d 100%);
+            color: #1a1a1a;
+            font-size: 2rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 1.5rem;
+            color: #2c2c2c;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .step-content p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Portfolio Grid Section */
+        .portfolio-grid-section {
+            padding: 80px 20px;
+            background: #1a1a1a;
+        }
+
+        .portfolio-grid-section .section-title {
+            color: #f4ca78;
+        }
+
+        .portfolio-grid-section p {
+            text-align: center;
+            color: #cccccc;
+            max-width: 700px;
+            margin: -20px auto 50px;
+            font-size: 1.1rem;
+        }
+
+        .team-grids-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .team-grid-item {
+            background: #2c2c2c;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .team-grid-item:hover {
+            transform: scale(1.02);
+        }
+
+        .team-grid-placeholder {
+            aspect-ratio: 16 / 9;
+            background: #3d3d3d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-preview {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 2px;
+            padding: 2px;
+        }
+
+        .grid-cell {
+            background: linear-gradient(135deg, #4a4a4a 0%, #3d3d3d 100%);
+            border-radius: 4px;
+        }
+
+        .team-grid-label {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .team-grid-label h4 {
+            color: #f4ca78;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .team-grid-label p {
+            color: #999;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* Why Choose Section */
+        .why-choose-section {
+            padding: 80px 20px;
+            background: #f4ca78;
+        }
+
+        .why-choose-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .why-choose-section .section-title {
+            color: #1a1a1a;
+        }
+
+        .why-choose-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .highlight-item {
+            text-align: center;
+        }
+
+        .highlight-stat {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .highlight-label {
+            font-size: 1.1rem;
+            color: #2c2c2c;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Employee Gift Section */
+        .employee-gift-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .gift-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .gift-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .gift-feature {
+            text-align: center;
+        }
+
+        .gift-feature i {
+            font-size: 2.5rem;
+            color: #f4ca78;
+            margin-bottom: 15px;
+        }
+
+        .gift-feature h4 {
+            font-size: 1.1rem;
+            color: #2c2c2c;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .gift-feature p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .final-cta-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+            text-align: center;
+        }
+
+        .final-cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .final-cta-section h2 {
+            font-size: 2.5rem;
+            color: #f4ca78;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .final-cta-section p {
+            color: #cccccc;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .team-hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .team-hero-content {
+                text-align: center;
+            }
+
+            .team-hero-image {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-hero {
+                min-height: auto;
+                padding: 100px 20px 60px;
+            }
+
+            .team-hero h1 {
+                font-size: 2rem;
+            }
+
+            .team-hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .team-hero-description {
+                font-size: 1rem;
+            }
+
+            .hero-cta-group {
+                flex-direction: column;
+            }
+
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .step-number {
+                margin: 0 auto;
+            }
+
+            .team-grids-showcase {
+                grid-template-columns: 1fr;
+            }
+
+            .highlight-stat {
+                font-size: 2rem;
+            }
+
+            .final-cta-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="images/logos/MarquelYvette_Gold+Dk+Grey+Logo+11-3-24.png" alt="Marquel Yvette Photography" class="header-logo-img">
+            </a>
+
+            <nav class="header-menu">
+                <a href="rates-2.html" class="cta-button">SEE RATES & AVAILABILITY</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="team-hero">
+            <div class="team-hero-container">
+                <div class="team-hero-content">
+                    <h1>Professional Team Photography</h1>
+                    <p class="team-hero-subtitle">We Come to You. Simple. Efficient. Stress-Free.</p>
+                    <p class="team-hero-description">
+                        Elevate your company's professional image with cohesive, high-quality team headshots.
+                        I bring the studio to your office, making it effortless for your entire team to get
+                        polished, professional photos—all in one convenient session.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="#contact" class="cta-button cta-button-large">Get a Custom Quote</a>
+                        <a href="#how-it-works" class="cta-button cta-button-large cta-button-outline">See How It Works</a>
+                    </div>
+                </div>
+
+                <div class="team-hero-image">
+                    <!-- Replace this placeholder with actual team grid photo -->
+                    <div class="team-hero-image-placeholder">
+                        <div class="hero-grid-cell"></div>
+                        <div class="hero-grid-cell"></div>
+                        <div class="hero-grid-cell"></div>
+                        <div class="hero-grid-cell"></div>
+                        <div class="hero-grid-cell"></div>
+                        <div class="hero-grid-cell"></div>
+                        <div class="hero-grid-cell"></div>
+                        <div class="hero-grid-cell"></div>
+                        <div class="hero-grid-cell"></div>
+                        <div class="hero-grid-cell"></div>
+                        <div class="hero-grid-cell"></div>
+                        <div class="hero-grid-cell"></div>
+                    </div>
+                    <div class="team-hero-image-label">
+                        <p>Example: 12-Person Team Grid • Replace with Your Photo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="section-title">Why Companies Choose On-Site Team Photography</h2>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>We Come to You</h3>
+                        <p>No need for your team to travel. I bring professional studio-quality equipment directly to your office, saving everyone time and hassle.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Efficient & Fast</h3>
+                        <p>Minimal disruption to your workday. Each team member gets professional photos in just 10-15 minutes with my streamlined process.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Consistent Branding</h3>
+                        <p>Unified look across your entire team's headshots. Perfect for websites, LinkedIn, marketing materials, and company directories.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3>Employee Morale Boost</h3>
+                        <p>Professional headshots are a valuable employee perk that shows you invest in your team's professional development and personal brand.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>Expert Guidance</h3>
+                        <p>I coach everyone through posing and expressions—even those who are camera-shy. Everyone looks confident and professional.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3>Quick Turnaround</h3>
+                        <p>Professionally retouched images delivered within 7-10 business days. All files optimized for print, web, and social media.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-section" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Schedule Your Session</h3>
+                            <p>Contact me for a custom quote based on your team size. We'll find a date that works for your schedule—I'm flexible and can accommodate multiple days if needed for larger teams.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>I Arrive & Set Up</h3>
+                            <p>I bring all professional equipment to your location. Setup takes about 30 minutes in a conference room or designated space. Your team continues working until it's their turn.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Quick, Professional Sessions</h3>
+                            <p>Each team member spends just 10-15 minutes with me. I guide them through poses and capture multiple professional shots. No stress, no awkwardness—just great results.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Review & Select</h3>
+                            <p>Your team views their proofs in a private online gallery. They can select their favorite shots, and I handle all professional retouching.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Receive Polished Images</h3>
+                            <p>Within 7-10 business days, receive all final, professionally retouched images. High-resolution files ready for any use—website, social media, print, or email signatures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid Section -->
+        <section class="portfolio-grid-section">
+            <div class="container">
+                <h2 class="section-title">Team Photography Grids We've Created</h2>
+                <p>Professional, cohesive team photos that elevate your company's brand and showcase your talented team.</p>
+
+                <div class="team-grids-showcase">
+                    <!-- Grid Placeholder 1 -->
+                    <div class="team-grid-item">
+                        <div class="team-grid-placeholder">
+                            <div class="grid-preview">
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                            </div>
+                        </div>
+                        <div class="team-grid-label">
+                            <h4>8-Person Team Grid</h4>
+                            <p>Professional Services Firm</p>
+                        </div>
+                    </div>
+
+                    <!-- Grid Placeholder 2 -->
+                    <div class="team-grid-item">
+                        <div class="team-grid-placeholder">
+                            <div class="grid-preview">
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                            </div>
+                        </div>
+                        <div class="team-grid-label">
+                            <h4>Executive Leadership</h4>
+                            <p>Tech Startup</p>
+                        </div>
+                    </div>
+
+                    <!-- Grid Placeholder 3 -->
+                    <div class="team-grid-item">
+                        <div class="team-grid-placeholder">
+                            <div class="grid-preview">
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                            </div>
+                        </div>
+                        <div class="team-grid-label">
+                            <h4>Sales Team</h4>
+                            <p>Real Estate Agency</p>
+                        </div>
+                    </div>
+
+                    <!-- Grid Placeholder 4 -->
+                    <div class="team-grid-item">
+                        <div class="team-grid-placeholder">
+                            <div class="grid-preview">
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                                <div class="grid-cell"></div>
+                            </div>
+                        </div>
+                        <div class="team-grid-label">
+                            <h4>Full Department</h4>
+                            <p>Marketing Agency</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Section -->
+        <section class="why-choose-section">
+            <div class="container">
+                <div class="why-choose-content">
+                    <h2 class="section-title">The Numbers Speak for Themselves</h2>
+
+                    <div class="why-choose-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-stat">50+</div>
+                            <div class="highlight-label">Companies Served</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-stat">500+</div>
+                            <div class="highlight-label">Professionals Photographed</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-stat">10-15</div>
+                            <div class="highlight-label">Minutes Per Person</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-stat">7-10</div>
+                            <div class="highlight-label">Day Turnaround</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Employee Gift Section -->
+        <section class="employee-gift-section">
+            <div class="container">
+                <div class="gift-content">
+                    <h2 class="section-title">More Than Photos—It's an Investment in Your Team</h2>
+                    <p style="font-size: 1.15rem; color: #666; line-height: 1.8; margin-bottom: 20px;">
+                        Professional headshots are a meaningful employee benefit that demonstrates you value
+                        your team's professional growth and personal brand. It's a gift that keeps giving.
+                    </p>
+
+                    <div class="gift-features">
+                        <div class="gift-feature">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Career Development</h4>
+                            <p>Help your team build their professional brand with polished headshots for LinkedIn and industry profiles.</p>
+                        </div>
+
+                        <div class="gift-feature">
+                            <i class="fas fa-heart"></i>
+                            <h4>Boosts Morale</h4>
+                            <p>Shows employees you're invested in their success and professional image—a thoughtful, appreciated perk.</p>
+                        </div>
+
+                        <div class="gift-feature">
+                            <i class="fas fa-building"></i>
+                            <h4>Strengthens Culture</h4>
+                            <p>Creates a unified, professional company image while celebrating each individual on your team.</p>
+                        </div>
+
+                        <div class="gift-feature">
+                            <i class="fas fa-trophy"></i>
+                            <h4>Attracts Talent</h4>
+                            <p>Professional team photos on your website and social media show you're a company that values excellence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta-section" id="contact">
+            <div class="final-cta-content">
+                <h2>Ready to Invest in Your Team?</h2>
+                <p>Let's create professional, cohesive headshots that elevate your company's brand and give your team the gift of a polished professional image.</p>
+
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="cta-button cta-button-large">Request a Custom Quote</a>
+                    <a href="tel:+17039570643" class="cta-button cta-button-large cta-button-outline">Call (703) 957-0643</a>
+                </div>
+
+                <p style="margin-top: 30px; font-size: 1rem; color: #999;">
+                    Serving DC Metro Area • On-Site at Your Location • Flexible Scheduling
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-brand">
+                    <img src="images/logos/MarquelYvette_Gold+White+Text+11-3-24.png" alt="Marquel Yvette Photography Logo" class="footer-logo">
+                    <p class="footer-tagline">Capturing life's precious moments with artistry and elegance</p>
+                </div>
+
+                <div class="footer-column footer-contact">
+                    <h3>Contact</h3>
+                    <p><strong>Phone:</strong> <a href="tel:+17039570643">(703) 957-0643</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:marquel@marquelyvette.com">marquel@marquelyvette.com</a></p>
+                    <p><strong>Location:</strong> Chantilly, VA<br>Serving DC Metro Area</p>
+                </div>
+
+                <div class="footer-column footer-cta">
+                    <h3>Ready to Book?</h3>
+                    <p>Let's create stunning headshots that showcase your best self</p>
+                    <a href="rates-2.html" class="cta-button">Book Your Session</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/marquelyvettephoto" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/marquelyvettephotography" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marquelforbes" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                <div class="footer-legal">
+                    <p>&copy; 2025 Marquel Yvette Photography. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="tos.html">Terms of Service</a>
+                        <a href="disclaimer.html">Disclaimer</a>
+                        <a href="website-accessibility-statement.html">Accessibility</a>
+                        <a href="copyright.html">Copyright</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/meta-loader.js"></script>
+    <script src="js/menu.js" defer></script>
+</body>
+</html>

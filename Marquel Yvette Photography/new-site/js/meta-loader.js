@@ -1,101 +1,109 @@
 /**
  * Meta Tags Loader
- * Loads site configuration and injects meta tags into HTML head
+ * Dynamically loads page metadata from config/pages.json
+ * Manages SEO, Open Graph tags, and structured data per page
  */
 
 (function() {
     'use strict';
 
-    // Load configuration and inject meta tags
-    fetch('config/site-config.json')
+    // Determine current page
+    const currentPage = getCurrentPage();
+
+    // Load page metadata configuration
+    fetch('config/pages.json')
         .then(response => response.json())
-        .then(config => {
+        .then(pagesConfig => {
+            console.log('Loading page metadata from config...');
+
+            const pageData = pagesConfig[currentPage];
+            const globalData = pagesConfig.global;
+
+            if (!pageData) {
+                console.warn(`No metadata found for page: ${currentPage}`);
+                return;
+            }
+
             const head = document.head;
 
-            // Set page title
-            document.title = config.site.title;
+            // Update page title
+            if (pageData.title) {
+                document.title = pageData.title;
+            }
 
             // Create and inject meta tags
             const metaTags = [
                 // Basic meta tags
-                { name: 'description', content: config.site.description },
-                { name: 'keywords', content: config.seo.keywords },
-                { name: 'author', content: config.seo.author },
+                { name: 'description', content: pageData.description },
+                { name: 'keywords', content: pageData.keywords },
 
                 // Open Graph / Social Media
-                { property: 'og:site_name', content: config.openGraph.siteName },
-                { property: 'og:title', content: config.openGraph.title },
-                { property: 'og:description', content: config.openGraph.description },
-                { property: 'og:type', content: config.openGraph.type },
-                { property: 'og:url', content: config.openGraph.url },
-                { property: 'og:image', content: config.openGraph.image },
+                { property: 'og:site_name', content: globalData.businessName },
+                { property: 'og:title', content: pageData.ogTitle || pageData.title },
+                { property: 'og:description', content: pageData.ogDescription || pageData.description },
+                { property: 'og:type', content: 'website' },
+                { property: 'og:url', content: pageData.canonicalUrl || window.location.href },
+                { property: 'og:image', content: pageData.ogImage ? new URL(pageData.ogImage, window.location.origin).href : null },
 
                 // Twitter Card
                 { name: 'twitter:card', content: 'summary_large_image' },
-                { name: 'twitter:title', content: config.openGraph.title },
-                { name: 'twitter:description', content: config.openGraph.description },
-                { name: 'twitter:image', content: config.openGraph.image }
+                { name: 'twitter:title', content: pageData.ogTitle || pageData.title },
+                { name: 'twitter:description', content: pageData.ogDescription || pageData.description },
+                { name: 'twitter:image', content: pageData.ogImage ? new URL(pageData.ogImage, window.location.origin).href : null }
             ];
 
             // Inject meta tags
             metaTags.forEach(tag => {
+                if (!tag.content) return;
+
                 const meta = document.createElement('meta');
                 if (tag.name) meta.setAttribute('name', tag.name);
                 if (tag.property) meta.setAttribute('property', tag.property);
-                if (tag.content) meta.setAttribute('content', tag.content);
+                meta.setAttribute('content', tag.content);
                 head.appendChild(meta);
             });
 
-            // Update favicon
-            const favicon = document.querySelector('link[rel="icon"]');
-            if (favicon) {
-                favicon.href = config.assets.favicon;
+            // Update canonical URL
+            if (pageData.canonicalUrl) {
+                let canonical = document.querySelector('link[rel="canonical"]');
+                if (!canonical) {
+                    canonical = document.createElement('link');
+                    canonical.setAttribute('rel', 'canonical');
+                    head.appendChild(canonical);
+                }
+                canonical.setAttribute('href', pageData.canonicalUrl);
             }
 
-            // Create Schema.org structured data
-            const schema = {
-                "@context": "https://schema.org",
-                "@type": config.business.type,
-                "name": config.business.name,
-                "description": config.business.description,
-                "image": config.business.logo,
-                "url": config.site.url,
-                "telephone": config.business.phone,
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": config.business.address.street,
-                    "addressLocality": config.business.address.city,
-                    "addressRegion": config.business.address.state,
-                    "postalCode": config.business.address.zip,
-                    "addressCountry": config.business.address.country
-                },
-                "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": config.business.location.latitude,
-                    "longitude": config.business.location.longitude
-                },
-                "openingHoursSpecification": {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": config.business.hours.days,
-                    "opens": config.business.hours.opens,
-                    "closes": config.business.hours.closes
-                },
-                "sameAs": [
-                    config.business.social.facebook,
-                    config.business.social.instagram,
-                    config.business.social.linkedin
-                ]
-            };
+            // Add structured data (JSON-LD) if present
+            if (pageData.structuredData) {
+                const script = document.createElement('script');
+                script.type = 'application/ld+json';
+                script.textContent = JSON.stringify(pageData.structuredData, null, 2);
+                head.appendChild(script);
+            }
 
-            // Inject Schema.org JSON-LD
-            const script = document.createElement('script');
-            script.type = 'application/ld+json';
-            script.textContent = JSON.stringify(schema, null, 2);
-            head.appendChild(script);
-
-            console.log('✓ Site configuration loaded successfully');
+            console.log(`✓ Metadata loaded for page: ${currentPage}`);
         })
         .catch(error => {
-            console.error('Error loading site configuration:', error);
+            console.error('Error loading page metadata:', error);
         });
+
+    // Helper: Determine current page
+    function getCurrentPage() {
+        const path = window.location.pathname;
+        const filename = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+
+        const pageMap = {
+            'index.html': 'homepage',
+            '': 'homepage',
+            '/': 'homepage',
+            'rates-2.html': 'rates',
+            'contact.html': 'contact',
+            'contact-thank-you.html': 'contactThankYou',
+            'request-proposal.html': 'requestProposal',
+            'team-photography.html': 'teamPhotography'
+        };
+
+        return pageMap[filename] || 'homepage';
+    }
 })();
