@@ -1,12 +1,10 @@
 {
   "_comment": "Photo Configuration - Update photo paths here to change images across the entire website",
   "_instructions": "To change a photo: 1) Upload new image to the appropriate folder, 2) Update the path below, 3) Refresh the website",
-
   "logo": {
     "header": "images/logos/MarquelYvette_Gold+Dk+Grey+Logo+11-3-24.png",
     "footer": "images/logos/MarquelYvette_Gold+White+Text+11-3-24.png"
   },
-
   "gallery": {
     "image1": {
       "src": "images/portfolio/Dionne_Kindra_697-MarquelYvette0085.jpg",
@@ -59,7 +57,6 @@
       "priority": "normal"
     }
   },
-
   "testimonials": {
     "featured": {
       "src": "images/portfolio/Dennis_Jennifer_161-MarquelYvette0063-retouched.jpg",
@@ -78,7 +75,6 @@
       "alt": "Dr. Bess"
     }
   },
-
   "services": {
     "corporate": {
       "src": "images/portfolio/CS-0205_500px.jpg",
@@ -93,7 +89,6 @@
       "alt": "LinkedIn headshot"
     }
   },
-
   "teamHeadshots": {
     "team1": {
       "src": "images/portfolio/VOF+-+5X4+Images+(14+x+8.5+in).jpg",
@@ -104,7 +99,6 @@
       "alt": "LinkVisum team headshots"
     }
   },
-
   "about": {
     "photographer": {
       "src": "images/portfolio/Marquel+Headshots9093+1.jpg",
@@ -115,7 +109,6 @@
       "alt": "Professional photography studio"
     }
   },
-
   "additionalServices": {
     "branding": {
       "src": "images/portfolio/James_Lia_397-MarquelYvette0012-ig.jpg",
@@ -130,7 +123,6 @@
       "alt": "Virtual gallery of headshots"
     }
   },
-
   "process": {
     "icon1": {
       "src": "images/backgrounds/2622595_female_photographer_icon.png",
@@ -145,7 +137,6 @@
       "alt": "Digital delivery icon"
     }
   },
-
   "bannerGallery": {
     "headshot1": {
       "src": "images/banner-gallery/headshot-1.jpg",
@@ -180,7 +171,6 @@
       "alt": "Professional headshot by Marquel Yvette Photography"
     }
   },
-
   "ratesTestimonials": {
     "testimonial1": {
       "src": "images/testimonials/zeigler.jpg",
@@ -191,11 +181,10 @@
       "alt": "J. Dennis"
     },
     "testimonial3": {
-      "src": "images/testimonials/everett.jpg",
+      "src": "images/testimonials/Legrand_Zhayer_and_glynis_766-0108-ig.jpg",
       "alt": "C. Everett"
     }
   },
-
   "contactPortfolio": {
     "image1": {
       "src": "images/portfolio/Dionne_Kindra_697-MarquelYvette0085.jpg",
@@ -214,7 +203,6 @@
       "alt": "Professional headshot"
     }
   },
-
   "thankYouPortfolio": {
     "image1": {
       "src": "images/portfolio/Dionne_Kindra_697-MarquelYvette0085.jpg",
@@ -239,6 +227,48 @@
     "image6": {
       "src": "images/portfolio/Hovis_Catherine_169-MarquelYvette0110.jpg",
       "alt": "Professional headshot"
+    }
+  },
+  "teamPhotographyPage": {
+    "_comment": "Team photography landing page images and placeholders",
+    "heroGrid": {
+      "src": "images/portfolio/team-hero-grid-placeholder.jpg",
+      "alt": "Example 12-person team grid - Replace with your team photo",
+      "layout": "4x3",
+      "description": "Hero section team grid placeholder (12 cells)",
+      "usedOn": "team-photography.html - Hero section"
+    },
+    "showcaseGrid1": {
+      "src": "images/portfolio/team-grid-8person-1.jpg",
+      "alt": "8-person team grid - Professional services firm",
+      "layout": "4x2",
+      "company": "Professional Services Firm",
+      "description": "8-person team grid example",
+      "usedOn": "team-photography.html - Portfolio grid section"
+    },
+    "showcaseGrid2": {
+      "src": "images/portfolio/team-grid-8person-2.jpg",
+      "alt": "Executive leadership team grid - Tech startup",
+      "layout": "4x2",
+      "company": "Tech Startup",
+      "description": "Executive leadership team example",
+      "usedOn": "team-photography.html - Portfolio grid section"
+    },
+    "showcaseGrid3": {
+      "src": "images/portfolio/team-grid-8person-3.jpg",
+      "alt": "Sales team grid - Real estate agency",
+      "layout": "4x2",
+      "company": "Real Estate Agency",
+      "description": "Sales team example",
+      "usedOn": "team-photography.html - Portfolio grid section"
+    },
+    "showcaseGrid4": {
+      "src": "images/portfolio/team-grid-8person-4.jpg",
+      "alt": "Full department grid - Marketing agency",
+      "layout": "4x2",
+      "company": "Marketing Agency",
+      "description": "Full department example",
+      "usedOn": "team-photography.html - Portfolio grid section"
     }
   }
 }
