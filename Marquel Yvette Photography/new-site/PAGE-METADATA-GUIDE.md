@@ -22,14 +22,14 @@ Pages are organized by key:
 - `contact` - contact.html
 - `contactThankYou` - contact-thank-you.html
 - `requestProposal` - request-proposal.html
-- `teamPhotography` - team-photography.html
+- `workplaceHeadshots` - workplace-headshots.html
 
 ### Step 3: Update the Metadata
 
-**Example:** Update the team photography page title
+**Example:** Update the workplace headshots page title
 
 ```json
-"teamPhotography": {
+"workplaceHeadshots": {
   "title": "NEW TITLE HERE | Marquel Yvette Photography",
   "description": "NEW DESCRIPTION HERE",
   "keywords": "new, keywords, here"
@@ -101,12 +101,12 @@ Pages are organized by key:
 }
 ```
 
-### Team Photography Page
+### Workplace Headshots Page
 
 ```json
-"teamPhotography": {
-  "title": "Team Photography Services | Marquel Yvette Photography",
-  "description": "Professional team photography services in Loudoun County, VA...",
+"workplaceHeadshots": {
+  "title": "Workplace Headshots | Professional On-Site Photography | Marquel Yvette Photography",
+  "description": "Professional workplace headshots in Loudoun County, VA...",
   "ogImage": "images/portfolio/team-grid.jpg",
   "stats": {
     "companiesServed": "50+",
@@ -171,7 +171,7 @@ The `global` section contains site-wide information:
 
 **Good Example:**
 ```
-"Team Photography Services | Marquel Yvette Photography"
+"Workplace Headshots | Professional On-Site Photography | Marquel Yvette Photography"
 ```
 
 ### Meta Descriptions
@@ -181,7 +181,7 @@ The `global` section contains site-wide information:
 
 **Good Example:**
 ```
-"Professional team photography services in Loudoun County, VA. We come to you for efficient, stress-free team headshots. Get a quote today!"
+"Professional workplace headshots in Loudoun County, VA. We come to you for efficient, stress-free employee headshots. Get a quote today!"
 ```
 
 ### Keywords
@@ -191,7 +191,7 @@ The `global` section contains site-wide information:
 
 **Good Example:**
 ```
-"team photography, corporate headshots, on-site photography, Loudoun County VA"
+"workplace headshots, corporate headshots, on-site photography, Loudoun County VA"
 ```
 
 ### Open Graph Images
@@ -245,7 +245,7 @@ The `global` section contains site-wide information:
 | Contact | `contact` | contact.html |
 | Thank You | `contactThankYou` | contact-thank-you.html |
 | Request Proposal | `requestProposal` | request-proposal.html |
-| Team Photography | `teamPhotography` | team-photography.html |
+| Workplace Headshots | `workplaceHeadshots` | workplace-headshots.html |
 
 ---
 

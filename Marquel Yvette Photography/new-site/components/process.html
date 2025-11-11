@@ -1,0 +1,18 @@
+<!-- Process Section Component -->
+<!-- Uses data from: data/content.json -> process -->
+<section class="process-section" data-component="process">
+    <div class="container">
+        <h2 class="section-title">{{process.title}}</h2>
+        <div class="process-steps">
+            <!-- Loop through process.steps -->
+            <div class="process-step">
+                <div class="process-icon">
+                    <img src="{{icon}}" alt="{{alt}}" loading="lazy">
+                </div>
+                <h3>{{title}}</h3>
+                <p>{{description}}</p>
+            </div>
+            <!-- End loop -->
+        </div>
+    </div>
+</section>

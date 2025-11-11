@@ -101,7 +101,7 @@
             'contact.html': 'contact',
             'contact-thank-you.html': 'contactThankYou',
             'request-proposal.html': 'requestProposal',
-            'team-photography.html': 'teamPhotography'
+            'workplace-headshots.html': 'workplaceHeadshots'
         };
 
         return pageMap[filename] || 'homepage';

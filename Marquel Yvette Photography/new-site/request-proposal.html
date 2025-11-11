@@ -59,115 +59,28 @@
         <!-- SECTION 3: Contact Form -->
         <section class="contact-form-section">
             <div class="container">
-                <div class="form-wrapper">
-                    <form id="proposal-form" class="proposal-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="first-name">First Name <span class="required">*</span></label>
-                                <input type="text" id="first-name" name="first-name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="last-name">Last Name <span class="required">*</span></label>
-                                <input type="text" id="last-name" name="last-name" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email Address <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number <span class="required">*</span></label>
-                                <input type="tel" id="phone" name="phone" placeholder="(703) 555-1234" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="company">Company/Organization (Optional)</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service-type">Type of Service <span class="required">*</span></label>
-                            <select id="service-type" name="service-type" required>
-                                <option value="">Select a service...</option>
-                                <option value="individual-headshot">Individual Headshot Session</option>
-                                <option value="team-headshots">Team Headshots (5-10 people)</option>
-                                <option value="corporate-event">Corporate Event Headshots (11-25 people)</option>
-                                <option value="large-team">Large Team Session (26+ people)</option>
-                                <option value="actor-headshots">Actor Headshots</option>
-                                <option value="linkedin-profile">LinkedIn Profile Photo</option>
-                                <option value="executive-portraits">Executive Portraits</option>
-                                <option value="other">Other (Please describe below)</option>
-                            </select>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="session-date">Preferred Session Date</label>
-                                <input type="date" id="session-date" name="session-date">
-                            </div>
-                            <div class="form-group">
-                                <label for="number-of-people">Number of People</label>
-                                <input type="number" id="number-of-people" name="number-of-people" min="1" placeholder="1">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="location-preference">Location Preference <span class="required">*</span></label>
-                            <select id="location-preference" name="location-preference" required>
-                                <option value="">Select location...</option>
-                                <option value="studio-chantilly">Studio in Chantilly, VA</option>
-                                <option value="on-location">On-Location at My Office</option>
-                                <option value="outdoor">Outdoor Location</option>
-                                <option value="flexible">Flexible / Not Sure</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="how-heard">How Did You Hear About Us?</label>
-                            <select id="how-heard" name="how-heard">
-                                <option value="">Select one...</option>
-                                <option value="google-search">Google Search</option>
-                                <option value="social-media">Social Media (Instagram/Facebook)</option>
-                                <option value="referral">Referral from a Friend/Colleague</option>
-                                <option value="linkedin">LinkedIn</option>
-                                <option value="previous-client">I'm a Previous Client</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Additional Details / Questions</label>
-                            <textarea id="message" name="message" rows="6" placeholder="Tell me more about your project, timeline, specific needs, or any questions you have..."></textarea>
-                        </div>
-
-                        <div class="form-group checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
-                                <span>Yes, I'd like to receive photography tips and special offers via email</span>
-                            </label>
-                        </div>
-
-                        <div class="form-actions">
-                            <button type="submit" class="cta-button cta-button-large">SUBMIT REQUEST</button>
-                        </div>
-
-                        <p class="form-note">We respect your privacy. Your information will never be shared with third parties.</p>
-                    </form>
-
-                    <!-- Success/Error Messages -->
-                    <div id="form-success" class="form-message form-success" style="display: none;">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>Thank you for your request!</h3>
-                        <p>I'll review your information and get back to you within 24 hours with a personalized proposal.</p>
-                    </div>
-
-                    <div id="form-error" class="form-message form-error" style="display: none;">
-                        <i class="fas fa-exclamation-circle"></i>
-                        <h3>Oops! Something went wrong.</h3>
-                        <p>Please try again or contact me directly at <a href="tel:+17039570643">(703) 957-0643</a></p>
+                <div class="form-wrapper" style="max-width: 800px; margin: 0 auto;">
+                    <!-- GHL Embedded Form -->
+                    <div style="min-height: 600px;">
+                        <iframe
+                            src="https://api.leadconnectorhq.com/widget/form/bV3K1OgeSUUvy4S1Qtsf"
+                            style="width:100%;height:100%;min-height:600px;border:none;border-radius:3px"
+                            id="inline-bV3K1OgeSUUvy4S1Qtsf"
+                            data-layout="{'id':'INLINE'}"
+                            data-trigger-type="alwaysShow"
+                            data-trigger-value=""
+                            data-activation-type="alwaysActivated"
+                            data-activation-value=""
+                            data-deactivation-type="neverDeactivate"
+                            data-deactivation-value=""
+                            data-form-name="Team Headshot Form"
+                            data-height="undefined"
+                            data-layout-iframe-id="inline-bV3K1OgeSUUvy4S1Qtsf"
+                            data-form-id="bV3K1OgeSUUvy4S1Qtsf"
+                            title="Team Headshot Form"
+                        >
+                        </iframe>
+                        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
                     </div>
                 </div>
             </div>
@@ -308,6 +221,5 @@
     <!-- JavaScript - Deferred for performance -->
     <script src="js/meta-loader.js"></script>
     <script src="js/menu.js" defer></script>
-    <script src="js/contact-form.js" defer></script>
 </body>
 </html>

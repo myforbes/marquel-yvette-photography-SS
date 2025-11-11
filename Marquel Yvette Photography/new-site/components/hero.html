@@ -1,0 +1,22 @@
+<!-- Hero Gallery Section -->
+<!-- Uses data from: data/content.json -> hero.gallery -->
+<section class="hero-section">
+    <div class="gallery-grid-wrapper" data-component="hero-gallery">
+        <!-- Gallery images loaded dynamically or from content.json -->
+        <div class="gallery-grid-item">
+            <div class="gallery-grid-item-wrapper">
+                <img src="{{image}}" alt="{{alt}}" loading="eager">
+            </div>
+        </div>
+        <!-- Repeat for each gallery item -->
+    </div>
+</section>
+
+<!-- Hero Title Section -->
+<!-- Uses data from: data/content.json -> hero -->
+<section class="hero-title-section" data-component="hero-title">
+    <div class="container">
+        <p class="hero-tagline">{{hero.tagline}}</p>
+        <h1 class="hero-h1">{{hero.title}}</h1>
+    </div>
+</section>

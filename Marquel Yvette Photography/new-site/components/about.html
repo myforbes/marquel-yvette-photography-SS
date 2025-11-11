@@ -1,0 +1,21 @@
+<!-- About Section Component -->
+<!-- Uses data from: data/content.json -> about -->
+<section class="about-section" data-component="about">
+    <div class="container">
+        <div class="about-two-col">
+            <div class="about-image">
+                <img src="{{about.image}}" alt="{{about.alt}}" loading="lazy">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">{{about.title}}</h2>
+                <div class="bio-text">
+                    <p>{{about.text.intro}}</p>
+                    <h2 style="display:inline;font-size:1.125rem;">{{about.text.highlight}}</h2><p style="display:inline"> </p>
+                    <!-- Loop through about.text.body -->
+                    <p>{{line}}</p>
+                    <!-- End loop -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

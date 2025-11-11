@@ -1,0 +1,41 @@
+<!-- FAQ Section Component -->
+<!-- Uses data from: data/content.json -> faq -->
+<section class="faq-section" data-component="faq">
+    <div class="container">
+        <h2 class="section-title">{{faq.title}}</h2>
+        <p class="faq-subtitle">{{faq.subtitle}}</p>
+
+        <div class="faq-grid">
+            <!-- Split items into two columns -->
+            <div class="faq-column">
+                <!-- Loop through first half of faq.items -->
+                <div class="faq-item">
+                    <input type="checkbox" class="faq-toggle" id="faq-{{index}}">
+                    <label for="faq-{{index}}" class="faq-question">
+                        {{question}}
+                        <span class="faq-icon">+</span>
+                    </label>
+                    <div class="faq-answer">
+                        <p>{{answer}}</p>
+                    </div>
+                </div>
+                <!-- End loop -->
+            </div>
+
+            <div class="faq-column">
+                <!-- Loop through second half of faq.items -->
+                <div class="faq-item">
+                    <input type="checkbox" class="faq-toggle" id="faq-{{index}}">
+                    <label for="faq-{{index}}" class="faq-question">
+                        {{question}}
+                        <span class="faq-icon">+</span>
+                    </label>
+                    <div class="faq-answer">
+                        <p>{{answer}}</p>
+                    </div>
+                </div>
+                <!-- End loop -->
+            </div>
+        </div>
+    </div>
+</section>

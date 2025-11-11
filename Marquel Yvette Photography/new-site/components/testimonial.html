@@ -1,0 +1,36 @@
+<!-- Featured Testimonial Component -->
+<!-- Uses data from: data/content.json -> testimonials.featured -->
+<section class="testimonial-featured" data-component="testimonial-featured">
+    <div class="container">
+        <div class="testimonial-two-col">
+            <div class="testimonial-image">
+                <img src="{{testimonials.featured.image}}" alt="{{testimonials.featured.alt}}" loading="lazy">
+            </div>
+            <div class="testimonial-content">
+                <blockquote>
+                    <p>"{{testimonials.featured.quote}}"</p>
+                    <cite>— {{testimonials.featured.author}}</cite>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Client Success Stories Grid -->
+<!-- Uses data from: data/content.json -> testimonials.grid -->
+<section class="success-stories-section" data-component="testimonials-grid">
+    <div class="container">
+        <h2 class="section-title">Client Success Stories</h2>
+        <div class="testimonials-grid-3col">
+            <!-- Loop through testimonials.grid -->
+            <div class="testimonial-card">
+                <img src="{{image}}" alt="{{alt}}" loading="lazy">
+                <blockquote>
+                    <p>"{{quote}}"</p>
+                    <cite>— {{author}}</cite>
+                </blockquote>
+            </div>
+            <!-- End loop -->
+        </div>
+    </div>
+</section>

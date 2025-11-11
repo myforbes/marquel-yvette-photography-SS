@@ -1,0 +1,39 @@
+<!-- Primary Services Grid Component -->
+<!-- Uses data from: data/content.json -> services.primary -->
+<section class="services-grid-section" data-component="services-primary">
+    <div class="container">
+        <div class="services-grid-3col">
+            <!-- Loop through services.primary -->
+            <div class="service-card">
+                <img src="{{image}}" alt="{{alt}}" loading="lazy">
+                <h3>{{title}}</h3>
+                <p>{{description}}</p>
+            </div>
+            <!-- End loop -->
+        </div>
+        <div class="services-cta">
+            <a href="{{cta.url}}" class="cta-button">{{cta.text}}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Services Component -->
+<!-- Uses data from: data/content.json -> services.additional -->
+<section class="additional-services-section" data-component="services-additional">
+    <div class="container">
+        <div class="services-grid-3col">
+            <!-- Loop through services.additional -->
+            <div class="service-card-detailed">
+                <img src="{{image}}" alt="{{alt}}" loading="lazy">
+                <h3>{{title}}</h3>
+                <p>{{description}}</p>
+                <ul class="service-types">
+                    <!-- Loop through types -->
+                    <li>{{type}}</li>
+                    <!-- End loop -->
+                </ul>
+            </div>
+            <!-- End loop -->
+        </div>
+    </div>
+</section>

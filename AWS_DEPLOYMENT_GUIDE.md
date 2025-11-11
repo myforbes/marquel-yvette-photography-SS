@@ -421,15 +421,60 @@ aws cloudfront create-invalidation --distribution-id YOUR_ID --paths "/*"
 
 ---
 
+## Deployment Status
+
+### ✅ Completed Deployments
+
+**Initial Deployment:** November 2, 2025
+- Vanilla JS rebuild deployed
+- Squarespace framework removed
+- 97% JavaScript reduction achieved
+
+**Recent Deployment:** November 11, 2025 at 22:46 UTC
+- Mobile and tablet optimizations
+- Team photography landing page
+- Photo gallery system
+- Request proposal forms
+- Contact pages
+- All recent features and bug fixes
+
+**Current Configuration:**
+- **S3 Bucket:** marquelyvette-website
+- **CloudFront Distribution:** E50QXXWNUFNYT
+- **CloudFront URL:** https://d1pqc8zade8idc.cloudfront.net
+- **Live Site:** https://www.marquelyvette.com
+- **Latest Invalidation:** I3T9DRQYBRSZ9S4IDREMEVYGCQ (Completed)
+- **Git Branch:** rebuild-vanilla-js (synced with origin)
+
+---
+
 ## Next Steps
 
+### Initial Setup (Completed)
 1. ✅ Create S3 bucket
 2. ✅ Upload optimized files
 3. ✅ Request SSL certificate
 4. ✅ Create CloudFront distribution
 5. ✅ Configure DNS
 6. ✅ Test deployment
-7. ✅ Cancel Squarespace subscription
+7. ⏳ Cancel Squarespace subscription (optional)
+
+### Future Deployments
+
+Use this quick deploy command:
+```bash
+# From project root
+cd "Marquel Yvette Photography/new-site"
+
+# Sync to S3
+aws s3 sync . s3://marquelyvette-website/ \
+  --delete --exclude ".DS_Store" --exclude "*.md"
+
+# Invalidate cache
+aws cloudfront create-invalidation \
+  --distribution-id E50QXXWNUFNYT \
+  --paths "/*"
+```
 
 **Questions?** Refer to AWS documentation:
 - S3: https://docs.aws.amazon.com/s3/
@@ -438,6 +483,6 @@ aws cloudfront create-invalidation --distribution-id YOUR_ID --paths "/*"
 
 ---
 
-**Good luck with your deployment!** 🚀
+**Deployment successful!** 🚀
 
-Last updated: November 2025
+Last updated: November 11, 2025

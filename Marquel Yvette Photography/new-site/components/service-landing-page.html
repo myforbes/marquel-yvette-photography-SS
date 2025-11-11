@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Meta tags will be populated by JavaScript -->
+    <title id="page-title">Service | Marquel Yvette Photography</title>
+    <meta name="description" id="page-description" content="">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Google Fonts - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <style>
+        /* Service Landing Page Styles */
+
+        .service-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            color: white;
+            padding: 120px 20px 80px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            min-height: 600px;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(244,202,120,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .service-hero-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .service-hero-content {
+            text-align: left;
+        }
+
+        .service-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #f4ca78;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            line-height: 1.2;
+        }
+
+        .service-hero-subtitle {
+            font-size: 1.5rem;
+            color: #cccccc;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .service-hero-description {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-button-large {
+            padding: 18px 40px;
+            font-size: 1.1rem;
+        }
+
+        .cta-button-outline {
+            background: transparent;
+            border: 2px solid #f4ca78;
+            color: #f4ca78;
+        }
+
+        .cta-button-outline:hover {
+            background: #f4ca78;
+            color: #1a1a1a;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 80px 20px;
+            background: #f8f8f8;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            color: #f4ca78;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            color: #2c2c2c;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .benefit-card p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        /* How It Works Section */
+        .how-it-works-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .steps-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            min-width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f4ca78 0%, #b9914d 100%);
+            color: #1a1a1a;
+            font-size: 2rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 1.5rem;
+            color: #2c2c2c;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .step-content p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Why Choose Section */
+        .why-choose-section {
+            padding: 80px 20px;
+            background: #f4ca78;
+        }
+
+        .why-choose-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .why-choose-section .section-title {
+            color: #1a1a1a;
+        }
+
+        .why-choose-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .highlight-item {
+            text-align: center;
+        }
+
+        .highlight-stat {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .highlight-label {
+            font-size: 1.1rem;
+            color: #2c2c2c;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Final CTA Section */
+        .final-cta-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+            text-align: center;
+        }
+
+        .final-cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .final-cta-section h2 {
+            font-size: 2.5rem;
+            color: #f4ca78;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .final-cta-section p {
+            color: #cccccc;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .service-hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .service-hero-content {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .service-hero {
+                min-height: auto;
+                padding: 100px 20px 60px;
+            }
+
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .benefits-section,
+            .how-it-works-section,
+            .why-choose-section {
+                padding: 60px 20px;
+            }
+
+            .final-cta-section {
+                padding: 70px 20px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .step-number {
+                margin: 0 auto;
+            }
+
+            .hero-cta-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .cta-button-large {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service-hero {
+                padding: 90px 15px 50px;
+            }
+
+            .service-hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .why-choose-highlights {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="images/logos/MarquelYvette_Gold+Dk+Grey+Logo+11-3-24.png" alt="Marquel Yvette Photography" class="header-logo-img">
+            </a>
+
+            <nav class="header-menu">
+                <a href="rates-2.html" class="cta-button">SEE RATES & AVAILABILITY</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="service-hero">
+            <div class="service-hero-container">
+                <div class="service-hero-content">
+                    <h1 id="hero-title">Loading...</h1>
+                    <p class="service-hero-subtitle" id="hero-subtitle"></p>
+                    <p class="service-hero-description" id="hero-description"></p>
+                    <div class="hero-cta-group">
+                        <a href="#contact" class="cta-button cta-button-large">Get a Custom Quote</a>
+                        <a href="#how-it-works" class="cta-button cta-button-large cta-button-outline">See How It Works</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="section-title" id="benefits-title">Why Choose This Service</h2>
+                <div class="benefits-grid" id="benefits-grid">
+                    <!-- Benefits will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-section" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <div class="steps-container" id="steps-container">
+                    <!-- Steps will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Section -->
+        <section class="why-choose-section">
+            <div class="container">
+                <div class="why-choose-content">
+                    <h2 class="section-title" id="stats-title">The Numbers Speak for Themselves</h2>
+                    <div class="why-choose-highlights" id="stats-container">
+                        <!-- Stats will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta-section" id="contact">
+            <div class="final-cta-content">
+                <h2 id="cta-title">Ready to Get Started?</h2>
+                <p id="cta-description">Let's create something amazing together.</p>
+
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="cta-button cta-button-large">Request a Custom Quote</a>
+                    <a href="tel:+17039570643" class="cta-button cta-button-large cta-button-outline">Call (703) 957-0643</a>
+                </div>
+
+                <p style="margin-top: 30px; font-size: 1rem; color: #999;">
+                    Serving DC Metro Area • On-Site at Your Location • Flexible Scheduling
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column footer-brand">
+                    <img src="images/logos/MarquelYvette_Gold+White+Text+11-3-24.png" alt="Marquel Yvette Photography Logo" class="footer-logo">
+                    <p class="footer-tagline">Capturing life's precious moments with artistry and elegance</p>
+                </div>
+
+                <div class="footer-column footer-contact">
+                    <h3>Contact</h3>
+                    <p><strong>Phone:</strong> <a href="tel:+17039570643">(703) 957-0643</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:marquel@marquelyvette.com">marquel@marquelyvette.com</a></p>
+                    <p><strong>Location:</strong> Chantilly, VA<br>Serving DC Metro Area</p>
+                </div>
+
+                <div class="footer-column footer-cta">
+                    <h3>Ready to Book?</h3>
+                    <p>Let's create stunning headshots that showcase your best self</p>
+                    <a href="rates-2.html" class="cta-button">Book Your Session</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/marquelyvettephoto" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/marquelyvettephotography" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marquelforbes" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                <div class="footer-legal">
+                    <p>&copy; 2025 Marquel Yvette Photography. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="tos.html">Terms of Service</a>
+                        <a href="disclaimer.html">Disclaimer</a>
+                        <a href="website-accessibility-statement.html">Accessibility</a>
+                        <a href="copyright.html">Copyright</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/service-landing-loader.js"></script>
+    <script src="js/meta-loader.js"></script>
+    <script src="js/menu.js" defer></script>
+</body>
+</html>

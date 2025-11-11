@@ -229,46 +229,46 @@
       "alt": "Professional headshot"
     }
   },
-  "teamPhotographyPage": {
-    "_comment": "Team photography landing page images and placeholders",
+  "workplaceHeadshotsPage": {
+    "_comment": "Workplace headshots landing page images and placeholders",
     "heroGrid": {
       "src": "images/portfolio/team-hero-grid-placeholder.jpg",
-      "alt": "Example 12-person team grid - Replace with your team photo",
+      "alt": "Example 12-person workplace headshots grid - Replace with your team photo",
       "layout": "4x3",
-      "description": "Hero section team grid placeholder (12 cells)",
-      "usedOn": "team-photography.html - Hero section"
+      "description": "Hero section workplace headshots grid placeholder (12 cells)",
+      "usedOn": "workplace-headshots.html - Hero section"
     },
     "showcaseGrid1": {
       "src": "images/portfolio/team-grid-8person-1.jpg",
-      "alt": "8-person team grid - Professional services firm",
+      "alt": "8-person workplace headshots grid - Professional services firm",
       "layout": "4x2",
       "company": "Professional Services Firm",
-      "description": "8-person team grid example",
-      "usedOn": "team-photography.html - Portfolio grid section"
+      "description": "8-person workplace headshots grid example",
+      "usedOn": "workplace-headshots.html - Portfolio grid section"
     },
     "showcaseGrid2": {
       "src": "images/portfolio/team-grid-8person-2.jpg",
-      "alt": "Executive leadership team grid - Tech startup",
+      "alt": "Executive leadership workplace headshots grid - Tech startup",
       "layout": "4x2",
       "company": "Tech Startup",
-      "description": "Executive leadership team example",
-      "usedOn": "team-photography.html - Portfolio grid section"
+      "description": "Executive leadership workplace headshots example",
+      "usedOn": "workplace-headshots.html - Portfolio grid section"
     },
     "showcaseGrid3": {
       "src": "images/portfolio/team-grid-8person-3.jpg",
-      "alt": "Sales team grid - Real estate agency",
+      "alt": "Sales team workplace headshots grid - Real estate agency",
       "layout": "4x2",
       "company": "Real Estate Agency",
-      "description": "Sales team example",
-      "usedOn": "team-photography.html - Portfolio grid section"
+      "description": "Sales team workplace headshots example",
+      "usedOn": "workplace-headshots.html - Portfolio grid section"
     },
     "showcaseGrid4": {
       "src": "images/portfolio/team-grid-8person-4.jpg",
-      "alt": "Full department grid - Marketing agency",
+      "alt": "Full department workplace headshots grid - Marketing agency",
       "layout": "4x2",
       "company": "Marketing Agency",
-      "description": "Full department example",
-      "usedOn": "team-photography.html - Portfolio grid section"
+      "description": "Full department workplace headshots example",
+      "usedOn": "workplace-headshots.html - Portfolio grid section"
     }
   }
 }

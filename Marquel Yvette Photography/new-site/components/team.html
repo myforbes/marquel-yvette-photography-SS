@@ -1,0 +1,16 @@
+<!-- Team Headshots Component -->
+<!-- Uses data from: data/content.json -> team -->
+<section class="team-headshots-section" data-component="team">
+    <div class="container">
+        <h2 class="section-title">{{team.title}}</h2>
+        <p class="team-intro">{{team.intro}}</p>
+
+        <div class="team-images-grid">
+            <!-- Loop through team.images -->
+            <div class="team-image">
+                <img src="{{src}}" alt="{{alt}}" loading="lazy">
+            </div>
+            <!-- End loop -->
+        </div>
+    </div>
+</section>

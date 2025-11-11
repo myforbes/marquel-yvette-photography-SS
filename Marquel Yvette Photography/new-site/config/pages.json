@@ -101,21 +101,21 @@
   "requestProposal": {
     "title": "Request a Proposal | Marquel Yvette Photography",
     "description": "Request a custom photography proposal. Professional headshots in Loudoun County, VA serving the DC Metro area. Get a personalized quote today.",
-    "keywords": "photography proposal, custom quote, team headshots quote, corporate photography pricing, event headshots proposal",
+    "keywords": "photography proposal, custom quote, workplace headshots quote, corporate photography pricing, event headshots proposal",
     "ogTitle": "Request a Custom Photography Proposal | Marquel Yvette Photography",
-    "ogDescription": "Get a personalized proposal for your photography needs. Team headshots, corporate events, and more.",
+    "ogDescription": "Get a personalized proposal for your photography needs. Workplace headshots, corporate events, and more.",
     "ogImage": "images/portfolio/VOF+-+5X4+Images+(14+x+8.5+in).jpg",
     "canonicalUrl": "https://www.marquelyvette.com/request-proposal.html"
   },
 
-  "teamPhotography": {
-    "title": "Team Photography Services | Professional Headshots On-Site | Marquel Yvette Photography",
-    "description": "Professional team photography services in Loudoun County, VA. We come to you for efficient, stress-free team headshots. Perfect employee gift and morale booster.",
-    "keywords": "team photography, corporate team headshots, on-site headshots, company photography, employee headshots, team photo session, office photography",
-    "ogTitle": "Professional Team Photography | We Come to You | Marquel Yvette Photography",
-    "ogDescription": "Efficient, on-site team photography for companies in DC Metro area. Professional headshots that elevate your brand and boost employee morale.",
+  "workplaceHeadshots": {
+    "title": "Workplace Headshots | Professional On-Site Photography | Marquel Yvette Photography",
+    "description": "Professional workplace headshots in Loudoun County, VA. We come to you for efficient, stress-free employee headshots. Perfect employee gift and morale booster.",
+    "keywords": "workplace headshots, corporate headshots, on-site headshots, company photography, employee headshots, office photography, workplace photos",
+    "ogTitle": "Professional Workplace Headshots | We Come to You | Marquel Yvette Photography",
+    "ogDescription": "Efficient, on-site workplace headshots for companies in DC Metro area. Professional headshots that elevate your brand and boost employee morale.",
     "ogImage": "images/portfolio/VOF+-+5X4+Images+(14+x+8.5+in).jpg",
-    "canonicalUrl": "https://www.marquelyvette.com/team-photography.html",
+    "canonicalUrl": "https://www.marquelyvette.com/workplace-headshots.html",
     "benefits": [
       {
         "title": "We Come to You",

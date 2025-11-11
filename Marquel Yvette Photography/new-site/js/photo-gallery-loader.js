@@ -158,18 +158,18 @@
         });
       }
 
-      // Team photography page
-      if (photos.teamPhotographyPage) {
-        Object.entries(photos.teamPhotographyPage).forEach(([key, photo]) => {
+      // Workplace headshots page
+      if (photos.workplaceHeadshotsPage) {
+        Object.entries(photos.workplaceHeadshotsPage).forEach(([key, photo]) => {
           // Skip the _comment field
           if (key.startsWith('_')) return;
 
           photoItems.push({
-            section: 'teamPhotographyPage',
+            section: 'workplaceHeadshotsPage',
             key: key,
             src: photo.src,
             alt: photo.alt,
-            location: photo.usedOn || 'Team Photography Page'
+            location: photo.usedOn || 'Workplace Headshots Page'
           });
         });
       }
