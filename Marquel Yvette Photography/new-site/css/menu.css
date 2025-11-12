@@ -50,9 +50,9 @@ body.menu-open {
   overflow: hidden;
 }
 
-/* Mobile-specific adjustments */
-@media (max-width: 768px) {
-  /* Hide hamburger menu and navigation on mobile */
+/* Mobile and Tablet adjustments */
+@media (max-width: 1024px) {
+  /* Hide hamburger menu and navigation on mobile and tablet */
   .header-burger-btn {
     display: none;
   }
@@ -63,7 +63,7 @@ body.menu-open {
 }
 
 /* Desktop - menu should be visible (not slide-in) */
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   .header-menu {
     position: static;
     transform: none;

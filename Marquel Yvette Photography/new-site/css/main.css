@@ -121,7 +121,7 @@ a:hover {
     display: block;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     .site-header {
         padding: 6vw 0;
     }
