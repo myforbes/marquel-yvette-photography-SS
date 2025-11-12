@@ -103,7 +103,7 @@
 }
 
 .rates-package-card:hover .featured-label {
-    background-color: #d4af37;
+    background: linear-gradient(45deg, #f4ca78, #b9914d);
     color: #1a1a1a;
     transform: translateX(-50%) scale(1.02);
 }
@@ -170,7 +170,10 @@
 .package-price {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #d4af37; /* Gold price */
+    background: linear-gradient(45deg, #f4ca78, #b9914d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     line-height: 1;
     transition: all 0.3s ease;
 }
@@ -231,7 +234,7 @@
 .step-circle {
     width: 60px;
     height: 60px;
-    background-color: #d4af37;
+    background: linear-gradient(45deg, #f4ca78, #b9914d);
     color: #ffffff;
     font-size: 1.5rem;
     font-weight: 700;
@@ -295,7 +298,11 @@
     top: 20px;
     left: 20px;
     font-size: 3rem;
-    color: rgba(212, 175, 55, 0.3);
+    background: linear-gradient(45deg, #f4ca78, #b9914d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.3;
     line-height: 1;
     font-family: Georgia, serif;
 }
@@ -347,7 +354,10 @@
 .rates-final-cta h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #d4af37;
+    background: linear-gradient(45deg, #f4ca78, #b9914d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
@@ -365,7 +375,10 @@
 }
 
 .cta-contact a {
-    color: #d4af37;
+    background: linear-gradient(45deg, #f4ca78, #b9914d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-decoration: none;
     font-weight: 600;
 }
@@ -768,7 +781,7 @@
 }
 
 .modal-close:hover {
-    background-color: #d4af37;
+    background: linear-gradient(45deg, #f4ca78, #b9914d);
     transform: rotate(90deg);
 }
 
