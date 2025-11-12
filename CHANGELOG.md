@@ -5,6 +5,74 @@ All notable changes to this project are documented in this file.
 
 ---
 
+## [2.2.0] - November 12, 2025
+
+### 📱 Mobile Optimization & Bug Fixes
+
+#### Homepage (index.html)
+- **Fixed testimonials section overlap on mobile**
+  - Changed photo positioning from absolute to static
+  - Photos now display below testimonial text (no overlap)
+  - Names appear below photos with proper spacing
+  - Reduced quote mark sizes for mobile (80px → 50px)
+  - Center-aligned all content for better mobile layout
+  - Added proper spacing between elements
+- **Reduced title font sizes on mobile**
+  - Section titles: 1.8rem → 1rem on mobile (max-width: 768px)
+  - Service/Process titles: Reduced to 0.9rem on mobile
+  - Problem section titles: Reduced to 0.95rem on mobile
+  - Better visual hierarchy on small screens
+
+#### Pricing Page (rates-2.html)
+- **Gallery optimization for mobile**
+  - Show only 4 images on mobile (2x2 grid) instead of all 8
+  - Added 10px gap between images for better spacing
+  - 8px gap on small iPhones (max-width: 480px)
+- **Added horizontal padding throughout page**
+  - 15px left/right padding on tablets and mobile (max-width: 768px)
+  - 10px padding on small iPhones (max-width: 480px)
+  - Proper breathing room on all sections
+- **Optimized typography for mobile devices**
+  - Main title: 2rem → 1.5rem (768px), 1.3rem (480px)
+  - Subtitle: 1rem → 0.95rem (768px), 0.9rem (480px)
+  - Package titles: 1.5rem → 1.2rem (768px), 1.1rem (480px)
+  - Package descriptions: Reduced to 0.9rem-0.85rem
+  - Package details: 0.85rem-0.8rem on mobile
+  - Journey/testimonial titles: 1.5rem → 1.3rem on small screens
+- **Redesigned "What Clients Say" testimonials section**
+  - Updated to match live site design from screenshot
+  - CSS Grid layout with photo positioned on right (desktop)
+  - Light beige background color (#faf8f5)
+  - Semi-transparent gold quote marks
+  - Photo appears on right side of card spanning both rows
+  - Name appears below testimonial text on left side
+  - Single column layout on mobile (text → name → photo)
+  - Proper spacing and alignment across all breakpoints
+- **Optimized all sections for mobile**
+  - Journey steps with smaller circles and text
+  - Testimonials in single column with reduced sizes
+  - Better padding and spacing throughout
+  - Improved readability on small screens
+
+#### CSS Updates
+- **css/main.css**
+  - Fixed testimonials mobile layout (lines 1789-1830)
+  - Reduced title font sizes in mobile breakpoints
+  - Added proper responsive typography
+- **css/pricing.css**
+  - Added mobile-specific gallery hiding (lines 395-398)
+  - Implemented horizontal padding system for mobile
+  - Redesigned testimonials layout (lines 281-337)
+  - Added comprehensive mobile optimizations (lines 390-710)
+
+### 🔧 Technical Improvements
+- Improved mobile responsive design consistency
+- Better touch target sizing throughout
+- Enhanced visual hierarchy on small screens
+- Cleaner spacing and padding system
+
+---
+
 ## [2.1.0] - November 11, 2025
 
 ### 🚀 Deployed to Production
@@ -214,8 +282,8 @@ c01beb2 - Major performance optimization for home and rates pages
 - **Live Site:** https://www.marquelyvette.com
 - **CloudFront URL:** https://d1pqc8zade8idc.cloudfront.net
 - **Branch:** rebuild-vanilla-js
-- **Last Updated:** November 11, 2025
-- **Status:** ✅ Deployed and Live
+- **Last Updated:** November 12, 2025
+- **Status:** 🔄 Local Changes Ready for Deployment
 
 ---
 

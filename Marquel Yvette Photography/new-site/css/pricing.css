@@ -279,45 +279,61 @@
 }
 
 .testimonial-card-rate {
-    background-color: #fafafa;
-    border-left: 5px solid #d4af37;
+    background-color: #faf8f5;
+    border-left: 3px solid #d4af37;
     padding: 40px 30px;
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 15px 20px;
+    align-items: start;
 }
 
 .quote-mark {
-    font-size: 4rem;
-    color: #d4af37;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 3rem;
+    color: rgba(212, 175, 55, 0.3);
     line-height: 1;
     font-family: Georgia, serif;
-    margin-bottom: 20px;
 }
 
 .testimonial-text {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     font-size: 1rem;
     line-height: 1.8;
     color: #333333;
     font-style: italic;
-    margin-bottom: 30px;
+    margin: 0;
+    padding-left: 30px;
 }
 
 .testimonial-author {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: center;
 }
 
 .author-photo {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .author-name {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
     font-weight: 700;
     color: #1a1a1a;
     font-size: 0.95rem;
+    padding-left: 30px;
+    margin: 0;
 }
 
 /* Final CTA Section */
@@ -388,43 +404,308 @@
 }
 
 @media (max-width: 768px) {
+    /* Add horizontal padding to entire page on mobile */
+    .rates-hero-banner {
+        padding: 0 15px;
+    }
+
+    .banner-gallery-container {
+        padding: 0;
+    }
+
     .banner-headshots-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    /* Hide images 5-8 on mobile (show only first 4) */
+    .banner-headshots-grid img:nth-child(n+5) {
+        display: none;
     }
 
     .rates-intro-section {
-        padding: 60px 20px 40px;
+        padding: 40px 20px 30px;
+    }
+
+    .rates-intro-section .container {
+        padding: 0 15px;
     }
 
     .rates-main-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        letter-spacing: 0.5px;
     }
 
     .rates-subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .rates-packages-section {
+        padding: 10px 15px 60px;
+    }
+
+    .rates-packages-grid {
+        padding: 0;
     }
 
     .package-title {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+
+    .package-description {
+        font-size: 0.9rem;
+        min-height: auto;
+    }
+
+    .package-included {
+        padding: 20px 15px;
+        margin-bottom: 25px;
+    }
+
+    .package-included h3 {
+        font-size: 0.8rem;
+        margin-bottom: 12px;
+    }
+
+    .package-included p {
+        font-size: 0.85rem;
+        line-height: 1.6;
     }
 
     .package-pricing {
         flex-direction: column;
         gap: 20px;
         align-items: stretch;
+        padding-top: 15px;
+    }
+
+    .package-price {
+        font-size: 2rem;
     }
 
     .package-button {
         width: 100%;
         text-align: center;
+        padding: 13px 25px;
+        font-size: 0.9rem;
+    }
+
+    .session-journey-section {
+        padding: 50px 20px;
+    }
+
+    .session-journey-section .container {
+        padding: 0 15px;
+    }
+
+    .journey-title {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+
+    .journey-step h3 {
+        font-size: 1rem;
+    }
+
+    .journey-step p {
+        font-size: 0.85rem;
+    }
+
+    .testimonials-section {
+        padding: 50px 20px;
+    }
+
+    .testimonials-section .container {
+        padding: 0 15px;
+    }
+
+    .testimonials-title {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .testimonial-card-rate {
+        padding: 30px 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 15px;
+    }
+
+    .quote-mark {
+        font-size: 2.5rem;
+        top: 15px;
+        left: 15px;
+    }
+
+    .testimonial-text {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin: 0;
+        padding-left: 25px;
+    }
+
+    .testimonial-author {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        justify-content: flex-start;
+        padding-left: 25px;
+    }
+
+    .author-photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .author-name {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        padding-left: 25px;
+    }
+
+    .rates-final-cta {
+        padding: 50px 20px;
+    }
+
+    .rates-final-cta .container {
+        padding: 0 15px;
     }
 
     .rates-final-cta h2 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     .rates-final-cta p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further optimizations for small iPhones (iPhone SE, etc.) */
+    .rates-hero-banner {
+        padding: 0 10px;
+    }
+
+    .banner-headshots-grid {
+        gap: 8px;
+    }
+
+    .rates-intro-section .container {
+        padding: 0 10px;
+    }
+
+    .rates-main-title {
+        font-size: 1.3rem;
+    }
+
+    .rates-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .rates-packages-section {
+        padding: 5px 10px 40px;
+    }
+
+    .session-journey-section .container,
+    .testimonials-section .container {
+        padding: 0 10px;
+    }
+
+    .rates-package-card {
+        padding: 25px 20px;
+    }
+
+    .package-title {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .package-description {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    .package-included {
+        padding: 18px 12px;
+        margin-bottom: 20px;
+    }
+
+    .package-included h3 {
+        font-size: 0.75rem;
+    }
+
+    .package-included p {
+        font-size: 0.8rem;
+    }
+
+    .package-price {
+        font-size: 1.8rem;
+    }
+
+    .package-button {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+
+    .journey-title {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .step-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    .journey-step h3 {
+        font-size: 0.95rem;
+    }
+
+    .journey-step p {
+        font-size: 0.8rem;
+    }
+
+    .testimonials-title {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .testimonial-card-rate {
+        padding: 25px 15px;
+    }
+
+    .quote-mark {
+        font-size: 2rem;
+        top: 10px;
+        left: 10px;
+    }
+
+    .testimonial-text {
+        font-size: 0.85rem;
+        padding-left: 20px;
+    }
+
+    .testimonial-author {
+        padding-left: 20px;
+    }
+
+    .author-photo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .author-name {
+        font-size: 0.85rem;
+        padding-left: 20px;
     }
 }
 

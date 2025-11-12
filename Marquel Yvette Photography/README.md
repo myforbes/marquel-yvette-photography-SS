@@ -293,12 +293,20 @@ aws cloudfront create-invalidation --distribution-id E50QXXWNUFNYT --paths "/*"
 - **v2.0** - Complete rebuild with vanilla JS/CSS
   - Phase 1-4: Framework removal and core rebuilds
   - Phase 5: Visual design refinements
-- **v2.1** - Additional pages and optimization
+- **v2.1** - Additional pages and optimization (Nov 11, 2025)
   - Contact page with simplified form
   - Contact thank-you page with brand styling
   - Portfolio image optimization (Dennis: 381K → 28K)
-  - Cache lifetime optimization (1-year cache headers)
-- **Current:** Deployed on AWS S3 + CloudFront
+  - Workplace headshots landing page
+  - Photo gallery system
+  - Mobile/tablet optimizations
+- **v2.2** - Mobile optimization & design fixes (Nov 12, 2025)
+  - Fixed homepage testimonials overlap on mobile
+  - Reduced title font sizes across all mobile breakpoints
+  - Optimized pricing page for mobile (4 images, proper padding)
+  - Redesigned pricing page testimonials to match live site
+  - Enhanced mobile typography and spacing throughout
+- **Current:** Local changes ready for deployment to AWS S3 + CloudFront
 
 ## Pages Built
 

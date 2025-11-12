@@ -1586,7 +1586,7 @@ section {
     }
 
     .section-title {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-bottom: 20px;
         letter-spacing: 0.05em;
     }
@@ -1594,7 +1594,7 @@ section {
     .service-card h3,
     .service-card-detailed h3,
     .process-step h3 {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         margin-bottom: 10px;
         letter-spacing: 0.03em;
     }
@@ -1630,7 +1630,7 @@ section {
 
     .problem-section h2,
     .problem-section .section-title {
-        font-size: 1rem;
+        font-size: 0.95rem;
         margin-bottom: 20px;
     }
 
@@ -1786,20 +1786,47 @@ section {
         margin-bottom: 30px;
     }
 
-    /* Adjust testimonial card images */
+    /* Adjust testimonial card images - fix mobile overlap */
     .testimonial-card {
-        padding: 25px 20px;
+        padding: 25px 20px 20px;
+        margin-bottom: 20px;
+        text-align: center;
     }
 
     .testimonial-card img {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 15px;
+        position: static;
+        width: 80px;
+        height: 80px;
+        margin: 15px auto 10px;
+        transform: none;
+    }
+
+    .testimonial-card cite {
+        position: static;
+        display: block;
+        margin-top: 10px;
+        font-size: 1rem;
     }
 
     .testimonial-card blockquote p {
         font-size: 0.9rem;
         line-height: 1.5;
+    }
+
+    .testimonial-card::before {
+        font-size: 50px;
+        top: 10px;
+        left: 15px;
+    }
+
+    .testimonial-card::after {
+        font-size: 50px;
+        bottom: 10px;
+        right: 15px;
+    }
+
+    .success-stories-section {
+        padding: 35px 15px 35px;
     }
 
     /* Team images spacing */

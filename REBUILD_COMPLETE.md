@@ -11,9 +11,11 @@
 
 Successfully removed entire Squarespace framework and rebuilt with lightweight vanilla JavaScript.
 
-**Latest Update:** November 11, 2025
-- ✅ Mobile optimization completed for all pages
-- ✅ Team photography landing page added
+**Latest Update:** November 12, 2025
+- ✅ Homepage mobile testimonials fixed (no overlap)
+- ✅ Pricing page mobile optimization completed
+- ✅ Mobile title font sizes reduced across all pages
+- ✅ Workplace headshots landing page (renamed from team photography)
 - ✅ Photo gallery system implemented
 - ✅ Deployed to CloudFront
 - ✅ All features tested and live
@@ -184,8 +186,8 @@ All work documented in 4 commits:
 
 ## New Features Added (November 2025)
 
-### ✅ Mobile & Tablet Optimization (Nov 9-11, 2025)
-**Files:** index.html, team-photography.html, rates-2.html
+### ✅ Mobile & Tablet Optimization (Nov 9-12, 2025)
+**Files:** index.html, workplace-headshots.html, rates-2.html, css/main.css, css/pricing.css
 
 **Homepage Mobile Enhancements:**
 - Hamburger menu with animated burger-to-X transition
@@ -199,24 +201,52 @@ All work documented in 4 commits:
 - Mobile-specific tap feedback with scale/opacity
 - Proper ARIA labels and keyboard navigation
 
-**Team Photography Page Mobile:**
+**Homepage Mobile Fixes (Nov 12, 2025):**
+- Fixed testimonials section overlap issue on mobile
+- Testimonial photos now display below text (static positioning)
+- Names appear below photos instead of overlapping
+- Reduced quote mark sizes for mobile (50px)
+- Reduced section title font sizes (1.8rem → 1rem on mobile)
+- Improved text alignment and spacing on small screens
+
+**Pricing Page Mobile Optimization (Nov 12, 2025):**
+- Gallery shows only 4 images on mobile (2x2 grid) instead of 8
+- Added 15px horizontal padding throughout page on mobile
+- Reduced 10px padding on small iPhones (max-width: 480px)
+- Optimized typography for mobile:
+  - Main title: 2rem → 1.5rem (768px), 1.3rem (480px)
+  - Package titles: 1.5rem → 1.2rem (768px), 1.1rem (480px)
+  - Package details: Reduced to 0.85rem-0.8rem on mobile
+- Improved testimonials design to match live site:
+  - CSS Grid layout with photo on right (desktop)
+  - Light beige background (#faf8f5)
+  - Semi-transparent quote marks
+  - Photo positioned on right side of card
+  - Name below testimonial text on left
+  - Single column layout on mobile
+- Added 10px gap between gallery images on mobile
+- Optimized journey steps and testimonials for small screens
+- All sections now have proper breathing room on mobile
+
+**Workplace Headshots Page Mobile:**
 - Full mobile/tablet responsive design
 - Hamburger navigation
 - Responsive image grid
 - Optimized spacing and typography
 - Touch-optimized interactions
 
-### ✅ Team Photography Landing Page (Nov 9, 2025)
-**File:** team-photography.html
+### ✅ Workplace Headshots Landing Page (Nov 9-11, 2025)
+**File:** workplace-headshots.html (renamed from team-photography.html)
 
 **Features:**
-- Dedicated landing page for team photography services
+- Dedicated landing page for workplace headshots services
 - Hero section with service overview
 - Photo examples showcase
 - Service benefits grid
 - Call-to-action buttons
 - Responsive design for all devices
 - Professional branding consistent with main site
+- Component-based architecture for easy reuse
 
 ### ✅ Centralized Photo Gallery System (Nov 9, 2025)
 **Files:** photo-gallery.html, data/photos.json, js/photo-gallery.js
@@ -326,26 +356,29 @@ All work documented in 4 commits:
 
 ## Deployment Status
 
-### Current Status (Updated: November 11, 2025)
+### Current Status (Updated: November 12, 2025)
 - **Branch:** `rebuild-vanilla-js`
 - **S3 Bucket:** marquelyvette-website
 - **CloudFront:** E50QXXWNUFNYT
 - **CloudFront URL:** https://d1pqc8zade8idc.cloudfront.net
 - **Live Site:** https://www.marquelyvette.com
-- **Latest Deployment:** November 11, 2025 at 22:46 UTC
-- **Cache Invalidation:** I3T9DRQYBRSZ9S4IDREMEVYGCQ (Completed)
-- **Git Status:** Synced with origin/rebuild-vanilla-js
+- **Latest Deployment:** November 12, 2025
+- **Cache Invalidation:** Ready for deployment
+- **Git Status:** Local changes ready to commit
 
-### Latest Deployment Includes:
-- ✅ Mobile-optimized homepage
-- ✅ Mobile-optimized team photography page
+### Latest Changes (Ready for Deployment):
+- ✅ Homepage mobile testimonials fixed (no text/photo overlap)
+- ✅ Pricing page fully optimized for mobile (4 images, proper padding)
+- ✅ Pricing page testimonials redesigned to match live site
+- ✅ Mobile title font sizes reduced across all pages
+- ✅ Workplace headshots landing page
 - ✅ Photo gallery system
 - ✅ Request proposal forms
 - ✅ Contact pages
-- ✅ All recent optimizations and bug fixes
 
 ### Deployment History
-- **Nov 11, 2025:** Deployed mobile optimizations and team photography page
+- **Nov 12, 2025:** Mobile testimonials fixes and pricing page optimization
+- **Nov 11, 2025:** Deployed mobile optimizations and workplace headshots page
 - **Nov 9, 2025:** Deployed team photography landing page and photo gallery
 - **Nov 2, 2025:** Initial vanilla JS rebuild deployment
 
@@ -515,7 +548,7 @@ We successfully:
 
 ---
 
-*Last Updated: November 11, 2025*
+*Last Updated: November 12, 2025*
 *Project: Marquel Yvette Photography*
 *Developer: Claude Code*
-*Status: Deployed and Live*
+*Status: Local Updates Ready for Deployment*
