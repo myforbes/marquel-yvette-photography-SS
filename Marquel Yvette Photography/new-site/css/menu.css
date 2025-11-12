@@ -52,42 +52,13 @@ body.menu-open {
 
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
+  /* Hide hamburger menu and navigation on mobile */
+  .header-burger-btn {
+    display: none;
+  }
+
   .header-menu {
-    width: 100%;
-    background-color: rgba(26, 26, 26, 0.98);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .header-menu-nav {
-    flex-direction: column;
-    gap: 20px;
-    padding: 40px 20px;
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .header-menu-nav li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .header-menu-nav a {
-    color: #ffffff;
-    font-size: 1.2rem;
-    display: block;
-    padding: 15px 20px;
-    width: 100%;
-  }
-
-  .header-menu-nav a:hover {
-    color: #f4ca78;
-  }
-
-  .header-menu-nav .cta-button {
-    margin-top: 20px;
+    display: none;
   }
 }
 
