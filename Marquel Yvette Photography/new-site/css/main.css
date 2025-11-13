@@ -24,8 +24,8 @@
     --color-bg-light-gray: #f5f5f5;
     --color-bg-white: #ffffff;
 
-    /* Typography - Matches Original (Montserrat) */
-    --font-primary: 'Montserrat', sans-serif;
+    /* Typography - Matches Original (Open Sans) */
+    --font-primary: 'Open Sans', sans-serif;
     --font-weight-normal: 400;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -657,16 +657,6 @@ section {
     margin-bottom: 40px;
 }
 
-.footer-logo {
-    font-size: 1.5rem;
-    font-weight: var(--font-weight-semibold);
-    margin-bottom: 15px;
-    background: linear-gradient(45deg, var(--color-gold-light), var(--color-gold-dark));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
 .footer-tagline {
     color: var(--color-text-gray);
     font-style: italic;
@@ -696,12 +686,15 @@ section {
 .social-links {
     display: flex;
     gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
 
 .social-links a {
     width: 50px;
     height: 50px;
-    background-color: rgba(244, 202, 120, 0.1);
+    background-color: transparent;
     border: 2px solid var(--color-gold-light);
     color: var(--color-gold-light);
     border-radius: 50%;
@@ -713,15 +706,15 @@ section {
 }
 
 .social-links a:hover {
-    background: linear-gradient(45deg, var(--color-gold-light), var(--color-gold-dark));
-    color: var(--color-text-white);
+    background-color: var(--color-gold-light);
+    color: var(--color-dark-primary);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(244, 202, 120, 0.3);
 }
 
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
+    padding-top: 25px;
     text-align: center;
 }
 
@@ -729,13 +722,22 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 15px;
+    gap: 15px;
+    margin-bottom: 0;
 }
 
 .footer-links a {
-    color: var(--color-text-light);
-    font-size: 0.9rem;
+    color: var(--color-text-gray);
+    font-size: 0.85rem;
+    text-decoration: none;
+    position: relative;
+}
+
+.footer-links a:not(:last-child)::after {
+    content: '|';
+    position: absolute;
+    right: -10px;
+    color: var(--color-text-gray);
 }
 
 .footer-links a:hover {
@@ -828,31 +830,31 @@ section {
 
 .hero-title-section .container {
     background-color: white;
-    padding: 40px 40px;
+    padding: 50px 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     max-width: 1400px;
     margin: 0 auto;
 }
 
 .hero-tagline {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: var(--font-weight-normal);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--color-dark-primary);
     margin-bottom: 20px;
     display: block;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .hero-h1 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: var(--font-weight-normal);
     color: var(--color-dark-primary);
     max-width: 900px;
     margin: 0 auto;
-    line-height: 1.4;
-    letter-spacing: 0.03em;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 /* Testimonial Featured (2-column) - Dark Background */
@@ -912,12 +914,12 @@ section {
 
 .problem-section h2,
 .problem-section .section-title {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: var(--font-weight-normal);
     text-transform: uppercase;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.05em;
     color: var(--color-dark-secondary);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .problem-content {
@@ -926,9 +928,9 @@ section {
 }
 
 .problem-content p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.8;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: var(--color-dark-secondary);
 }
 
@@ -957,7 +959,7 @@ section {
 }
 
 .service-img-wrapper {
-    margin-top: 15px;
+    margin-top: 0;
     display: inline-block;
 }
 
@@ -973,20 +975,21 @@ section {
     font-size: 1.5rem;
     font-weight: var(--font-weight-normal);
     color: var(--color-dark-secondary);
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-transform: uppercase;
-    letter-spacing: 0.02em;
+    letter-spacing: 0;
 }
 
 .service-card p {
     line-height: 1.5;
     color: var(--color-text-dark-gray);
-    margin-bottom: 0;
+    margin-bottom: 25px;
     min-height: 90px;
 }
 
 .services-cta {
     text-align: center;
+    margin-top: 20px;
 }
 
 /* Team Headshots Section */
@@ -1513,21 +1516,69 @@ section {
 
 .footer-column h3 {
     color: var(--color-gold-light);
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: var(--font-weight-normal);
+    letter-spacing: 0.5px;
+}
+
+.footer-contact h3 {
+    text-align: center;
+}
+
+.footer-column p {
+    color: var(--color-text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: var(--color-text-light);
+    font-size: 1rem;
+}
+
+.footer-contact-item i {
+    color: var(--color-gold-light);
+    margin-right: 12px;
+    width: 20px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.footer-contact-item a,
+.footer-contact-item span {
+    color: var(--color-text-light);
+    text-decoration: none;
+}
+
+.footer-contact-item a:hover {
+    color: var(--color-gold-light);
+}
+
+.footer-column a {
+    color: var(--color-text-light);
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: var(--color-gold-light);
 }
 
 .footer-logo {
     max-width: 200px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .footer-tagline {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--color-text-light);
     line-height: 1.6;
+    font-style: italic;
 }
 
 .footer-cta .cta-button {
@@ -1536,6 +1587,12 @@ section {
 
 .footer-legal {
     margin-top: 20px;
+}
+
+.footer-legal p {
+    color: var(--color-text-gray);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
 }
 
 /* ================================
