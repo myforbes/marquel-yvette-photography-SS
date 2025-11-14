@@ -1569,9 +1569,14 @@ section {
     color: var(--color-gold-light);
 }
 
+.footer-brand {
+    text-align: center;
+}
+
 .footer-logo {
     max-width: 200px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
+    display: block;
 }
 
 .footer-tagline {
