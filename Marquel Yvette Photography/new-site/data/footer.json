@@ -1,0 +1,72 @@
+{
+  "branding": {
+    "logo": "images/logos/MarquelYvette_Gold+White+Text+11-3-24.png",
+    "logoAlt": "Marquel Yvette Photography Logo",
+    "tagline": "Capturing life's precious moments with artistry and elegance"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "phone": {
+      "display": "(703) 957-0643",
+      "link": "tel:+17039570643"
+    },
+    "email": {
+      "display": "info@marquelyvette.com",
+      "link": "mailto:info@marquelyvette.com"
+    },
+    "location": {
+      "display": "DMV Metropolitan Area"
+    }
+  },
+  "cta": {
+    "title": "Ready to Book?",
+    "description": "Professional photography services throughout the DMV Metropolitan Area",
+    "button": {
+      "text": "BOOK SESSION",
+      "url": "rates-2.html"
+    }
+  },
+  "social": {
+    "instagram": {
+      "url": "https://www.instagram.com/marquelyvettephoto",
+      "label": "Instagram"
+    },
+    "facebook": {
+      "url": "https://www.facebook.com/marquelyvettephotography",
+      "label": "Facebook"
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/marquelforbes",
+      "label": "LinkedIn"
+    }
+  },
+  "legal": {
+    "copyright": "© 2025 Marquel Yvette Photography LLC - All Rights Reserved",
+    "links": [
+      {
+        "text": "Privacy Policy",
+        "url": "privacy-policy.html"
+      },
+      {
+        "text": "Terms of Service",
+        "url": "tos.html"
+      },
+      {
+        "text": "Copyright Notice",
+        "url": "copyright.html"
+      },
+      {
+        "text": "Professional Services Disclaimer",
+        "url": "disclaimer.html"
+      },
+      {
+        "text": "Website Accessibility Statement",
+        "url": "website-accessibility-statement.html"
+      },
+      {
+        "text": "Portfolio",
+        "url": "site-gallery.html"
+      }
+    ]
+  }
+}
