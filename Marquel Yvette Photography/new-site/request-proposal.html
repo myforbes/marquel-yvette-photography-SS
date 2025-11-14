@@ -13,21 +13,411 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/contact-form.css">
+    <link rel="stylesheet" href="css/pricing.css">
+    <link rel="stylesheet" href="css/menu.css">
 
-    <!-- Google Fonts - Montserrat with font-display swap for performance -->
+    <!-- Page-specific styles -->
+    <style>
+        /* Hide navigation links on this page for all screen sizes */
+        .header-menu {
+            display: none !important;
+        }
+
+        /* Proposal Hero Section */
+        .proposal-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .proposal-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #f4ca78, #b9914d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .proposal-hero p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Two Column Form Section */
+        .proposal-form-section {
+            padding: 80px 20px;
+            background-color: #ffffff;
+        }
+
+        .form-two-col {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        /* Benefits Column */
+        .proposal-benefits {
+            padding: 40px;
+            background: linear-gradient(135deg, #faf8f5 0%, #ffffff 100%);
+            border-left: 4px solid #d4af37;
+            border-radius: 8px;
+            position: sticky;
+            top: 120px;
+        }
+
+        .proposal-benefits h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 25px;
+        }
+
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #f4ca78, #b9914d);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a1a1a;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+
+        .benefit-content h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .benefit-content p {
+            font-size: 0.95rem;
+            color: #555555;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Form Column */
+        .proposal-form-wrapper {
+            background-color: #ffffff;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .proposal-form-wrapper h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .proposal-form-wrapper .form-subtitle {
+            font-size: 0.95rem;
+            color: #666666;
+            margin-bottom: 30px;
+        }
+
+        /* Process Section - Matching rates page */
+        .proposal-process {
+            padding: 80px 20px;
+            background-color: #fafafa;
+        }
+
+        .proposal-process h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 60px;
+            letter-spacing: 1px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-item {
+            text-align: center;
+        }
+
+        .process-number {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, #f4ca78, #b9914d);
+            color: #ffffff;
+            font-size: 1.8rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .process-item h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .process-item p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #555555;
+        }
+
+        /* Trust Section */
+        .trust-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            text-align: center;
+        }
+
+        .trust-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .trust-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .trust-stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #f4ca78, #b9914d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #cccccc;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Alternative Contact */
+        .alt-contact-section {
+            padding: 60px 20px;
+            background-color: #ffffff;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .alt-contact-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-option {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #faf8f5;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-option:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-option i {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #f4ca78, #b9914d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .contact-option h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .contact-option p {
+            font-size: 0.95rem;
+            color: #555555;
+            margin-bottom: 5px;
+        }
+
+        .contact-option a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-option a:hover {
+            color: #b9914d;
+        }
+
+        .contact-hours {
+            font-size: 0.85rem;
+            color: #888888;
+            margin-top: 10px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .form-two-col {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .proposal-benefits {
+                position: static;
+                padding: 30px 25px;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .trust-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .contact-options {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .proposal-hero h1 {
+                font-size: 2rem;
+            }
+
+            .proposal-hero p {
+                font-size: 1rem;
+            }
+
+            .proposal-form-section {
+                padding: 50px 15px;
+            }
+
+            .proposal-form-wrapper {
+                padding: 25px 20px;
+            }
+
+            .proposal-benefits {
+                padding: 25px 20px;
+            }
+
+            .benefit-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+                margin-right: 15px;
+            }
+
+            .benefit-content h3 {
+                font-size: 1rem;
+            }
+
+            .benefit-content p {
+                font-size: 0.9rem;
+            }
+
+            .proposal-process h2 {
+                font-size: 1.8rem;
+                margin-bottom: 40px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .process-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+
+    <!-- Google Fonts - Open Sans with font-display swap for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome - Deferred loading -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header / Navigation -->
     <header class="site-header">
         <div class="header-container">
-            <a href="/" class="logo">
+            <a href="index.html" class="logo">
                 <img src="images/logos/MarquelYvette_Gold+Dk+Grey+Logo+11-3-24.png" alt="Professional Headshot Photographer | Loudoun County, VA" class="header-logo-img">
             </a>
 
@@ -43,28 +433,67 @@
     </header>
 
     <main>
-        <!-- SECTION 1: Page Title -->
-        <section class="hero-title-section">
+        <!-- SECTION 1: Hero -->
+        <section class="proposal-hero">
             <div class="container">
-                <h1 class="hero-h1">Let's Work Together</h1>
-                <p class="hero-tagline">REQUEST YOUR CUSTOM PROPOSAL TODAY</p>
+                <h1>Let's Create Something Amazing Together</h1>
+                <p>Request a custom proposal tailored to your needs. Whether you need individual headshots or a full team session, I'm here to help you make a lasting impression.</p>
             </div>
         </section>
 
-        <!-- SECTION 2: Contact Intro -->
-        <section class="contact-intro-section">
-            <div class="container">
-                <div class="contact-intro-content">
-                    <p>Ready to elevate your professional image? Fill out the form below and I'll get back to you within 24 hours with a personalized proposal tailored to your needs.</p>
-                    <p>Whether you need individual headshots or a full team session, I'm here to help you shine.</p>
+        <!-- SECTION 2: Form Section with Benefits -->
+        <section class="proposal-form-section">
+            <div class="form-two-col">
+                <!-- Left: Benefits -->
+                <div class="proposal-benefits">
+                    <h2>What You'll Get</h2>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>24-Hour Response</h3>
+                            <p>I'll review your request and get back to you within one business day with a personalized proposal.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Custom Pricing</h3>
+                            <p>Your proposal will include package options tailored to your specific needs and budget.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Flexible Scheduling</h3>
+                            <p>Choose session times that work for your team's schedule, including weekends.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Professional Results</h3>
+                            <p>High-quality headshots that elevate your brand and make you stand out.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- SECTION 3: Contact Form -->
-        <section class="contact-form-section">
-            <div class="container">
-                <div class="form-wrapper" style="max-width: 800px; margin: 0 auto;">
+                <!-- Right: Form -->
+                <div class="proposal-form-wrapper">
+                    <h2>Request Your Proposal</h2>
+                    <p class="form-subtitle">Fill out the form below and I'll send you a detailed proposal within 24 hours.</p>
+
                     <!-- GHL Embedded Form -->
                     <div style="min-height: 600px;">
                         <iframe
@@ -91,66 +520,39 @@
             </div>
         </section>
 
-        <!-- SECTION 4: Alternative Contact Methods -->
-        <section class="alternative-contact-section">
+        <!-- SECTION 3: Process -->
+        <section class="proposal-process">
             <div class="container">
-                <h2 class="section-title">PREFER TO REACH OUT DIRECTLY?</h2>
-                <div class="contact-methods">
-                    <div class="contact-method">
-                        <i class="fas fa-phone"></i>
-                        <h4>Call or Text</h4>
-                        <p><a href="tel:+17039570643">(703) 957-0643</a></p>
-                        <p class="contact-hours">Mon-Fri: 9am-6pm<br>Sat: 10am-4pm</p>
+                <h2>How It Works</h2>
+                <div class="process-grid">
+                    <div class="process-item">
+                        <div class="process-number">1</div>
+                        <h3>Submit Request</h3>
+                        <p>Fill out the form with your project details and requirements.</p>
                     </div>
-                    <div class="contact-method">
-                        <i class="fas fa-envelope"></i>
-                        <h4>Email</h4>
-                        <p><a href="mailto:marquel@marquelyvette.com">marquel@marquelyvette.com</a></p>
-                        <p class="contact-hours">Response within 24 hours</p>
+                    <div class="process-item">
+                        <div class="process-number">2</div>
+                        <h3>Receive Proposal</h3>
+                        <p>Get a custom proposal with pricing and package options within 24 hours.</p>
                     </div>
-                    <div class="contact-method">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h4>Studio Location</h4>
-                        <p>Chantilly, VA</p>
-                        <p class="contact-hours">Serving DC Metro Area<br>By Appointment Only</p>
+                    <div class="process-item">
+                        <div class="process-number">3</div>
+                        <h3>Book Session</h3>
+                        <p>Approve the proposal and schedule your session date.</p>
+                    </div>
+                    <div class="process-item">
+                        <div class="process-number">4</div>
+                        <h3>Get Results</h3>
+                        <p>Enjoy your professional headshots delivered within 7 business days.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 5: What to Expect -->
-        <section class="expectations-section">
+        <!-- SECTION 4: Trust Stats -->
+        <section class="trust-section">
             <div class="container">
-                <h2 class="section-title">WHAT HAPPENS NEXT?</h2>
-                <div class="expectation-steps">
-                    <div class="expectation-step">
-                        <div class="step-number">1</div>
-                        <h4>Quick Response</h4>
-                        <p>I'll review your request and respond within 24 hours (usually much sooner!)</p>
-                    </div>
-                    <div class="expectation-step">
-                        <div class="step-number">2</div>
-                        <h4>Custom Proposal</h4>
-                        <p>You'll receive a personalized proposal with pricing and package options</p>
-                    </div>
-                    <div class="expectation-step">
-                        <div class="step-number">3</div>
-                        <h4>Book Your Session</h4>
-                        <p>Once you approve the proposal, we'll schedule your session date</p>
-                    </div>
-                    <div class="expectation-step">
-                        <div class="step-number">4</div>
-                        <h4>Capture Amazing Photos</h4>
-                        <p>Relax and enjoy your session - I'll handle everything else!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 6: Social Proof -->
-        <section class="social-proof-section">
-            <div class="container">
-                <h2 class="section-title">TRUSTED BY PROFESSIONALS ACROSS DC METRO</h2>
+                <h2>Trusted by Professionals Across DC Metro</h2>
                 <div class="trust-stats">
                     <div class="trust-stat">
                         <span class="stat-number">500+</span>
@@ -171,12 +573,40 @@
                 </div>
             </div>
         </section>
+
+        <!-- SECTION 5: Alternative Contact -->
+        <section class="alt-contact-section">
+            <div class="container">
+                <h2>Prefer to Reach Out Directly?</h2>
+                <div class="contact-options">
+                    <div class="contact-option">
+                        <i class="fas fa-phone"></i>
+                        <h3>Call or Text</h3>
+                        <p><a href="tel:+17039570643">(703) 957-0643</a></p>
+                        <p class="contact-hours">Mon-Fri: 9am-6pm<br>Sat: 10am-4pm</p>
+                    </div>
+                    <div class="contact-option">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:marquel@marquelyvette.com">marquel@marquelyvette.com</a></p>
+                        <p class="contact-hours">Response within 24 hours</p>
+                    </div>
+                    <div class="contact-option">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Studio Location</h3>
+                        <p>Chantilly, VA</p>
+                        <p class="contact-hours">Serving DC Metro Area<br>By Appointment Only</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
     <!-- JavaScript - Deferred for performance -->
+    <script src="js/request-proposal-loader.js"></script>
     <script src="js/meta-loader.js"></script>
     <script src="js/menu.js" defer></script>
     <script src="js/footer-loader.js" defer></script>

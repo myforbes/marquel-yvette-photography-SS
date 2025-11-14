@@ -388,6 +388,16 @@
 }
 
 /* Mobile Responsiveness */
+
+/* iPad/Tablet: 2 columns for testimonials instead of 3 cramped ones */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 900px;
+    }
+}
+
 @media (max-width: 1024px) {
     .rates-packages-grid {
         grid-template-columns: 1fr;
@@ -461,6 +471,17 @@
 
     .rates-packages-grid {
         padding: 0;
+    }
+
+    /* Add top padding to featured package card to prevent label overlap */
+    .rates-package-featured {
+        padding-top: 40px;
+    }
+
+    .featured-label {
+        top: -12px;
+        font-size: 0.7rem;
+        padding: 5px 16px;
     }
 
     .package-title {
@@ -634,6 +655,11 @@
 
     .rates-package-card {
         padding: 25px 20px;
+    }
+
+    /* Ensure featured package has enough top padding on small screens */
+    .rates-package-featured {
+        padding-top: 35px;
     }
 
     .package-title {
