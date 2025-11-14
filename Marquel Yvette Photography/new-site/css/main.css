@@ -771,7 +771,7 @@ section {
     }
 
     .hero-title-section {
-        padding: 20px;
+        padding: 40px 20px;
     }
 
     .hero-title-section .container {
@@ -824,7 +824,7 @@ section {
 /* Hero Title Section */
 .hero-title-section {
     background-color: var(--color-bg-light);
-    padding: 25px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
@@ -1687,7 +1687,7 @@ section {
 
     /* Reduced padding between sections */
     .hero-title-section {
-        padding: 15px;
+        padding: 35px 15px;
     }
 
     .hero-title-section .container {
