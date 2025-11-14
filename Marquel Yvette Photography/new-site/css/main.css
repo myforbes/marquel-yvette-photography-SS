@@ -1586,6 +1586,10 @@ section {
     font-style: italic;
 }
 
+.footer-cta {
+    text-align: center;
+}
+
 .footer-cta .cta-button {
     margin-top: 20px;
 }
