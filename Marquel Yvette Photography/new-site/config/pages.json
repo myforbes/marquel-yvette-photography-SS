@@ -67,37 +67,6 @@
     }
   },
 
-  "contact": {
-    "title": "Contact | Marquel Yvette Photography",
-    "description": "Contact Marquel Yvette Photography. Professional headshots in Chantilly, VA serving the DC Metro area. Call (703) 957-0643 or send us a message.",
-    "keywords": "contact photographer, book headshot session, photography inquiry, Chantilly photographer, VA headshot photographer contact",
-    "ogTitle": "Contact Marquel Yvette Photography",
-    "ogDescription": "Get in touch to book your professional headshot session. Serving Loudoun County, VA and DC Metro area.",
-    "ogImage": "images/logos/MarquelYvette_Gold+Dk+Grey+Logo+11-3-24.png",
-    "canonicalUrl": "https://www.marquelyvette.com/contact.html",
-    "contactInfo": {
-      "phone": "(703) 957-0643",
-      "email": "marquel@marquelyvette.com",
-      "location": "Chantilly, VA",
-      "serviceArea": "DC Metro Area",
-      "hours": {
-        "weekday": "Mon-Fri: 9am-6pm",
-        "saturday": "Sat: 10am-4pm",
-        "appointmentOnly": true
-      }
-    }
-  },
-
-  "contactThankYou": {
-    "title": "Thank You | Marquel Yvette Photography",
-    "description": "Thank you for contacting Marquel Yvette Photography. I'll get back to you within 24 hours.",
-    "keywords": "thank you, contact confirmation, photography inquiry received",
-    "ogTitle": "Thank You for Your Inquiry | Marquel Yvette Photography",
-    "ogDescription": "Thank you for reaching out! I'll respond within 24 hours.",
-    "ogImage": "images/logos/MarquelYvette_Gold+Dk+Grey+Logo+11-3-24.png",
-    "canonicalUrl": "https://www.marquelyvette.com/contact-thank-you.html"
-  },
-
   "requestProposal": {
     "title": "Request a Proposal | Marquel Yvette Photography",
     "description": "Request a custom photography proposal. Professional headshots in Loudoun County, VA serving the DC Metro area. Get a personalized quote today.",

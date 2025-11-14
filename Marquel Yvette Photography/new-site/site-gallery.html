@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marquel Yvette Photography - Site Pages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .page-block {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .page-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .page-image {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            background: white;
+        }
+
+        .page-image iframe {
+            width: 1920px;
+            height: 2000px;
+            border: none;
+            transform: scale(0.21);
+            transform-origin: top left;
+            pointer-events: none;
+        }
+
+        .page-label {
+            padding: 20px;
+            text-align: center;
+            background: #1a1a1a;
+        }
+
+        .page-label h2 {
+            color: #f4ca78;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Marquel Yvette Photography - Website Pages</h1>
+
+        <div class="gallery">
+            <!-- Homepage -->
+            <div class="page-block" onclick="window.open('index.html', '_blank')">
+                <div class="page-image">
+                    <iframe src="index.html"></iframe>
+                </div>
+                <div class="page-label">
+                    <h2>Homepage</h2>
+                </div>
+            </div>
+
+            <!-- Rates -->
+            <div class="page-block" onclick="window.open('rates-2.html', '_blank')">
+                <div class="page-image">
+                    <iframe src="rates-2.html"></iframe>
+                </div>
+                <div class="page-label">
+                    <h2>Rates & Packages</h2>
+                </div>
+            </div>
+
+            <!-- Request Proposal -->
+            <div class="page-block" onclick="window.open('request-proposal.html', '_blank')">
+                <div class="page-image">
+                    <iframe src="request-proposal.html"></iframe>
+                </div>
+                <div class="page-label">
+                    <h2>Request Proposal</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

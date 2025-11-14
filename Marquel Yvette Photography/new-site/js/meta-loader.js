@@ -98,8 +98,6 @@
             '': 'homepage',
             '/': 'homepage',
             'rates-2.html': 'rates',
-            'contact.html': 'contact',
-            'contact-thank-you.html': 'contactThankYou',
             'request-proposal.html': 'requestProposal',
             'workplace-headshots.html': 'workplaceHeadshots'
         };

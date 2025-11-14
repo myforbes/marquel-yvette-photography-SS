@@ -24,28 +24,12 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Contact -->
-  <url>
-    <loc>https://www.marquelyvette.com/contact.html</loc>
-    <lastmod>2025-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <!-- Request Proposal -->
   <url>
     <loc>https://www.marquelyvette.com/request-proposal.html</loc>
     <lastmod>2025-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-
-  <!-- Thank You -->
-  <url>
-    <loc>https://www.marquelyvette.com/contact-thank-you.html</loc>
-    <lastmod>2025-11-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
 
   <!-- Legal Pages -->
