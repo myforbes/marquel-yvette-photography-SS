@@ -361,13 +361,13 @@
 }
 
 /* Form Validation Styles */
-.form-group input:invalid:not(:placeholder-shown),
+.form-group input:not([type="date"]):invalid:not(:placeholder-shown),
 .form-group select:invalid:not(:placeholder-shown),
 .form-group textarea:invalid:not(:placeholder-shown) {
     border-color: #f44336;
 }
 
-.form-group input:valid:not(:placeholder-shown),
+.form-group input:not([type="date"]):valid:not(:placeholder-shown),
 .form-group select:valid,
 .form-group textarea:valid {
     border-color: #4caf50;
