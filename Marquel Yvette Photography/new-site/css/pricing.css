@@ -1,5 +1,12 @@
 /* Pricing Page Styles - Matching Original Squarespace Design */
 
+/* Rates Page Main - Account for fixed header on tablet/iPad */
+@media (max-width: 1024px) {
+    main {
+        margin-top: calc(85px + 12vw + 30px);
+    }
+}
+
 /* Hero Banner Gallery */
 .rates-hero-banner {
     width: 100%;
