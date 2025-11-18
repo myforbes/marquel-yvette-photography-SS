@@ -5,12 +5,12 @@
     "keywords": "professional headshots, corporate headshots, business headshots, Northern Virginia, DC metro, South Riding, Ashburn, Chantilly"
   },
   "hero": {
-    "logo": "new-site/images/logos/MarquelYvette_Gold+White+Text+11-3-24.png",
+    "logo": "images/logos/MarquelYvette_Gold+White+Text+11-3-24.png",
     "eyebrow": "Professional Headshots",
     "title": "Professional Headshots For Northern Virginia Professionals",
     "subtitle": "Clean, modern headshots for professionals and business owners in Northern Virginia and the DC metro area. I make the process easy, even if you do not like being in front of the camera.",
     "locationText": "Studio in South Riding, serving Ashburn, Chantilly, Leesburg, Reston, and the DC metro area.",
-    "heroImage": "new-site/images/portfolio/Willis_Samira_937-MarquelYvette0083-ig+(1).jpg",
+    "heroImage": "images/portfolio/Willis_Samira_937-MarquelYvette0083-ig+(1).jpg",
     "heroImageAlt": "Professional business headshot example showing clean lighting and modern style",
     "pillText": "Booked by executives, business owners, and professionals across Northern Virginia.",
     "buttons": [
@@ -45,19 +45,19 @@
     ],
     "gallery": [
       {
-        "src": "new-site/images/portfolio/Dennis_Jennifer_161-MarquelYvette0063-retouched.jpg",
+        "src": "images/portfolio/Dennis_Jennifer_161-MarquelYvette0063-retouched.jpg",
         "alt": "Professional business headshot of woman in navy blazer"
       },
       {
-        "src": "new-site/images/portfolio/Lee_Eric_612-MarquelYvette0048-retouched.jpg",
+        "src": "images/portfolio/Lee_Eric_612-MarquelYvette0048-retouched.jpg",
         "alt": "Corporate headshot of man in dark suit"
       },
       {
-        "src": "new-site/images/portfolio/Leonard_Taylor_331-MarquelYvette0050+500px.jpg",
+        "src": "images/portfolio/Leonard_Taylor_331-MarquelYvette0050+500px.jpg",
         "alt": "Professional headshot of man in grey suit and glasses"
       },
       {
-        "src": "new-site/images/portfolio/Newman_Tamara_832-MarquelYvette0072-ig.jpg",
+        "src": "images/portfolio/Newman_Tamara_832-MarquelYvette0072-ig.jpg",
         "alt": "Professional headshot of woman with natural smile"
       }
     ]
