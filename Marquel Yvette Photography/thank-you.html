@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thank You! | Marquel Yvette Photography</title>
+    <meta name="description" content="Thank you for downloading the Professional Headshot Checklist from Marquel Yvette Photography.">
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+        background: #f5f5f5;
+        color: #222;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* Header Section */
+      .thank-you-header {
+        background: #1a1a1a;
+        color: #fff;
+        padding: 60px 20px 80px;
+        text-align: center;
+      }
+
+      .logo {
+        width: 200px;
+        margin: 0 auto 30px;
+      }
+
+      .thank-you-header h1 {
+        font-size: 2.5rem;
+        color: #f4ca78;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .thank-you-header p {
+        font-size: 1.1rem;
+        color: #e0e0e0;
+      }
+
+      /* Container */
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Check Email Section */
+      .check-email-section {
+        background: #fff;
+        margin: -40px auto 0;
+        max-width: 700px;
+        border-radius: 12px;
+        padding: 40px 30px;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 10;
+      }
+
+      .email-icon {
+        width: 50px;
+        height: 50px;
+        background: #4a90e2;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 24px;
+        color: #fff;
+      }
+
+      .check-email-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #1a1a1a;
+      }
+
+      .check-email-section p {
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+
+      /* Checklist Preview Section */
+      .checklist-preview {
+        background: #fafafa;
+        padding: 60px 20px;
+      }
+
+      .checklist-preview h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+        color: #1a1a1a;
+      }
+
+      .checklist-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .checklist-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .check-icon {
+        width: 28px;
+        height: 28px;
+        background: #f4ca78;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 3px;
+      }
+
+      .check-icon::before {
+        content: "✓";
+        color: #1a1a1a;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      .checklist-item-content h3 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+        color: #1a1a1a;
+      }
+
+      .checklist-item-content p {
+        font-size: 0.88rem;
+        color: #666;
+        line-height: 1.5;
+      }
+
+      /* Next Steps Section */
+      .next-steps-section {
+        background: #fff;
+        padding: 60px 20px;
+      }
+
+      .next-steps-section h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 50px;
+        color: #1a1a1a;
+      }
+
+      .next-steps-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .step-card {
+        text-align: center;
+      }
+
+      .step-number {
+        width: 60px;
+        height: 60px;
+        background: #f4ca78;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1a1a1a;
+      }
+
+      .step-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        color: #1a1a1a;
+      }
+
+      .step-card p {
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 1.6;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: linear-gradient(135deg, #f4ca78 0%, #d4a959 100%);
+        padding: 60px 20px;
+        text-align: center;
+        color: #1a1a1a;
+      }
+
+      .cta-section h2 {
+        font-size: 1.9rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .cta-section .subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 30px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.7;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 16px 36px;
+        background: #fff;
+        color: #1a1a1a;
+        border-radius: 40px;
+        font-size: 1rem;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition: all 0.25s ease;
+        margin-bottom: 30px;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .testimonial {
+        font-style: italic;
+        font-size: 0.95rem;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.8;
+        opacity: 0.95;
+      }
+
+      .testimonial-author {
+        font-style: normal;
+        font-weight: 600;
+        margin-top: 10px;
+        font-size: 0.9rem;
+      }
+
+      /* Footer */
+      .footer {
+        background: #1a1a1a;
+        color: #999;
+        padding: 30px 20px;
+        text-align: center;
+        font-size: 0.85rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .thank-you-header h1 {
+          font-size: 2rem;
+        }
+
+        .checklist-items {
+          grid-template-columns: 1fr;
+        }
+
+        .next-steps-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .check-email-section {
+          margin: -30px 20px 0;
+          padding: 30px 20px;
+        }
+
+        .logo {
+          width: 160px;
+        }
+
+        .cta-section h2 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+    <script src="new-site/js/thank-you-loader.js"></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="thank-you-header">
+      <img data-logo src="new-site/images/logos/MarquelYvette_Gold+White+Text+11-3-24.png" alt="Marquel Yvette Photography" class="logo">
+      <h1 data-main-title>Thank You!</h1>
+      <p data-subtitle>Your Headshot Checklist is on its way to your inbox.</p>
+    </header>
+
+    <main>
+      <!-- Check Email Section -->
+      <section class="check-email-section">
+        <div class="email-icon">✉</div>
+        <h2 data-email-title>Check Your Email</h2>
+        <p data-email-text>
+          I've sent your free Perfect Headshot Checklist. A detailed guide where I've laid it out step-by-step. If you don't see it immediately, check your spam folder.
+        </p>
+      </section>
+
+      <!-- Checklist Preview Section -->
+      <section class="checklist-preview">
+        <div class="container">
+          <h2 data-checklist-title>Here's What You'll Find in Your Checklist:</h2>
+          <div data-checklist-items class="checklist-items">
+            <div class="checklist-item">
+              <div class="check-icon"></div>
+              <div class="checklist-item-content">
+                <h3>Before You Shoot Questions</h3>
+                <p>Essential questions to ask yourself before your session.</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="check-icon"></div>
+              <div class="checklist-item-content">
+                <h3>What To Bring Tips</h3>
+                <p>Recommended extra clothing options and accessories.</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="check-icon"></div>
+              <div class="checklist-item-content">
+                <h3>Preparing Your Look</h3>
+                <p>Tips on clothing colors, patterns, and grooming.</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="check-icon"></div>
+              <div class="checklist-item-content">
+                <h3>Posing For Headshots</h3>
+                <p>Proven posing techniques that work on camera.</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="check-icon"></div>
+              <div class="checklist-item-content">
+                <h3>Expression Tips</h3>
+                <p>How to achieve natural, confident expressions.</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <div class="check-icon"></div>
+              <div class="checklist-item-content">
+                <h3>After the Session</h3>
+                <p>Making the most of your new professional headshots.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Next Steps Section -->
+      <section class="next-steps-section">
+        <div class="container">
+          <h2 data-steps-title>Your Next Steps</h2>
+          <div data-next-steps class="next-steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h3>Review the Checklist</h3>
+              <p>Read through your headshot preparation guide.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h3>Plan Your Look</h3>
+              <p>Choose your outfits and prepare your appearance.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h3>Book Your Session</h3>
+              <p>Schedule your professional headshot session.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <h2 data-cta-title>Ready to Transform Your Professional Image?</h2>
+          <p data-cta-subtitle class="subtitle">
+            Now that you have the perfect preparation guide, let's create headshots that elevate your brand and showcase your professional excellence.
+          </p>
+          <a data-cta-button href="new-site/rates-2.html" class="cta-button">View Session Options & Pricing</a>
+          <div data-testimonial class="testimonial">
+            "Marquel made me look the perfect amount of warm, friendly, and professional. My headshot is being used everywhere and I could not feel more confident. It perfectly captures my personality."
+            <div class="testimonial-author">— Sarah Bartlett, CFO</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p data-footer-text>© 2025 Marquel Yvette Photography. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

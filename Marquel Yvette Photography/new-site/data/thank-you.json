@@ -1,0 +1,77 @@
+{
+  "page": {
+    "title": "Thank You! | Marquel Yvette Photography",
+    "description": "Thank you for downloading the Professional Headshot Checklist from Marquel Yvette Photography."
+  },
+  "header": {
+    "logo": "new-site/images/logos/MarquelYvette_Gold+White+Text+11-3-24.png",
+    "mainTitle": "Thank You!",
+    "subtitle": "Your Headshot Checklist is on its way to your inbox."
+  },
+  "checkEmail": {
+    "title": "Check Your Email",
+    "text": "I've sent your free Perfect Headshot Checklist. A detailed guide where I've laid it out step-by-step. If you don't see it immediately, check your spam folder."
+  },
+  "checklistPreview": {
+    "title": "Here's What You'll Find in Your Checklist:",
+    "items": [
+      {
+        "title": "Before You Shoot Questions",
+        "description": "Essential questions to ask yourself before your session."
+      },
+      {
+        "title": "What To Bring Tips",
+        "description": "Recommended extra clothing options and accessories."
+      },
+      {
+        "title": "Preparing Your Look",
+        "description": "Tips on clothing colors, patterns, and grooming."
+      },
+      {
+        "title": "Posing For Headshots",
+        "description": "Proven posing techniques that work on camera."
+      },
+      {
+        "title": "Expression Tips",
+        "description": "How to achieve natural, confident expressions."
+      },
+      {
+        "title": "After the Session",
+        "description": "Making the most of your new professional headshots."
+      }
+    ]
+  },
+  "nextSteps": {
+    "title": "Your Next Steps",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Review the Checklist",
+        "description": "Read through your headshot preparation guide."
+      },
+      {
+        "number": 2,
+        "title": "Plan Your Look",
+        "description": "Choose your outfits and prepare your appearance."
+      },
+      {
+        "number": 3,
+        "title": "Book Your Session",
+        "description": "Schedule your professional headshot session."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Professional Image?",
+    "subtitle": "Now that you have the perfect preparation guide, let's create headshots that elevate your brand and showcase your professional excellence.",
+    "buttonText": "View Session Options & Pricing",
+    "buttonUrl": "new-site/rates-2.html",
+    "testimonial": {
+      "quote": "Marquel made me look the perfect amount of warm, friendly, and professional. My headshot is being used everywhere and I could not feel more confident. It perfectly captures my personality.",
+      "author": "Sarah Bartlett, CFO"
+    }
+  },
+  "footer": {
+    "text": "© 2025 Marquel Yvette Photography. All rights reserved."
+  }
+}

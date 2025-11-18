@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Professional Headshots | Northern Virginia | Marquel Yvette Photography</title>
+    <meta name="description" content="Clean, modern professional headshots for Northern Virginia professionals and business owners. Easy booking, flattering lighting, fast turnaround.">
+    <meta name="keywords" content="professional headshots, corporate headshots, business headshots, Northern Virginia, DC metro, South Riding, Ashburn, Chantilly">
+    <meta name="author" content="Marquel Yvette Photography">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+        background: #f5f5f5;
+        color: #222;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .section {
+        padding: 70px 20px;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      /* Hero */
+      .hero {
+        background: #000;
+        color: #fff;
+        padding: 80px 20px;
+      }
+
+      .hero-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .hero .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        color: #f2f2f2;
+      }
+
+      .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .eyebrow {
+        font-size: 0.85rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #f4ca78;
+        margin-bottom: 10px;
+      }
+
+      .hero-image-wrapper {
+        position: relative;
+      }
+
+      .hero-image-wrapper img {
+        border-radius: 18px;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+      }
+
+      .pill {
+        position: absolute;
+        bottom: 14px;
+        left: 14px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 999px;
+        padding: 10px 22px;
+        font-size: 0.85rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .pill .icon {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #32cd32;
+      }
+
+      /* Buttons */
+      .cta-button {
+        display: inline-block;
+        padding: 16px 34px;
+        border-radius: 40px;
+        font-size: 1rem;
+        font-weight: 600;
+        background: linear-gradient(135deg, #f4ca78 0%, #b9914d 100%);
+        color: #fff;
+        box-shadow: 0 4px 15px rgba(244, 202, 120, 0.35);
+        transition: all 0.25s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(244, 202, 120, 0.45);
+      }
+
+      .cta-button.secondary {
+        background: transparent;
+        border: 1px solid #f4ca78;
+        color: #f4ca78;
+        box-shadow: none;
+      }
+
+      .cta-button.secondary:hover {
+        background: linear-gradient(135deg, #f4ca78 0%, #b9914d 100%);
+        color: #fff;
+      }
+
+      /* Section Titles */
+      .section-title {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .section-intro {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 40px;
+        color: #555;
+      }
+
+      /* Benefits Grid */
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+
+      .benefit-card {
+        background: #fff;
+        border-radius: 14px;
+        padding: 22px 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      }
+
+      .benefit-card h3 {
+        font-size: 1.05rem;
+        margin-bottom: 8px;
+        color: #111;
+      }
+
+      .benefit-card p {
+        font-size: 0.95rem;
+        color: #555;
+      }
+
+      /* Gallery */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 45px;
+      }
+
+      .gallery-grid img {
+        border-radius: 12px;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      /* Pricing */
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin-top: 30px;
+      }
+
+      .pricing-card {
+        background: #fff;
+        border-radius: 14px;
+        padding: 22px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      }
+
+      .pricing-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+      }
+
+      .pricing-card .price {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+        color: #111;
+      }
+
+      .pricing-card p {
+        font-size: 0.95rem;
+        color: #555;
+      }
+
+      /* Steps */
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 30px;
+      }
+
+      .step-card {
+        background: #fff;
+        border-radius: 14px;
+        padding: 22px 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      }
+
+      .step-number {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #f4ca78 0%, #b9914d 100%);
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+      }
+
+      /* Testimonials */
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 30px;
+      }
+
+      .testimonial {
+        background: #111;
+        color: #f5f5f5;
+        border-radius: 14px;
+        padding: 22px 20px;
+      }
+
+      .testimonial p {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+      }
+
+      .testimonial span {
+        font-size: 0.85rem;
+        color: #f4ca78;
+      }
+
+      /* FAQ */
+      .faq {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        border-bottom: 1px solid #ddd;
+        padding: 14px 0;
+      }
+
+      .faq-question {
+        font-weight: 600;
+        font-size: 0.98rem;
+      }
+
+      .faq-answer {
+        font-size: 0.95rem;
+        color: #555;
+        margin-top: 6px;
+      }
+
+      /* Lead Magnet */
+      .lead-magnet {
+        background: linear-gradient(135deg, #f4ca78 0%, #b9914d 100%);
+        color: #111;
+      }
+
+      .lead-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .lead-magnet h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+
+      .lead-magnet ul {
+        margin: 10px 0 0 18px;
+        font-size: 0.95rem;
+      }
+
+      .lead-form {
+        background: #fff;
+        border-radius: 16px;
+        padding: 22px 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      }
+
+      .lead-form label {
+        display: block;
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+        font-weight: 500;
+      }
+
+      .lead-form input {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+      }
+
+      .lead-form button {
+        width: 100%;
+      }
+
+      .lead-form .disclaimer {
+        font-size: 0.8rem;
+        color: #777;
+        margin-top: 8px;
+      }
+
+      /* Footer */
+      .footer {
+        background: #000;
+        color: #aaa;
+        padding: 35px 20px;
+        font-size: 0.85rem;
+      }
+
+      .footer-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      /* Utilities */
+      .text-center {
+        text-align: center;
+      }
+
+      .mt-34 {
+        margin-top: 34px;
+      }
+
+      .bg-white {
+        background: #ffffff;
+      }
+
+      .bg-light {
+        background: #f0f0f0;
+      }
+
+      .bg-dark {
+        background: #111;
+        color: #fff;
+      }
+
+      .logo {
+        width: 210px;
+        margin-bottom: 18px;
+      }
+
+      .location-text {
+        margin-top: 18px;
+        font-size: 0.9rem;
+        color: #ccc;
+      }
+
+      .section-intro-light {
+        color: #ddd;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .hero-inner,
+        .benefits-grid,
+        .gallery-grid,
+        .steps,
+        .testimonials-grid,
+        .lead-inner {
+          grid-template-columns: 1fr;
+        }
+
+        .pricing-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .hero {
+          padding-top: 60px;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .pricing-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+        }
+
+        .logo {
+          width: 180px;
+        }
+
+        .section {
+          padding: 50px 20px;
+        }
+
+        .hero h1 {
+          font-size: 1.75rem;
+        }
+
+        .section-title {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+    <script src="new-site/js/professional-headshots-loader.js"></script>
+  </head>
+  <body>
+    <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <img data-hero-logo src="new-site/images/logos/MarquelYvette_Gold+White+Text+11-3-24.png" alt="Marquel Yvette Photography" class="logo">
+          <div data-hero-eyebrow class="eyebrow">Professional Headshots</div>
+          <h1 data-hero-title>Professional Headshots For Northern Virginia Professionals</h1>
+          <p data-hero-subtitle class="subtitle">
+            Clean, modern headshots for professionals and business owners in Northern Virginia and the DC metro area. I make the process easy, even if you do not like being in front of the camera.
+          </p>
+          <div data-hero-buttons class="hero-buttons">
+            <a href="new-site/rates-2.html" class="cta-button">Book Your Headshot Session</a>
+            <a href="#lead-form" class="cta-button secondary">Get The Free Headshot Checklist</a>
+          </div>
+          <p data-hero-location class="location-text">
+            Studio in South Riding, serving Ashburn, Chantilly, Leesburg, Reston, and the DC metro area.
+          </p>
+        </div>
+        <div class="hero-image-wrapper">
+          <img data-hero-image src="new-site/images/portfolio/Willis_Samira_937-MarquelYvette0083-ig+(1).jpg" alt="Professional business headshot example showing clean lighting and modern style">
+          <div class="pill">
+            <span class="icon"></span>
+            <span data-hero-pill>Booked by executives, business owners, and professionals across Northern Virginia.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section">
+      <div class="container">
+        <h2 data-benefits-title class="section-title">Look Confident In Every Photo</h2>
+        <p data-benefits-intro class="section-intro">
+          Most people hate getting their photo taken. My job is to help you feel comfortable, look like yourself, and walk away with a headshot you are proud to share on LinkedIn, your website, and anywhere your name shows up.
+        </p>
+        <div data-benefits-cards class="benefits-grid">
+          <div class="benefit-card">
+            <h3>Guided Posing</h3>
+            <p>I coach you through expression, posture, and angles so you never feel stiff, lost, or unsure what to do with your hands.</p>
+          </div>
+          <div class="benefit-card">
+            <h3>Clean, Modern Lighting</h3>
+            <p>Light that flatters your features, keeps your skin tone true, and feels polished without looking overdone.</p>
+          </div>
+          <div class="benefit-card">
+            <h3>Images You Actually Use</h3>
+            <p>Headshots designed for LinkedIn, company sites, speaking engagements, and press features so you can show up consistently.</p>
+          </div>
+        </div>
+
+        <div data-benefits-gallery class="gallery-grid">
+          <img src="new-site/images/portfolio/Dennis_Jennifer_161-MarquelYvette0063-retouched.jpg" alt="Professional business headshot of woman in navy blazer">
+          <img src="new-site/images/portfolio/Lee_Eric_612-MarquelYvette0048-retouched.jpg" alt="Corporate headshot of man in dark suit">
+          <img src="new-site/images/portfolio/Leonard_Taylor_331-MarquelYvette0050+500px.jpg" alt="Professional headshot of man in grey suit and glasses">
+          <img src="new-site/images/portfolio/Newman_Tamara_832-MarquelYvette0072-ig.jpg" alt="Professional headshot of woman with natural smile">
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section bg-white">
+      <div class="container">
+        <h2 data-pricing-title class="section-title">Straightforward Pricing</h2>
+        <p data-pricing-intro class="section-intro">
+          Clear, simple pricing with flexibility to choose only the images you love.
+        </p>
+        <div data-pricing-packages class="pricing-grid">
+          <div class="pricing-card">
+            <h3>The Express</h3>
+            <div class="price">$525</div>
+            <p>Perfect for busy professionals who need polished headshots quickly.</p>
+          </div>
+          <div class="pricing-card">
+            <h3>The Signature</h3>
+            <div class="price">$995</div>
+            <p>Our comprehensive session for professionals who want variety and options.</p>
+          </div>
+          <div class="pricing-card">
+            <h3>The Executive</h3>
+            <div class="price">$1,895</div>
+            <p>The ultimate headshot experience for established professionals who need a complete image library.</p>
+          </div>
+          <div class="pricing-card">
+            <h3>Team And Workplace</h3>
+            <div class="price">Custom Quote</div>
+            <p>On site or in studio headshots for your leadership team or staff. Pricing based on number of people and locations.</p>
+            <a href="new-site/request-proposal.html" class="cta-button secondary" style="margin-top: 15px; display: inline-block;">Contact Us</a>
+          </div>
+        </div>
+        <div class="text-center mt-34">
+          <a data-pricing-cta href="new-site/rates-2.html" class="cta-button">View Availability And Book</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section bg-light">
+      <div class="container">
+        <h2 data-how-title class="section-title">How It Works</h2>
+        <p data-how-intro class="section-intro">
+          A simple process that keeps you comfortable and confident from start to finish.
+        </p>
+        <div data-how-steps class="steps">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Book Your Session</h3>
+            <p>Choose a date and time that works for you and confirm your session online in just a few clicks.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Prepare With The Checklist</h3>
+            <p>Use the free headshot checklist to decide what to wear, how to prep, and what to bring so you arrive ready.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Enjoy Your Shoot And Final Images</h3>
+            <p>During your session I guide you through posing and expression, then deliver polished high end images ready to use.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section bg-dark">
+      <div class="container">
+        <h2 data-testimonials-title class="section-title">Trusted By Business Leaders</h2>
+        <p data-testimonials-intro class="section-intro section-intro-light">
+          Professionals across Northern Virginia trust me to create headshots that match the level of work they do.
+        </p>
+        <div data-testimonials-grid class="testimonials-grid">
+          <div class="testimonial">
+            <p>I usually dread photos, but Marquel made me feel relaxed within minutes. My new headshot looks polished and still feels like me.</p>
+            <span>Senior Director, Technology</span>
+          </div>
+          <div class="testimonial">
+            <p>The entire process was simple and efficient. I booked online, showed up, and left with several images I can use across my business.</p>
+            <span>Small Business Owner, Northern Virginia</span>
+          </div>
+          <div class="testimonial">
+            <p>I needed an updated headshot for a promotion announcement. Marquel guided every detail and the final result is exactly what I wanted.</p>
+            <span>Operations Leader, Financial Services</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Busy Professionals Section -->
+    <section class="section bg-white">
+      <div class="container">
+        <h2 data-busy-title class="section-title">Too Busy For A Full Session</h2>
+        <p data-busy-intro class="section-intro">
+          I offer options designed for busy professionals who still want a high quality image.
+        </p>
+        <div data-busy-cards class="benefits-grid">
+          <div class="benefit-card">
+            <h3>Express Sessions</h3>
+            <p>Short focused sessions that fit into a lunch break or between meetings, without sacrificing quality.</p>
+          </div>
+          <div class="benefit-card">
+            <h3>On Site Headshots</h3>
+            <p>I can come to your workplace or event so your team can be photographed without leaving the office.</p>
+          </div>
+          <div class="benefit-card">
+            <h3>Flexible Scheduling</h3>
+            <p>Limited early morning, evening, and weekend appointments are available for demanding schedules.</p>
+          </div>
+        </div>
+        <div class="text-center mt-34">
+          <a data-busy-cta href="new-site/request-proposal.html" class="cta-button">Request Express Or On Site Session</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead Magnet Section -->
+    <section class="section lead-magnet" id="lead-form">
+      <div class="lead-inner">
+        <div>
+          <h2 data-lead-title>Get The Perfect Headshot Checklist</h2>
+          <p data-lead-description>
+            Not quite ready to book but tired of guessing what to wear or how to prep? This free checklist gives you a simple plan so you arrive confident and camera ready.
+          </p>
+          <ul data-lead-benefits>
+            <li>Outfit guidance that works on camera.</li>
+            <li>Tips for hair, grooming, and glasses.</li>
+            <li>What to bring so you have options.</li>
+            <li>How to choose the right background for your brand.</li>
+          </ul>
+        </div>
+        <div class="lead-form">
+          <form data-lead-form id="checklist-form" method="POST" action="https://services.leadconnectorhq.com/hooks/QqzMbs9W02wuc63zjyYB/webhook-trigger/887bd4a2-60fc-4ac1-90b5-8f163edb13d5">
+            <label for="name">First Name</label>
+            <input id="name" type="text" name="name" placeholder="First name" required>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="name@email.com" required>
+            <button data-lead-submit type="submit" class="cta-button">Email Me The Checklist</button>
+            <p data-lead-disclaimer class="disclaimer">
+              By submitting, you agree to receive occasional emails with headshot tips and studio updates. You can unsubscribe at any time.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+      <div class="container">
+        <h2 data-faq-title class="section-title">Frequently Asked Questions</h2>
+        <div data-faq-items class="faq">
+          <div class="faq-item">
+            <div class="faq-question">How long does a typical session take?</div>
+            <div class="faq-answer">
+              Most professional sessions last about one hour, which includes time to review images and make sure we have several strong options.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Do you help with posing and expression?</div>
+            <div class="faq-answer">
+              Yes. I guide you through every pose and help you find expressions that look relaxed, confident, and natural so you never feel unsure.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">When will I receive my final images?</div>
+            <div class="faq-answer">
+              Proofs are typically delivered within two business days. Once you choose your favorites, final retouched images are delivered quickly after that.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Can you photograph my leadership team or staff?</div>
+            <div class="faq-answer">
+              Yes. I offer custom workplace and team headshot options. Share a few details about your team size and location and I will provide a tailored quote.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div data-footer-copyright>© 2025 Marquel Yvette Photography. All rights reserved.</div>
+        <div data-footer-location>Studio in South Riding, Virginia. Serving Northern Virginia and the DC metro area.</div>
+      </div>
+    </footer>
+
+  </body>
+</html>
