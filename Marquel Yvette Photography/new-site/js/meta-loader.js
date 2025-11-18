@@ -11,7 +11,7 @@
     const currentPage = getCurrentPage();
 
     // Load page metadata configuration
-    fetch('config/pages.json')
+    fetch('new-site/config/pages.json')
         .then(response => response.json())
         .then(pagesConfig => {
             console.log('Loading page metadata from config...');

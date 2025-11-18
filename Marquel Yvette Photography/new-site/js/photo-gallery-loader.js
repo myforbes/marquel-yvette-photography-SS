@@ -9,7 +9,7 @@
   const updatedPhotos = new Map(); // Track which photos have been updated
 
   // Load photos configuration
-  fetch('config/photos.json')
+  fetch('new-site/config/photos.json')
     .then(response => response.json())
     .then(photos => {
       console.log('Loading photo gallery from config...');

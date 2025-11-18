@@ -5,7 +5,7 @@
   'use strict';
 
   // Load photos configuration
-  fetch('config/photos.json')
+  fetch('new-site/config/photos.json')
     .then(response => response.json())
     .then(photos => {
       console.log('Loading photos from config...');

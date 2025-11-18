@@ -14,7 +14,7 @@
     }
 
     function loadContent() {
-        fetch('config/site-config.json')
+        fetch('new-site/config/site-config.json')
             .then(response => response.json())
             .then(config => {
                 loadLogos(config);
