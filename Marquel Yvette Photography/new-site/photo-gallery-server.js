@@ -202,9 +202,10 @@ const server = http.createServer(async (req, res) => {
           console.log(`✓ Uploaded ${file}`);
         }
 
-        // Create invalidation
+        // Create invalidation (URL-encode paths to handle spaces and special characters)
         const paths = ['/new-site/config/photos.json', ...updatedFiles.map(f => `/${f}`)];
-        const pathsStr = paths.map(p => `"${p}"`).join(' ');
+        const encodedPaths = paths.map(p => encodeURI(p));
+        const pathsStr = encodedPaths.map(p => `"${p}"`).join(' ');
 
         console.log('\nInvalidating CloudFront cache...');
         const { stdout } = await execPromise(
