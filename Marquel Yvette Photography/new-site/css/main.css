@@ -1105,7 +1105,7 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    max-width: 1300px;
+    max-width: 1450px;
     margin: 0 auto;
 }
 
@@ -1117,6 +1117,8 @@ section {
     padding: 40px 30px 60px;
     text-align: left;
     margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonial-card::before {
@@ -1128,6 +1130,7 @@ section {
     line-height: 1;
     color: #d0d0d0;
     font-family: Georgia, serif;
+    height: 60px;
 }
 
 .testimonial-card::after {
@@ -1144,6 +1147,8 @@ section {
 .testimonial-card blockquote {
     position: relative;
     z-index: 1;
+    margin-top: 20px;
+    flex-grow: 1;
 }
 
 .testimonial-card blockquote p {
