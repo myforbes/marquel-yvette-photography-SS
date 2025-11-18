@@ -650,6 +650,12 @@ section {
     border-image: linear-gradient(90deg, var(--color-gold-light), var(--color-gold-dark), var(--color-gold-light)) 1;
 }
 
+/* Ensure footer container has same horizontal padding as page sections */
+.site-footer .container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .footer-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
