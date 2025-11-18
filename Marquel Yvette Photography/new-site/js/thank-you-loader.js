@@ -3,7 +3,7 @@
 
 document.addEventListener('DOMContentLoaded', async function() {
     try {
-        const response = await fetch('new-site/data/thank-you.json');
+        const response = await fetch('new-site/data/thank-you-page.json');
         const data = await response.json();
 
         // Load all sections
