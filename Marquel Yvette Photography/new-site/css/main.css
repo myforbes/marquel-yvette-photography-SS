@@ -967,14 +967,17 @@ section {
 .service-img-wrapper {
     margin-top: 0;
     display: inline-block;
+    width: 100%;
 }
 
 .service-card img {
     width: 100%;
-    height: auto;
+    height: 350px;
     display: block;
     border-radius: 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    object-position: center;
 }
 
 .service-card h3 {
