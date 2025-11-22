@@ -1,0 +1,263 @@
+{
+  "site": {
+    "title": "Premium Headshots | Washington DC Metro | Marquel Yvette",
+    "description": "Elevate your image with premium headshots in DC Metro and Loudoun County. Easy booking, studio-quality lighting, and expert retouching.",
+    "url": "https://www.marquelyvette.com",
+    "phone": "(703)957-0643"
+  },
+
+  "hero": {
+    "tagline": "ONE HOUR. ONE IMAGE. A WHOLE NEW LEVEL OF CONFIDENCE",
+    "title": "High-end headshots for the Washington DC Metro, based in Loudoun County",
+    "gallery": [
+      {
+        "image": "images/portfolio/Dionne_Kindra_697-MarquelYvette0085.jpg",
+        "alt": "Professional woman with curly hair in dark blazer"
+      },
+      {
+        "image": "images/portfolio/Nakeisha+Neal+Jones-0134+(1).jpg",
+        "alt": "Female headshot for non-profit c suite employee"
+      },
+      {
+        "image": "images/portfolio/Cerissa.jpg",
+        "alt": "Lawyer high-end headshot in MD, female"
+      },
+      {
+        "image": "images/portfolio/Thongpia-hughes_Gift_495-MarquelYvette0107-ig.jpg",
+        "alt": "Woman with long brown hair smiling in pink top"
+      },
+      {
+        "image": "images/portfolio/Milestone-Title-0116.jpg",
+        "alt": "Female lawyer in MD; premium headshot"
+      },
+      {
+        "image": "images/portfolio/L+Carroll-0146+1.jpg",
+        "alt": "Male corporate headshot in DC"
+      },
+      {
+        "image": "images/portfolio/Glynis.JPG",
+        "alt": "Woman with gray curly hair professional headshot"
+      },
+      {
+        "image": "images/portfolio/Newman_Tamara_832-MarquelYvette0072-ig.jpg",
+        "alt": "Woman with curly brown hair smiling"
+      },
+      {
+        "image": "images/portfolio/Forbes_Lauryn_294-MarquelYvette0046.jpg",
+        "alt": "Professional woman in striped shirt smiling"
+      },
+      {
+        "image": "images/portfolio/Lee_Eric_612-MarquelYvette0007+1.jpg",
+        "alt": "Man with glasses in professional suit"
+      }
+    ]
+  },
+
+  "testimonials": {
+    "featured": {
+      "quote": "Marquel was very professional and made me feel comfortable in front of the camera. My pictures are flawless, and she puts so much care into the work she does. I didn't feel rushed or stressed; I felt relaxed, and Marquel had so much patience. I highly recommend her.",
+      "author": "J. Dennis",
+      "image": "images/portfolio/Dennis_Jennifer_161-MarquelYvette0063-retouched.jpg",
+      "alt": "Professional woman in white blazer"
+    },
+    "grid": [
+      {
+        "quote": "Fantastic all around experience. I am thrilled with my headshots and had a great time having them done. 100% recommend Marquel for professionalism of the process and end product.",
+        "author": "Cathy",
+        "image": "images/portfolio/Hovis_Catherine_403-MarquelYvette0013-original200px.jpg",
+        "alt": "Cathy - Client testimonial"
+      },
+      {
+        "quote": "If you are looking for someone to bring out your best, Marquel is your photographer. She is professional and helps you relax in order to bring out your true essence. Highly recommend!",
+        "author": "Nancy",
+        "image": "images/portfolio/Nancy+(200px).jpg",
+        "alt": "Nancy - Client testimonial"
+      },
+      {
+        "quote": "Marquel responded quickly and delivered print ready headshots. She has a level of professionalism and service that allows the session to flow easily! I highly recommend Marquel!",
+        "author": "Kahni",
+        "image": "images/portfolio/Kahni+(200px).jpg",
+        "alt": "Kahni - Client testimonial"
+      }
+    ]
+  },
+
+  "problem": {
+    "title": "FEEL UNCOMFORTABLE IN FRONT OF THE CAMERA? YOU'RE NOT ALONE.",
+    "paragraphs": [
+      "But avoiding it could be costing you opportunities.",
+      "An premium <strong>headshot</strong> experience can make all the difference.",
+      "Let me show you how much fun it can be!"
+    ]
+  },
+
+  "services": {
+    "primary": [
+      {
+        "title": "CORPORATE Headshots",
+        "description": "Corporate headshots should communicate confidence credibility, and leadership.",
+        "image": "images/portfolio/CS-0205_500px.jpg",
+        "alt": "Corporate headshot"
+      },
+      {
+        "title": "ACTOR Headshots",
+        "description": "Your headshot is your first audition—make it unforgettable. Let's capture the look that gets you noticed and booked.",
+        "image": "images/portfolio/Leonard_Taylor_331-MarquelYvette0050+500px.jpg",
+        "alt": "Actor headshot"
+      },
+      {
+        "title": "LinkedIn Headshots",
+        "description": "Before they read your resume, they see your photo. Ensure your image presents you at your very best.",
+        "image": "images/portfolio/Sireesha-Ganti-0103-(500px).jpg",
+        "alt": "LinkedIn headshot"
+      }
+    ],
+    "additional": [
+      {
+        "title": "REALTOR Headshots",
+        "description": "Is your current headshot impressive? A polished, professional headshot helps you stand out in a crowded market.",
+        "image": "images/portfolio/T-Fairfield-0297-(500px).jpg.jpg",
+        "alt": "Realtor headshot",
+        "types": [
+          "High-End Realtor Headshots",
+          "Realtor Portraits",
+          "Realtor Branding Headshots"
+        ]
+      },
+      {
+        "title": "Executive Headshots",
+        "description": "Authenticity is vital in executive headshots. Ensure that you communicate trust. Be perceived as an authority!",
+        "image": "images/portfolio/James_Lia_397-MarquelYvette0012-ig.jpg",
+        "alt": "Executive headshot",
+        "types": [
+          "C Suite Headshots",
+          "Executive Portraits",
+          "Business Headshots"
+        ]
+      },
+      {
+        "title": "Company Headshots",
+        "description": "Company headshots need to be consistent. Align your team headshots with your brand. Create loyalty and improve employee morale.",
+        "image": "images/portfolio/DrBess0561_eras_medical_loudoun_marquelyvette_500by500.jpg",
+        "alt": "Company headshots",
+        "types": [
+          "Website Headshots",
+          "Team Headshots",
+          "High Volume Headshots"
+        ]
+      }
+    ]
+  },
+
+  "team": {
+    "title": "Workplace Headshots",
+    "intro": "Time is precious and efficiency is essential. Workplace headshots are valuable and useful <strong>marketing tools</strong> for your company. Your clients want to know who they will be working with – impress them!",
+    "url": "workplace-headshots.html",
+    "images": [
+      {
+        "src": "images/portfolio/VOF+-+5X4+Images+(14+x+8.5+in).jpg",
+        "alt": "Corporate workplace headshots"
+      },
+      {
+        "src": "images/portfolio/LinkVisum+(1920+×+1080+px)+(1).jpg",
+        "alt": "Corporate group headshots"
+      }
+    ]
+  },
+
+  "about": {
+    "title": "LOUDOUN COUNTY Headshot Photographer",
+    "image": "images/portfolio/Marquel+Headshots9093+1.jpg",
+    "alt": "Marquel Forbes - Professional Headshot Photographer",
+    "text": {
+      "intro": "Hi there! I'm Marquel Forbes, your headshot photographer and confidence booster!",
+      "highlight": "I'm so glad you're here! Many people tell me they hate getting their photo taken—",
+      "body": [
+        "they feel awkward or nervous just thinking about it. If that sounds familiar, don't worry,",
+        "you're in the right place. I'm here to change your mind with just a little bit of your time.",
+        "Your LinkedIn profile photo is often the first impression companies get of you, so it needs",
+        "to show you at your best. As a headshot photographer, I specialize in helping you",
+        "feel comfortable and relaxed in front of the camera, so we can capture your true personality.",
+        "Let's make this a fun and enjoyable experience, and get you a photo that not only looks",
+        "great but also feels authentically you!"
+      ]
+    }
+  },
+
+  "process": {
+    "title": "The Process",
+    "steps": [
+      {
+        "icon": "images/backgrounds/4365245_date_schedule_calendar_event_icon.png",
+        "title": "Schedule",
+        "description": "Give the Calendar a Tap. Schedule your Session",
+        "alt": "Schedule icon"
+      },
+      {
+        "icon": "images/backgrounds/2622595_female_photographer_icon.png",
+        "title": "Shoot",
+        "description": "It's easier than it looks. come see what the fuss is about",
+        "alt": "Photographer icon"
+      },
+      {
+        "icon": "images/backgrounds/7680845_desktop_monitor_download_screen_device_icon.png",
+        "title": "Download",
+        "description": "Download Your Images. Find greater success",
+        "alt": "Download icon"
+      }
+    ]
+  },
+
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Got Questions? We've Got Answers!",
+    "items": [
+      {
+        "question": "What should I wear for my headshot?",
+        "answer": "Choose solid colors that complement your skin tone and avoid busy patterns. Bring multiple outfit options so we can find what works best on camera. Professional attire works well for corporate headshots, while creative fields may allow more personality."
+      },
+      {
+        "question": "How long does a headshot session take?",
+        "answer": "Most headshot sessions last about one hour. This gives us plenty of time to capture multiple looks, try different backgrounds, and ensure you're comfortable and relaxed in front of the camera."
+      },
+      {
+        "question": "When will I receive my photos?",
+        "answer": "You'll receive your professionally retouched headshots within 5-7 business days after your session. Rush delivery options are available if you need your images sooner."
+      },
+      {
+        "question": "Can I bring someone with me to the session?",
+        "answer": "Absolutely! You're welcome to bring a friend or colleague for support. Sometimes having a familiar face nearby helps you relax and feel more confident during the shoot."
+      },
+      {
+        "question": "Do you offer hair and makeup services?",
+        "answer": "Yes! Professional hair and makeup services are available for an additional fee. I work with talented artists who specialize in camera-ready looks that photograph beautifully."
+      },
+      {
+        "question": "What if I'm not photogenic?",
+        "answer": "Everyone is photogenic with the right photographer! I specialize in making people feel comfortable and bringing out their natural confidence. Many clients who thought they weren't photogenic are amazed by their results."
+      }
+    ]
+  },
+
+  "cta": {
+    "text": "SEE RATES AND AVAILABILITY",
+    "url": "rates-2.html"
+  },
+
+  "location": {
+    "title": "Chantilly Studio Location",
+    "image": "images/portfolio/Studio.jpg",
+    "alt": "Professional Photography studio, Marquel Yvette Photography",
+    "address": {
+      "street": "42570 Unbridleds Song Place",
+      "city": "South Riding",
+      "state": "VA",
+      "zip": "20152"
+    },
+    "text": [
+      "My studio is in located in Chantilly, VA and my client come from all over the DC Metro area.",
+      "I am less than a mile from route 50 which you can access via Route 606 which will take you behind Dulles",
+      "Town Center. The studio is located in a quiet residential area with plenty of parking."
+    ]
+  }
+}
