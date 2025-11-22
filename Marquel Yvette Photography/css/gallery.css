@@ -5,8 +5,7 @@
 .gallery-grid-wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 0;
-  grid-row-gap: 0;
+  gap: 0;
   width: 100%;
 }
 
@@ -17,6 +16,9 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
+  /* Improve touch interaction on mobile */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .gallery-grid-item-wrapper {
@@ -29,13 +31,30 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 50%;
   display: block;
   transition: transform 0.3s ease-in-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Hover effect - Scale up on hover */
-.gallery-grid-item:hover img {
-  transform: scale(1.05);
+/* Hover effect - Scale up on hover (desktop only) */
+@media (hover: hover) and (pointer: fine) {
+  .gallery-grid-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .gallery-grid-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+  }
+}
+
+/* Touch feedback for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .gallery-grid-item:active img {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
 }
 
 /* Loading state */
@@ -53,12 +72,22 @@
   .gallery-grid-wrapper {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  /* Hide images 9-10 on larger tablets/iPads (show only first 8) */
+  .gallery-grid-item:nth-child(n+9) {
+    display: none;
+  }
 }
 
-/* Responsive - 3 columns on mobile landscape */
+/* Responsive - 3 columns on mobile landscape and iPad Mini */
 @media (max-width: 768px) {
   .gallery-grid-wrapper {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Hide images 7-10 on iPad Mini (show only first 6) */
+  .gallery-grid-item:nth-child(n+7) {
+    display: none;
   }
 }
 
@@ -67,17 +96,16 @@
   .gallery-grid-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* Hide images 5-10 on mobile/iPhone (show only first 4) */
+  .gallery-grid-item:nth-child(n+5) {
+    display: none;
+  }
 }
 
 /* Accessibility - Focus states */
 .gallery-grid-item:focus-within {
   outline: 2px solid #f4ca78;
   outline-offset: -2px;
-  z-index: 1;
-}
-
-/* Optional: Add subtle shadow on hover */
-.gallery-grid-item:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1;
 }
