@@ -1,0 +1,216 @@
+{
+  "page": {
+    "title": "Professional Headshots | Northern Virginia | Marquel Yvette Photography",
+    "description": "Clean, modern professional headshots for Northern Virginia professionals and business owners. Easy booking, flattering lighting, fast turnaround.",
+    "keywords": "professional headshots, corporate headshots, business headshots, Northern Virginia, DC metro, South Riding, Ashburn, Chantilly"
+  },
+  "hero": {
+    "logo": "images/logos/MarquelYvette_Gold+White+Text+11-3-24.png",
+    "eyebrow": "Professional Headshots",
+    "title": "Professional Headshots For Northern Virginia Professionals",
+    "subtitle": "Clean, modern headshots for professionals and business owners in Northern Virginia and the DC metro area. I make the process easy, even if you do not like being in front of the camera.",
+    "locationText": "Studio in South Riding, serving Ashburn, Chantilly, Leesburg, Reston, and the DC metro area.",
+    "heroImage": "images/portfolio/Willis_Samira_937-MarquelYvette0083-ig+(1).jpg",
+    "heroImageAlt": "Professional business headshot example showing clean lighting and modern style",
+    "pillText": "Booked by executives, business owners, and professionals across Northern Virginia.",
+    "buttons": [
+      {
+        "text": "Book Your Headshot Session",
+        "url": "new-site/rates-2.html",
+        "style": "primary"
+      },
+      {
+        "text": "Get The Free Headshot Checklist",
+        "url": "#lead-form",
+        "style": "secondary"
+      }
+    ]
+  },
+  "benefits": {
+    "sectionTitle": "Look Confident In Every Photo",
+    "sectionIntro": "Most people hate getting their photo taken. My job is to help you feel comfortable, look like yourself, and walk away with a headshot you are proud to share on LinkedIn, your website, and anywhere your name shows up.",
+    "cards": [
+      {
+        "title": "Guided Posing",
+        "description": "I coach you through expression, posture, and angles so you never feel stiff, lost, or unsure what to do with your hands."
+      },
+      {
+        "title": "Clean, Modern Lighting",
+        "description": "Light that flatters your features, keeps your skin tone true, and feels polished without looking overdone."
+      },
+      {
+        "title": "Images You Actually Use",
+        "description": "Headshots designed for LinkedIn, company sites, speaking engagements, and press features so you can show up consistently."
+      }
+    ],
+    "gallery": [
+      {
+        "src": "images/portfolio/Dennis_Jennifer_161-MarquelYvette0063-retouched.jpg",
+        "alt": "Professional business headshot of woman in navy blazer"
+      },
+      {
+        "src": "images/portfolio/Lee_Eric_612-MarquelYvette0048-retouched.jpg",
+        "alt": "Corporate headshot of man in dark suit"
+      },
+      {
+        "src": "images/portfolio/Leonard_Taylor_331-MarquelYvette0050+500px.jpg",
+        "alt": "Professional headshot of man in grey suit and glasses"
+      },
+      {
+        "src": "images/portfolio/Newman_Tamara_832-MarquelYvette0072-ig.jpg",
+        "alt": "Professional headshot of woman with natural smile"
+      }
+    ]
+  },
+  "pricing": {
+    "sectionTitle": "Straightforward Pricing",
+    "sectionIntro": "Clear, simple pricing with flexibility to choose only the images you love.",
+    "packages": [
+      {
+        "title": "The Express",
+        "price": "$525",
+        "description": "Perfect for busy professionals who need polished headshots quickly."
+      },
+      {
+        "title": "The Signature",
+        "price": "$995",
+        "description": "Our comprehensive session for professionals who want variety and options."
+      },
+      {
+        "title": "The Executive",
+        "price": "$1,895",
+        "description": "The ultimate headshot experience for established professionals who need a complete image library."
+      },
+      {
+        "title": "Team And Workplace",
+        "price": "Custom Quote",
+        "description": "On site or in studio headshots for your leadership team or staff. Pricing based on number of people and locations.",
+        "ctaButton": {
+          "text": "Contact Us",
+          "url": "new-site/request-proposal.html"
+        }
+      }
+    ],
+    "ctaButton": {
+      "text": "View Availability And Book",
+      "url": "new-site/rates-2.html"
+    }
+  },
+  "howItWorks": {
+    "sectionTitle": "How It Works",
+    "sectionIntro": "A simple process that keeps you comfortable and confident from start to finish.",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Book Your Session",
+        "description": "Choose a date and time that works for you and confirm your session online in just a few clicks."
+      },
+      {
+        "number": 2,
+        "title": "Prepare With The Checklist",
+        "description": "Use the free headshot checklist to decide what to wear, how to prep, and what to bring so you arrive ready."
+      },
+      {
+        "number": 3,
+        "title": "Enjoy Your Shoot And Final Images",
+        "description": "During your session I guide you through posing and expression, then deliver polished high end images ready to use."
+      }
+    ]
+  },
+  "testimonials": {
+    "sectionTitle": "Trusted By Business Leaders",
+    "sectionIntro": "Professionals across Northern Virginia trust me to create headshots that match the level of work they do.",
+    "items": [
+      {
+        "quote": "I usually dread photos, but Marquel made me feel relaxed within minutes. My new headshot looks polished and still feels like me.",
+        "author": "Senior Director, Technology"
+      },
+      {
+        "quote": "The entire process was simple and efficient. I booked online, showed up, and left with several images I can use across my business.",
+        "author": "Small Business Owner, Northern Virginia"
+      },
+      {
+        "quote": "I needed an updated headshot for a promotion announcement. Marquel guided every detail and the final result is exactly what I wanted.",
+        "author": "Operations Leader, Financial Services"
+      }
+    ]
+  },
+  "busyProfessionals": {
+    "sectionTitle": "Too Busy For A Full Session",
+    "sectionIntro": "I offer options designed for busy professionals who still want a high quality image.",
+    "cards": [
+      {
+        "title": "Express Sessions",
+        "description": "Short focused sessions that fit into a lunch break or between meetings, without sacrificing quality."
+      },
+      {
+        "title": "On Site Headshots",
+        "description": "I can come to your workplace or event so your team can be photographed without leaving the office."
+      },
+      {
+        "title": "Flexible Scheduling",
+        "description": "Limited early morning, evening, and weekend appointments are available for demanding schedules."
+      }
+    ],
+    "ctaButton": {
+      "text": "Request Express Or On Site Session",
+      "url": "new-site/request-proposal.html"
+    }
+  },
+  "leadMagnet": {
+    "sectionTitle": "Get The Perfect Headshot Checklist",
+    "description": "Not quite ready to book but tired of guessing what to wear or how to prep? This free checklist gives you a simple plan so you arrive confident and camera ready.",
+    "benefits": [
+      "Outfit guidance that works on camera.",
+      "Tips for hair, grooming, and glasses.",
+      "What to bring so you have options.",
+      "How to choose the right background for your brand."
+    ],
+    "form": {
+      "action": "https://services.leadconnectorhq.com/hooks/QqzMbs9W02wuc63zjyYB/webhook-trigger/887bd4a2-60fc-4ac1-90b5-8f163edb13d5",
+      "fields": [
+        {
+          "id": "name",
+          "label": "First Name",
+          "type": "text",
+          "placeholder": "First name",
+          "required": true
+        },
+        {
+          "id": "email",
+          "label": "Email",
+          "type": "email",
+          "placeholder": "name@email.com",
+          "required": true
+        }
+      ],
+      "submitButton": "Email Me The Checklist",
+      "disclaimer": "By submitting, you agree to receive occasional emails with headshot tips and studio updates. You can unsubscribe at any time."
+    }
+  },
+  "faq": {
+    "sectionTitle": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How long does a typical session take?",
+        "answer": "Most professional sessions last about one hour, which includes time to review images and make sure we have several strong options."
+      },
+      {
+        "question": "Do you help with posing and expression?",
+        "answer": "Yes. I guide you through every pose and help you find expressions that look relaxed, confident, and natural so you never feel unsure."
+      },
+      {
+        "question": "When will I receive my final images?",
+        "answer": "Proofs are typically delivered within 7-10 business days. Once you choose your favorites, final retouched images are delivered quickly after that."
+      },
+      {
+        "question": "Can you photograph my leadership team or staff?",
+        "answer": "Yes. I offer custom workplace and team headshot options. Share a few details about your team size and location and I will provide a tailored quote."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2025 Marquel Yvette Photography. All rights reserved.",
+    "location": "Studio in South Riding, Virginia. Serving Northern Virginia and the DC metro area."
+  }
+}
