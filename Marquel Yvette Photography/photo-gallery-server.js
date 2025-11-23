@@ -190,7 +190,7 @@ const server = http.createServer(async (req, res) => {
 
         // Upload photos.json
         console.log('Uploading photos.json...');
-        await execPromise('aws s3 cp config/photos.json s3://marquelyvette-website/new-site/config/photos.json');
+        await execPromise('aws s3 cp config/photos.json s3://marquelyvette-website/config/photos.json');
         console.log('✓ Uploaded photos.json');
 
         // Upload each photo
@@ -203,7 +203,7 @@ const server = http.createServer(async (req, res) => {
         }
 
         // Create invalidation (URL-encode paths to handle spaces and special characters)
-        const paths = ['/new-site/config/photos.json', ...updatedFiles.map(f => `/${f}`)];
+        const paths = ['/config/photos.json', ...updatedFiles.map(f => `/${f}`)];
         const encodedPaths = paths.map(p => encodeURI(p));
         const pathsStr = encodedPaths.map(p => `"${p}"`).join(' ');
 
