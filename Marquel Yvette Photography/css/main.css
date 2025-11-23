@@ -1756,7 +1756,7 @@ section {
     .services-grid-section,
     .success-stories-section,
     .process-section {
-        padding: 35px 15px;
+        padding: 20px 15px 35px 15px;
     }
 
     /* Reduced spacing between components */
