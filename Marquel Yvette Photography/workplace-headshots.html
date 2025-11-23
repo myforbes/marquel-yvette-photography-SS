@@ -29,9 +29,15 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="">
 
-    <!-- CSS -->
+    <!-- Preload critical CSS for faster render -->
+    <link rel="preload" as="style" href="css/main.css">
+
+    <!-- CSS - Critical styles loaded immediately, non-critical deferred -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/menu.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="css/menu.css">
+    </noscript>
 
     <!-- Google Fonts - Open Sans with font-display swap for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

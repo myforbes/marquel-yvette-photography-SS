@@ -14,6 +14,9 @@ i d<!DOCTYPE html>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
 
+    <!-- Preload critical CSS for faster render -->
+    <link rel="preload" as="style" href="css/main.css">
+
     <!-- Preload LCP image for faster initial render -->
     <link rel="preload" as="image" href="images/portfolio/Dionne_Kindra_697-MarquelYvette0085.jpg" fetchpriority="high">
     <link rel="preload" as="image" href="images/portfolio/Nakeisha+Neal+Jones-0134+(1).jpg" fetchpriority="high">
@@ -22,10 +25,14 @@ i d<!DOCTYPE html>
     <link rel="preload" as="image" href="images/portfolio/Thongpia-hughes_Gift_495-MarquelYvette0107-ig.jpg" media="(min-width: 769px)">
     <link rel="preload" as="image" href="images/portfolio/Milestone-Title-0116.jpg" media="(min-width: 1025px)">
 
-    <!-- CSS -->
+    <!-- CSS - Critical styles loaded immediately, non-critical deferred -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/gallery.css">
-    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/gallery.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/menu.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="css/gallery.css">
+        <link rel="stylesheet" href="css/menu.css">
+    </noscript>
 
     <!-- Google Fonts - Open Sans with font-display swap for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
