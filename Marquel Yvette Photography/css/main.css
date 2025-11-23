@@ -1676,6 +1676,11 @@ section {
     .footer-logo {
         margin: 0 auto 15px;
     }
+
+    /* Reduce spacing above service card titles on tablet/mobile */
+    .service-card h3 {
+        margin: 10px 20px 10px;
+    }
 }
 
 @media (max-width: 767px) {
