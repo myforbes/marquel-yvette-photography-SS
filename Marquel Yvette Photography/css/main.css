@@ -1706,6 +1706,7 @@ section {
     .service-card-detailed h3,
     .process-step h3 {
         font-size: 0.9rem;
+        margin-top: 10px;
         margin-bottom: 10px;
         letter-spacing: 0.03em;
     }
