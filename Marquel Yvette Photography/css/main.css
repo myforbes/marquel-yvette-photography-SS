@@ -368,6 +368,7 @@ section {
 .service-card img {
     width: 100%;
     height: auto;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 
@@ -891,6 +892,8 @@ section {
 
 .testimonial-image img {
     width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -1051,6 +1054,8 @@ section {
 
 .team-image img {
     width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
     display: block;
     border-radius: 0;
 }
@@ -1228,6 +1233,8 @@ section {
 
 .about-image img {
     width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
     border-radius: 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
@@ -1345,6 +1352,7 @@ section {
 .service-card-detailed img {
     width: 100%;
     height: auto;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     margin: 20px 0 30px 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -1393,6 +1401,8 @@ section {
 
 .location-image img {
     width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     border-radius: 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
