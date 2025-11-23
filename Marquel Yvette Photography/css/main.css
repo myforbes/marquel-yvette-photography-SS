@@ -15,6 +15,41 @@
     font-display: swap;
 }
 
+/* Font metric overrides to match Open Sans with Arial fallback */
+/* This prevents layout shifts when web fonts load */
+@font-face {
+    font-family: 'Open Sans Fallback';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Arial');
+    ascent-override: 105%;
+    descent-override: 35%;
+    line-gap-override: 0%;
+    size-adjust: 95%;
+}
+
+@font-face {
+    font-family: 'Open Sans Fallback';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Arial');
+    ascent-override: 105%;
+    descent-override: 35%;
+    line-gap-override: 0%;
+    size-adjust: 95%;
+}
+
+@font-face {
+    font-family: 'Open Sans Fallback';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Arial');
+    ascent-override: 105%;
+    descent-override: 35%;
+    line-gap-override: 0%;
+    size-adjust: 95%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +71,7 @@
     --color-bg-white: #ffffff;
 
     /* Typography - Matches Original (Open Sans) */
-    --font-primary: 'Open Sans', sans-serif;
+    --font-primary: 'Open Sans', 'Open Sans Fallback', Arial, sans-serif;
     --font-weight-normal: 400;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
