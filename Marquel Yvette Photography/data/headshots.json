@@ -10,13 +10,13 @@
     "title": "Professional Headshots For Northern Virginia Professionals",
     "subtitle": "Clean, modern headshots for professionals and business owners in Northern Virginia and the DC metro area. I make the process easy, even if you do not like being in front of the camera.",
     "locationText": "Studio in South Riding, serving Ashburn, Chantilly, Leesburg, Reston, and the DC metro area.",
-    "heroImage": "images/portfolio/Willis_Samira_937-MarquelYvette0083-ig+(1).jpg",
+    "heroImage": "images/portfolio/James_Ryan_538-MarquelYvette0302-retouched.jpg",
     "heroImageAlt": "Professional business headshot example showing clean lighting and modern style",
     "pillText": "Booked by executives, business owners, and professionals across Northern Virginia.",
     "buttons": [
       {
         "text": "Book Your Headshot Session",
-        "url": "new-site/rates-2.html",
+        "url": "rates-2.html",
         "style": "primary"
       },
       {
@@ -87,13 +87,13 @@
         "description": "On site or in studio headshots for your leadership team or staff. Pricing based on number of people and locations.",
         "ctaButton": {
           "text": "Contact Us",
-          "url": "new-site/request-proposal.html"
+          "url": "request-proposal.html"
         }
       }
     ],
     "ctaButton": {
       "text": "View Availability And Book",
-      "url": "new-site/rates-2.html"
+      "url": "rates-2.html"
     }
   },
   "howItWorks": {
@@ -154,7 +154,7 @@
     ],
     "ctaButton": {
       "text": "Request Express Or On Site Session",
-      "url": "new-site/request-proposal.html"
+      "url": "request-proposal.html"
     }
   },
   "leadMagnet": {
@@ -201,7 +201,7 @@
       },
       {
         "question": "When will I receive my final images?",
-        "answer": "Proofs are typically delivered within 7-10 business days. Once you choose your favorites, final retouched images are delivered quickly after that."
+        "answer": "Proofs are typically delivered within two business days. Once you choose your favorites, final retouched images are delivered quickly after that."
       },
       {
         "question": "Can you photograph my leadership team or staff?",

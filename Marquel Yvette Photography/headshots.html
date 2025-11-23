@@ -20,7 +20,7 @@
 
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-        background: #f5f5f5;
+        background: #f8f8f8;
         color: #222;
         line-height: 1.6;
         /* Safe area padding for notched devices */
@@ -38,30 +38,38 @@
       }
 
       .section {
-        padding: 70px 20px;
+        padding: 50px 20px;
       }
 
       .container {
-        max-width: 1100px;
+        max-width: 1400px;
         margin: 0 auto;
+        padding: 0 30px;
+      }
+
+      .section:not(.bg-white):not(.bg-light):not(.bg-dark):not(.lead-magnet) .container {
+        padding: 0 30px;
       }
 
       /* Hero */
       .hero {
-        background: #000;
+        background: #f8f8f8;
         color: #fff;
-        padding: 80px 20px;
+        padding: 60px 20px;
         /* Safe area padding for top notch */
-        padding-top: max(80px, env(safe-area-inset-top));
+        padding-top: max(60px, env(safe-area-inset-top));
       }
 
       .hero-inner {
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1.2fr;
         gap: 50px;
         align-items: center;
+        background: #000;
+        padding: 40px 50px;
+        border-radius: 0;
       }
 
       .hero h1 {
@@ -70,9 +78,10 @@
       }
 
       .hero .subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-bottom: 30px;
-        color: #f2f2f2;
+        color: #d5d5d5;
+        line-height: 1.6;
       }
 
       .hero-buttons {
@@ -155,13 +164,18 @@
         font-size: 2rem;
         text-align: center;
         margin-bottom: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        color: #111;
       }
 
       .section-intro {
         text-align: center;
-        max-width: 700px;
+        max-width: 900px;
         margin: 0 auto 40px;
-        color: #555;
+        color: #666;
+        font-size: 1rem;
       }
 
       /* Benefits Grid */
@@ -181,12 +195,13 @@
       .benefit-card h3 {
         font-size: 1.05rem;
         margin-bottom: 8px;
-        color: #111;
+        color: #c9a661;
+        font-weight: 600;
       }
 
       .benefit-card p {
         font-size: 0.95rem;
-        color: #555;
+        color: #666;
       }
 
       /* Gallery */
@@ -223,6 +238,8 @@
       .pricing-card h3 {
         font-size: 1.1rem;
         margin-bottom: 8px;
+        color: #c9a661;
+        font-weight: 600;
       }
 
       .pricing-card .price {
@@ -234,7 +251,7 @@
 
       .pricing-card p {
         font-size: 0.95rem;
-        color: #555;
+        color: #666;
       }
 
       /* Steps */
@@ -250,6 +267,15 @@
         border-radius: 14px;
         padding: 22px 20px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      }
+
+      .step-card h3 {
+        color: #c9a661;
+        font-weight: 600;
+      }
+
+      .step-card p {
+        color: #666;
       }
 
       .step-number {
@@ -293,7 +319,7 @@
 
       /* FAQ */
       .faq {
-        max-width: 800px;
+        max-width: 1000px;
         margin: 0 auto;
       }
 
@@ -305,27 +331,30 @@
       .faq-question {
         font-weight: 600;
         font-size: 0.98rem;
+        color: #c9a661;
       }
 
       .faq-answer {
         font-size: 0.95rem;
-        color: #555;
+        color: #666;
         margin-top: 6px;
       }
 
       /* Lead Magnet */
       .lead-magnet {
-        background: linear-gradient(135deg, #f4ca78 0%, #b9914d 100%);
+        background: #f8f8f8;
         color: #111;
       }
 
       .lead-inner {
-        max-width: 900px;
+        max-width: 1400px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1.1fr 0.9fr;
         gap: 40px;
         align-items: center;
+        padding: 40px 30px;
+        background: linear-gradient(135deg, #f4ca78 0%, #b9914d 100%);
       }
 
       .lead-magnet h2 {
@@ -373,21 +402,23 @@
 
       /* Footer */
       .footer {
-        background: #000;
+        background: #f8f8f8;
         color: #aaa;
-        padding: 35px 20px;
+        padding: 30px 20px;
         font-size: 0.85rem;
         /* Safe area padding for bottom home indicator */
-        padding-bottom: max(35px, env(safe-area-inset-bottom));
+        padding-bottom: max(30px, env(safe-area-inset-bottom));
       }
 
       .footer-inner {
-        max-width: 900px;
+        max-width: 1400px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 14px;
+        padding: 30px 30px;
+        background: #000;
       }
 
       /* Utilities */
@@ -399,17 +430,27 @@
         margin-top: 34px;
       }
 
-      .bg-white {
-        background: #ffffff;
+      .bg-white .container {
+        background: #fff;
+        padding: 40px 30px;
+        max-width: 1400px;
       }
 
-      .bg-light {
-        background: #f0f0f0;
+      .bg-light .container {
+        background: #fff;
+        padding: 40px 30px;
+        max-width: 1400px;
       }
 
       .bg-dark {
+        background: #f8f8f8;
+      }
+
+      .bg-dark .container {
         background: #111;
         color: #fff;
+        padding: 40px 30px;
+        max-width: 1400px;
       }
 
       .logo {
@@ -443,7 +484,23 @@
         }
 
         .hero {
-          padding-top: 60px;
+          padding-top: 50px;
+        }
+
+        .hero-inner {
+          padding: 35px 25px;
+        }
+
+        .lead-inner,
+        .footer-inner,
+        .bg-white .container,
+        .bg-light .container,
+        .bg-dark .container {
+          padding: 35px 25px;
+        }
+
+        .section:not(.bg-white):not(.bg-light):not(.bg-dark):not(.lead-magnet) .container {
+          padding: 0 25px;
         }
 
         .hero h1 {
@@ -464,12 +521,28 @@
           flex-direction: column;
         }
 
+        .hero-inner {
+          padding: 25px 20px;
+        }
+
+        .lead-inner,
+        .footer-inner,
+        .bg-white .container,
+        .bg-light .container,
+        .bg-dark .container {
+          padding: 25px 20px;
+        }
+
+        .section:not(.bg-white):not(.bg-light):not(.bg-dark):not(.lead-magnet) .container {
+          padding: 0 20px;
+        }
+
         .logo {
           width: 180px;
         }
 
         .section {
-          padding: 50px 20px;
+          padding: 40px 20px;
         }
 
         .hero h1 {
