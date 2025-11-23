@@ -104,5 +104,15 @@
         "image": "images/testimonials/everett.jpg"
       }
     ]
+  },
+  "giftCards": {
+    "title": "Photography Gift Cards",
+    "intro": "Give someone you care about the opportunity to shine.",
+    "description": "Know someone who's been putting off getting professional headshots? A photography gift card is the perfect way to encourage them to invest in their professional image. Ideal for birthdays, graduations, promotions, or just because—our gift cards work for any session package listed above.",
+    "benefits": "Flexible and convenient: Gift cards never expire, can be combined with other offers, and are delivered instantly via email. The perfect last-minute gift that shows you care about their success.",
+    "cta": {
+      "text": "🎁 PURCHASE GIFT CARD 🎁",
+      "url": "gift-cards.html"
+    }
   }
 }

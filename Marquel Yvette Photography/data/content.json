@@ -149,6 +149,17 @@
     ]
   },
 
+  "giftCards": {
+    "title": "Give the Gift of Confidence",
+    "intro": "The perfect gift for professionals, graduates, job seekers, or anyone ready to elevate their image.",
+    "description": "Our photography gift cards can be applied to any headshot session or photography service. Whether it's for a friend starting a new career, a recent graduate, or a colleague who needs to update their LinkedIn profile—give them the confidence that comes with a professional headshot.",
+    "benefits": "Gift cards never expire and can be redeemed for any photography service. Delivered instantly via email—perfect for last-minute gifts!",
+    "cta": {
+      "text": "🎁 PURCHASE GIFT CARD 🎁",
+      "url": "gift-cards.html"
+    }
+  },
+
   "team": {
     "title": "Workplace Headshots",
     "intro": "Time is precious and efficiency is essential. Workplace headshots are valuable and useful <strong>marketing tools</strong> for your company. Your clients want to know who they will be working with – impress them!",

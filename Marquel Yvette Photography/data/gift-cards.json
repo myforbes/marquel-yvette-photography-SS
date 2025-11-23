@@ -1,0 +1,57 @@
+{
+  "page": {
+    "title": "Photography Gift Cards | Marquel Yvette Photography",
+    "description": "Give the gift of confidence with photography gift cards from Marquel Yvette Photography. Perfect for professionals, graduates, job seekers, and anyone ready to elevate their image.",
+    "url": "https://www.marquelyvette.com/gift-cards"
+  },
+
+  "hero": {
+    "title": "Give the Gift of Confidence",
+    "intro": "The perfect gift for professionals, graduates, job seekers, or anyone ready to elevate their image.",
+    "description": "Our photography gift cards can be applied to any headshot session or photography service. Whether it's for a friend starting a new career, a recent graduate, or a colleague who needs to update their LinkedIn profile—give them the confidence that comes with a professional headshot."
+  },
+
+  "giftCard": {
+    "embedId": "6920d8834828bb3d5329c7a7",
+    "scriptUrl": "https://storage.googleapis.com/leadgen-payment-products-preview-nuxt-assets/js/iframe-resizer/gc-embed.parent.js"
+  },
+
+  "benefits": [
+    {
+      "title": "Never Expire",
+      "description": "Gift cards never expire and can be redeemed for any photography service."
+    },
+    {
+      "title": "Instant Delivery",
+      "description": "Delivered instantly via email—perfect for last-minute gifts!"
+    },
+    {
+      "title": "Any Service",
+      "description": "Can be applied to any headshot session or photography package."
+    },
+    {
+      "title": "Professional Quality",
+      "description": "Recipients get the same premium experience and quality as all our clients."
+    }
+  ],
+
+  "idealFor": [
+    "Friends starting a new career",
+    "Recent graduates entering the job market",
+    "Colleagues needing to update their LinkedIn profile",
+    "Entrepreneurs building their personal brand",
+    "Anyone celebrating a promotion or career milestone",
+    "Professionals preparing for a job search"
+  ],
+
+  "cta": {
+    "primary": {
+      "text": "Purchase Gift Card",
+      "action": "purchase"
+    },
+    "secondary": {
+      "text": "See Our Rates",
+      "url": "rates-2.html"
+    }
+  }
+}
