@@ -921,8 +921,12 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
+}
+
+.testimonial-image {
+    max-width: 400px;
 }
 
 .testimonial-image img {
