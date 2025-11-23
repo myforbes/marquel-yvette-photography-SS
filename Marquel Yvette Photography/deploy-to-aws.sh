@@ -39,7 +39,44 @@ fi
 
 echo -e "${BLUE}Step 1: Syncing files to S3...${NC}"
 
-# Upload all files with proper cache headers
+# Sync CSS files with long cache (1 year)
+aws s3 sync ./css s3://$BUCKET_NAME/css \
+  --delete \
+  --cache-control "public, max-age=31536000, immutable" \
+  --content-type "text/css"
+
+# Sync JavaScript files with long cache (1 year)
+aws s3 sync ./js s3://$BUCKET_NAME/js \
+  --delete \
+  --cache-control "public, max-age=31536000, immutable" \
+  --content-type "application/javascript"
+
+# Sync images with long cache (1 year)
+aws s3 sync ./images s3://$BUCKET_NAME/images \
+  --delete \
+  --cache-control "public, max-age=31536000, immutable"
+
+# Sync fonts with long cache (1 year)
+if [ -d "fonts" ]; then
+  aws s3 sync ./fonts s3://$BUCKET_NAME/fonts \
+    --delete \
+    --cache-control "public, max-age=31536000, immutable"
+fi
+
+# Sync HTML files with shorter cache (1 day)
+aws s3 sync . s3://$BUCKET_NAME \
+  --exclude "*" \
+  --include "*.html" \
+  --cache-control "public, max-age=86400" \
+  --content-type "text/html; charset=utf-8"
+
+# Sync JSON files with medium cache (1 week)
+aws s3 sync ./data s3://$BUCKET_NAME/data \
+  --delete \
+  --cache-control "public, max-age=604800" \
+  --content-type "application/json"
+
+# Sync other files (config, components, etc.)
 aws s3 sync . s3://$BUCKET_NAME \
   --delete \
   --exclude "*.backup" \
@@ -49,19 +86,22 @@ aws s3 sync . s3://$BUCKET_NAME \
   --exclude ".git/*" \
   --exclude "images-original-backup/*" \
   --exclude "deploy-to-aws.sh" \
-  --cache-control "public, max-age=31536000, immutable"
+  --exclude "*.html" \
+  --exclude "css/*" \
+  --exclude "js/*" \
+  --exclude "images/*" \
+  --exclude "fonts/*" \
+  --exclude "data/*" \
+  --cache-control "public, max-age=31536000"
 
 echo -e "${GREEN}✓ Files synced to S3${NC}"
 
-echo -e "${BLUE}Step 2: Setting specific cache headers...${NC}"
-
-# HTML files - shorter cache (1 hour)
-aws s3 cp s3://$BUCKET_NAME/index.html s3://$BUCKET_NAME/index.html \
-  --metadata-directive REPLACE \
-  --cache-control "public, max-age=3600" \
-  --content-type "text/html; charset=utf-8"
-
-echo -e "${GREEN}✓ Cache headers configured${NC}"
+echo -e "${BLUE}Step 2: Cache headers configured during sync${NC}"
+echo -e "${GREEN}✓ Optimized cache headers set:${NC}"
+echo "  - HTML: 1 day (86400s)"
+echo "  - CSS/JS: 1 year (31536000s) immutable"
+echo "  - Images: 1 year (31536000s) immutable"
+echo "  - JSON: 1 week (604800s)"
 
 # Invalidate CloudFront cache if distribution ID is set
 if [ -n "$DISTRIBUTION_ID" ]; then
