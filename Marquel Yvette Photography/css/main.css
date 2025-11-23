@@ -4,6 +4,17 @@
    Matches original Squarespace design
    ================================ */
 
+/* Font Display Optimization - Ensure all fonts use swap for better performance */
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;

@@ -1,5 +1,16 @@
 /* Pricing Page Styles - Matching Original Squarespace Design */
 
+/* Font Display Optimization - Ensure all fonts use swap for better performance */
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-display: swap;
+}
+
 /* Rates Page Main - Account for fixed header on tablet/iPad */
 @media (max-width: 1024px) {
     main {
