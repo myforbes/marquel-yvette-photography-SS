@@ -27,6 +27,60 @@
     <!-- Font Awesome - Deferred for non-critical icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <style>
+        /* Gift card embed styling for mobile */
+        .gift-card-section {
+            background-color: #f8f8f8;
+        }
+
+        .gift-card-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gift-card-intro {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .gift-card-description {
+            margin-bottom: 30px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .gift-card-benefits {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        /* Widen gift card embed on mobile */
+        @media (max-width: 768px) {
+            .gift-card-section .container {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+                max-width: 100% !important;
+            }
+
+            .gift-card-content {
+                padding: 0 5px;
+            }
+
+            /* Give the embed iframe full width */
+            [data-gc-id] {
+                width: 100% !important;
+                margin: 0 !important;
+            }
+
+            [data-gc-id] iframe {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header / Navigation -->
