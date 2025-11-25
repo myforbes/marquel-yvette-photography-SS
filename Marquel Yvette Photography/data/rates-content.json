@@ -5,14 +5,14 @@
   },
   "banner": {
     "images": [
-      "images/banner-gallery/headshot-1.jpg",
-      "images/banner-gallery/headshot-2.jpg",
-      "images/banner-gallery/headshot-3.jpg",
-      "images/banner-gallery/headshot-4.jpg",
-      "images/banner-gallery/headshot-5.jpg",
-      "images/banner-gallery/headshot-6.jpg",
-      "images/banner-gallery/headshot-7.jpg",
-      "images/banner-gallery/headshot-8.jpg"
+      "/images/banner-gallery/headshot-1.jpg",
+      "/images/banner-gallery/headshot-2.jpg",
+      "/images/banner-gallery/headshot-3.jpg",
+      "/images/banner-gallery/headshot-4.jpg",
+      "/images/banner-gallery/headshot-5.jpg",
+      "/images/banner-gallery/headshot-6.jpg",
+      "/images/banner-gallery/headshot-7.jpg",
+      "/images/banner-gallery/headshot-8.jpg"
     ]
   },
   "hero": {
@@ -91,17 +91,17 @@
       {
         "name": "E. Zeigler",
         "text": "I had an absolutely amazing experience working with Marquel. She made the entire process feel effortless.",
-        "image": "images/testimonials/zeigler.jpg"
+        "image": "/images/portfolio/Eonyu+Zeigler+-+insurance+Manager.jpg"
       },
       {
         "name": "J. Dennis",
         "text": "Marquel is very friendly and professional. She made me feel at ease and took fantastic headshots!",
-        "image": "images/testimonials/dennis.jpg"
+        "image": "/images/testimonials/dennis.jpg"
       },
       {
         "name": "C. Everett",
         "text": "Marquel is the absolute truth! Her professionalism and suggestions on clothing, stance, poses brought out the image that I wanted to portray. I ADORE my new headshots!",
-        "image": "images/testimonials/everett.jpg"
+        "image": "/images/portfolio/Everett_Cara_headshot_loudoun.jpg"
       }
     ]
   },

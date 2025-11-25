@@ -90,18 +90,18 @@ async function loadRatesContent() {
 
         // Load Testimonials Section
         if (data.testimonials) {
-            const testimonialsSection = document.querySelector('.rates-testimonials, .testimonial-section');
+            const testimonialsSection = document.querySelector('.testimonials-section');
             if (testimonialsSection) {
-                const title = testimonialsSection.querySelector('h2, .section-title');
+                const title = testimonialsSection.querySelector('.testimonials-title');
                 if (title) title.textContent = data.testimonials.title;
 
-                const testimonialCards = testimonialsSection.querySelectorAll('.testimonial-card, .testimonial-item');
+                const testimonialCards = testimonialsSection.querySelectorAll('.testimonial-card-rate');
                 if (testimonialCards.length === data.testimonials.reviews.length) {
                     data.testimonials.reviews.forEach((review, index) => {
                         const card = testimonialCards[index];
-                        const name = card.querySelector('.testimonial-name, h4');
-                        const text = card.querySelector('.testimonial-text, p');
-                        const image = card.querySelector('.testimonial-image, img');
+                        const name = card.querySelector('.author-name');
+                        const text = card.querySelector('.testimonial-text');
+                        const image = card.querySelector('.author-photo');
 
                         if (name) name.textContent = review.name;
                         if (text) text.textContent = review.text;

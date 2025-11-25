@@ -4,7 +4,7 @@
     "description": "Thank you for downloading the Professional Headshot Checklist from Marquel Yvette Photography."
   },
   "header": {
-    "logo": "images/logos/MarquelYvette_Gold+White+Text+11-3-24.png",
+    "logo": "/images/logos/MarquelYvette_Gold+White+Text+11-3-24.png",
     "mainTitle": "Thank You!",
     "subtitle": "Your Headshot Checklist is on its way to your inbox."
   },
@@ -72,6 +72,6 @@
     }
   },
   "footer": {
-    "text": "© 2025 Marquel Yvette Photography. All rights reserved."
+    "text": "\u00a9 2025 Marquel Yvette Photography. All rights reserved."
   }
 }

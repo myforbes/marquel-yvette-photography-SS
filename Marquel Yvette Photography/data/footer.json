@@ -1,6 +1,6 @@
 {
   "branding": {
-    "logo": "images/logos/MarquelYvette_Gold+White+Text+11-3-24.png",
+    "logo": "/images/logos/MarquelYvette_Gold+White+Text+11-3-24.png",
     "logoAlt": "Marquel Yvette Photography Logo",
     "tagline": "Capturing life's precious moments with artistry and elegance"
   },
@@ -41,7 +41,7 @@
     }
   },
   "legal": {
-    "copyright": "© 2025 Marquel Yvette Photography LLC - All Rights Reserved",
+    "copyright": "\u00a9 2025 Marquel Yvette Photography LLC - All Rights Reserved",
     "links": [
       {
         "text": "Privacy Policy",

@@ -1,14 +1,13 @@
 {
   "_comment": "Page Metadata Configuration - SEO, titles, descriptions, and structured data for all pages",
   "_instructions": "Update page metadata here to change titles, descriptions, and SEO across the entire website",
-
   "homepage": {
     "title": "Professional Headshot Photographer | Loudoun County, VA | Marquel Yvette Photography",
     "description": "Professional headshot photography in Loudoun County, VA. Specializing in corporate headshots, LinkedIn photos, actor headshots, and team photography. Serving DC Metro area.",
     "keywords": "professional headshots, corporate headshots, LinkedIn photos, actor headshots, team photography, Loudoun County photographer, Virginia headshots, DC Metro photographer",
     "ogTitle": "Professional Headshot Photographer | Marquel Yvette Photography",
     "ogDescription": "Creating confident, professional headshots that elevate your brand. Serving Loudoun County, VA and DC Metro area.",
-    "ogImage": "images/portfolio/Marquel+Headshots9093+1.jpg",
+    "ogImage": "/images/portfolio/Marquel+Headshots9093+1.jpg",
     "canonicalUrl": "https://www.marquelyvette.com/",
     "structuredData": {
       "@context": "https://schema.org",
@@ -32,14 +31,13 @@
       "priceRange": "$$$"
     }
   },
-
   "rates": {
-    "title": "Rates | Book Your Session — Professional Headshot Photographer | Loudoun County, VA",
+    "title": "Rates | Book Your Session \u2014 Professional Headshot Photographer | Loudoun County, VA",
     "description": "Explore individual pricing and services for professional headshots in Loudoun County, VA. Book now for expert coaching and image retouching.",
     "keywords": "headshot pricing, photography rates, professional headshot cost, LinkedIn photo pricing, corporate headshot rates, Loudoun County photographer rates",
     "ogTitle": "Headshot Photography Rates & Packages | Marquel Yvette Photography",
     "ogDescription": "Professional headshot packages starting at $525. Choose from Express, Signature, or Executive sessions. View pricing and book online.",
-    "ogImage": "images/banner-gallery/headshot-1.jpg",
+    "ogImage": "/images/banner-gallery/headshot-1.jpg",
     "canonicalUrl": "https://www.marquelyvette.com/rates-2.html",
     "packages": {
       "express": {
@@ -66,24 +64,22 @@
       }
     }
   },
-
   "requestProposal": {
     "title": "Request a Proposal | Marquel Yvette Photography",
     "description": "Request a custom photography proposal. Professional headshots in Loudoun County, VA serving the DC Metro area. Get a personalized quote today.",
     "keywords": "photography proposal, custom quote, workplace headshots quote, corporate photography pricing, event headshots proposal",
     "ogTitle": "Request a Custom Photography Proposal | Marquel Yvette Photography",
     "ogDescription": "Get a personalized proposal for your photography needs. Workplace headshots, corporate events, and more.",
-    "ogImage": "images/portfolio/VOF+-+5X4+Images+(14+x+8.5+in).jpg",
+    "ogImage": "/images/portfolio/VOF+-+5X4+Images+(14+x+8.5+in).jpg",
     "canonicalUrl": "https://www.marquelyvette.com/request-proposal.html"
   },
-
   "workplaceHeadshots": {
     "title": "Workplace Headshots | Professional On-Site Photography | Marquel Yvette Photography",
     "description": "Professional workplace headshots in Loudoun County, VA. We come to you for efficient, stress-free employee headshots. Perfect employee gift and morale booster.",
     "keywords": "workplace headshots, corporate headshots, on-site headshots, company photography, employee headshots, office photography, workplace photos",
     "ogTitle": "Professional Workplace Headshots | We Come to You | Marquel Yvette Photography",
     "ogDescription": "Efficient, on-site workplace headshots for companies in DC Metro area. Professional headshots that elevate your brand and boost employee morale.",
-    "ogImage": "images/portfolio/VOF+-+5X4+Images+(14+x+8.5+in).jpg",
+    "ogImage": "/images/portfolio/VOF+-+5X4+Images+(14+x+8.5+in).jpg",
     "canonicalUrl": "https://www.marquelyvette.com/workplace-headshots.html",
     "benefits": [
       {
@@ -109,7 +105,7 @@
       {
         "title": "Expert Guidance",
         "icon": "fa-camera",
-        "description": "I coach everyone through posing and expressions—even those who are camera-shy. Everyone looks confident and professional."
+        "description": "I coach everyone through posing and expressions\u2014even those who are camera-shy. Everyone looks confident and professional."
       },
       {
         "title": "Quick Turnaround",
@@ -124,7 +120,6 @@
       "turnaroundDays": "7-10"
     }
   },
-
   "global": {
     "businessName": "Marquel Yvette Photography",
     "tagline": "Capturing life's precious moments with artistry and elegance",
@@ -138,8 +133,8 @@
       "linkedin": "https://www.linkedin.com/in/marquelforbes"
     },
     "logos": {
-      "header": "images/logos/MarquelYvette_Gold+Dk+Grey+Logo+11-3-24.png",
-      "footer": "images/logos/MarquelYvette_Gold+White+Text+11-3-24.png"
+      "header": "/images/logos/MarquelYvette_Gold+Dk+Grey+Logo+11-3-24.png",
+      "footer": "/images/logos/MarquelYvette_Gold+White+Text+11-3-24.png"
     },
     "primaryCTA": {
       "text": "SEE RATES & AVAILABILITY",
@@ -147,7 +142,7 @@
     },
     "footer": {
       "tagline": "Capturing life's precious moments with artistry and elegance",
-      "copyright": "© 2025 Marquel Yvette Photography. All rights reserved.",
+      "copyright": "\u00a9 2025 Marquel Yvette Photography. All rights reserved.",
       "links": [
         {
           "text": "Privacy Policy",
