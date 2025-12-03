@@ -623,41 +623,7 @@ section {
     background-color: var(--color-bg-white);
 }
 
-.faq-icon {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    flex-shrink: 0;
-}
-
-.faq-icon::before,
-.faq-icon::after {
-    content: '';
-    position: absolute;
-    background-color: var(--color-gold-dark);
-    transition: transform var(--transition-speed) ease;
-    display: none;
-}
-
-.faq-icon::before {
-    width: 20px;
-    height: 3px;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-
-.faq-icon::after {
-    width: 3px;
-    height: 20px;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-}
-
-.faq-toggle:checked + .faq-question .faq-icon::after {
-    transform: translateX(-50%) rotate(90deg);
-}
+/* FAQ icon styles moved to main FAQ section below */
 
 .faq-answer {
     max-height: 0;
