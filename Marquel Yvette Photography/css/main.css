@@ -880,7 +880,7 @@ section {
 .problem-section h2,
 .problem-section .section-title {
     font-size: 1.4rem;
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--color-dark-secondary);
