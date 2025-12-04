@@ -63,6 +63,9 @@
 
         const teamIntro = document.querySelector('.team-headshots-section .team-intro');
         if (teamIntro) teamIntro.innerHTML = content.team.intro;
+
+        const teamDescription = document.querySelector('.team-headshots-section .team-description');
+        if (teamDescription && content.team.description) teamDescription.innerHTML = content.team.description;
       }
 
       // Load About Section
