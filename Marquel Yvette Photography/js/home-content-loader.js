@@ -132,8 +132,12 @@
           if (faqItems[index]) {
             const question = faqItems[index].querySelector('.faq-question');
             const answer = faqItems[index].querySelector('.faq-answer');
-            if (question) question.textContent = item.question;
-            if (answer) answer.textContent = item.answer;
+            // Only update the text span, preserve the faq-icon span
+            if (question) {
+              const textSpan = question.querySelector('span:not(.faq-icon)');
+              if (textSpan) textSpan.textContent = item.question;
+            }
+            if (answer) answer.innerHTML = '<p>' + item.answer + '</p>';
           }
         });
       }
