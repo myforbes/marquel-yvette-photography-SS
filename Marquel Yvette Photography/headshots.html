@@ -819,5 +819,36 @@
       </div>
     </footer>
 
+    <!-- Form submission handler -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('[data-lead-form]');
+        if (form) {
+          form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('[data-lead-submit]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            fetch(form.action, {
+              method: 'POST',
+              body: formData
+            })
+            .then(response => {
+              // Redirect to thank you page regardless of response
+              window.location.href = '/thank-you-page.html';
+            })
+            .catch(error => {
+              // Still redirect even if there's an error
+              window.location.href = '/thank-you-page.html';
+            });
+          });
+        }
+      });
+    </script>
+
   </body>
 </html>
