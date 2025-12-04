@@ -820,7 +820,7 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -836,10 +836,16 @@ section {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .testimonial-content blockquote {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-style: normal;
     color: var(--color-text-white);
 }
 

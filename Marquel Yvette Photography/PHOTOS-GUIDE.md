@@ -244,7 +244,7 @@ Gallery images 1-6 should have `"priority": "high"` for faster loading.
 2. Upload to S3:
    ```bash
    cd "Marquel Yvette Photography/new-site"
-   aws s3 cp config/photos.json s3://marquelyvette-website/config/photos.json
+   i ne
    ```
 3. Invalidate cache:
    ```bash
