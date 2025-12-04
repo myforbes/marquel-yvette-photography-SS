@@ -1171,7 +1171,7 @@ section {
 
 .about-image img {
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 5 / 4;
     object-fit: cover;
     border-radius: 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
