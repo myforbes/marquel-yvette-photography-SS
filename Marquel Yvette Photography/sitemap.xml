@@ -32,6 +32,42 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Location Pages -->
+  <url>
+    <loc>https://www.marquelyvette.com/headshots-ashburn-va</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.marquelyvette.com/headshots-fairfax-va</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.marquelyvette.com/headshots-reston-va</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.marquelyvette.com/headshots-leesburg-va</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.marquelyvette.com/headshots-washington-dc</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Gift Cards -->
   <url>
     <loc>https://www.marquelyvette.com/gift-cards</loc>
