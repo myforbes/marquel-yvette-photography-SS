@@ -26,7 +26,7 @@
       "price": "$525",
       "description": "Perfect for busy professionals who need polished headshots quickly.",
       "featured": false,
-      "whatsIncluded": "Up to 20-minute in-studio session, two fully-retouched images included (purchase additional photos for $195 each), one lighting setup, posing guidance, add makeup services for $150.00",
+      "whatsIncluded": "A focused, in-studio headshot session for professionals who need a clean, confident update. Includes up to 20 minutes, one lighting setup, guided posing, and two fully retouched images. Additional images are available at $195 each. Professional makeup may be added for $150.",
       "buttonText": "Book The Express",
       "bookingUrl": "https://api.leadconnectorhq.com/booking/marquel-yvette-photography-7y55km7zujk/sv/68b5a68c76a8d84159740d31?heightMode=fixed&showHeader=true",
       "iframeId": "68b5a68c76a8d84159740d31_1762113546985"
@@ -38,7 +38,7 @@
       "description": "Our comprehensive session for professionals who want variety and options.",
       "featured": true,
       "featuredLabel": "Most Popular",
-      "whatsIncluded": "60-minute studio session, 5 fully retouched digital images, 15-minute pre-session consultation call, 2-3 background and lighting setups, Complete wardrobe and posing guidance, Online gallery delivery within 7 business days, High-resolution files for all platforms, makeup services for $150",
+      "whatsIncluded": "A one-hour studio experience designed to capture range, confidence, and versatility. Includes a pre-session consultation, complete wardrobe and posing guidance, and two to three background and lighting setups. Five fully retouched, high-resolution images are delivered via an online gallery within 7–10 business days, optimized for all professional platforms. Additional images available at $195 each. Professional makeup may be added for $150.",
       "buttonText": "Book The Signature",
       "bookingUrl": "https://api.leadconnectorhq.com/booking/marquel-yvette-photography-7y55km7zujk/sv/68b5a68d76a8d8e9bd740da7?heightMode=fixed&showHeader=true",
       "iframeId": "68b5a68d76a8d8e9bd740da7_1762113925263"
@@ -46,10 +46,10 @@
     {
       "id": "executive",
       "name": "The Executive",
-      "price": "$1,895",
+      "price": "$2,195",
       "description": "The ultimate headshot experience for established professionals who need a complete image library.",
       "featured": false,
-      "whatsIncluded": "90-minute studio session, 10 fully retouched digital images, 30-minute pre-session strategy consultation, Multiple backgrounds, lighting styles, and looks, Complete style and wardrobe consultation, Same-day image preview available, Priority 5-day gallery delivery, 6 months of complimentary minor retouching updates, High-resolution files optimized for every use",
+      "whatsIncluded": "A fully curated, high-visibility portrait experience for women stepping into leadership, influence, or legacy moments. Includes a 30-minute pre-session strategy consultation, complete style and wardrobe guidance, and professional makeup as part of the experience. The 90-minute studio session allows for multiple looks, backgrounds, and lighting styles, with same-day image preview available. Ten fully retouched, high-resolution images are delivered within 7–10 business days, optimized for professional and editorial use.",
       "buttonText": "Book The Executive",
       "bookingUrl": "https://api.leadconnectorhq.com/booking/marquel-yvette-photography-7y55km7zujk/sv/68f6705e7576abd99edbd5ac?heightMode=fixed&showHeader=true",
       "iframeId": "68f6705e7576abd99edbd5ac_1762113970038"
