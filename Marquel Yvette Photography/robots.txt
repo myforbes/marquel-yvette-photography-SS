@@ -15,6 +15,7 @@ Disallow: /*.json$
 Disallow: /photo-gallery.html
 Disallow: /site-gallery.html
 Disallow: /test.html
+Disallow: /thank-you-page
 
 # Allow images for Google Images
 User-agent: Googlebot-Image
