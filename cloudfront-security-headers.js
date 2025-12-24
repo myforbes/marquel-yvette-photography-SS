@@ -37,16 +37,16 @@ function handler(event) {
     };
 
     // Content-Security-Policy: Prevent XSS and other injection attacks
-    // This policy is configured for your specific site with LeadConnector, Google Analytics, etc.
+    // This policy is configured for your specific site with LeadConnector, Google Analytics, GTM, Facebook, LinkedIn, etc.
     headers['content-security-policy'] = {
         value: [
             "default-src 'self'",
-            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://*.leadconnectorhq.com https://storage.googleapis.com https://cdnjs.cloudflare.com",
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://*.google.com https://*.googleadservices.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://*.leadconnectorhq.com https://storage.googleapis.com https://cdnjs.cloudflare.com https://connect.facebook.net https://snap.licdn.com https://call.chatra.io",
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com",
             "img-src 'self' data: https: blob:",
             "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com",
-            "frame-src 'self' https://*.leadconnectorhq.com https://www.google.com https://www.youtube.com https://link.fastpaydirect.com https://*.fastpaydirect.com",
-            "connect-src 'self' https://*.leadconnectorhq.com https://www.google-analytics.com https://services.leadconnectorhq.com https://*.fastpaydirect.com",
+            "frame-src 'self' https://*.leadconnectorhq.com https://www.google.com https://www.googletagmanager.com https://www.youtube.com https://link.fastpaydirect.com https://*.fastpaydirect.com https://td.doubleclick.net https://chat.chatra.io https://*.chatra.io",
+            "connect-src 'self' https://*.leadconnectorhq.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://*.google.com https://*.googleapis.com https://googleads.g.doubleclick.net https://*.doubleclick.net https://*.google-analytics.com https://region1.google-analytics.com https://services.leadconnectorhq.com https://*.fastpaydirect.com https://connect.facebook.net https://*.facebook.com https://snap.licdn.com https://px.ads.linkedin.com https://call.chatra.io https://*.chatra.io",
             "object-src 'none'",
             "base-uri 'self'",
             "form-action 'self' https://*.leadconnectorhq.com https://services.leadconnectorhq.com",
