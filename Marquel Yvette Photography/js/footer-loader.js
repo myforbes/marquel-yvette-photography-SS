@@ -171,7 +171,7 @@
       <footer class="site-footer">
         <div class="container">
           <div class="footer-legal">
-            <p>&copy; 2025 Marquel Yvette Photography. All rights reserved.</p>
+            <p>&copy; 2026 Marquel Yvette Photography. All rights reserved.</p>
             <div class="footer-links">
               <a href="privacy-policy.html">Privacy Policy</a>
               <a href="tos.html">Terms of Service</a>
