@@ -41,7 +41,7 @@
       // Load service images
       if (photos.services) {
         loadImage('[data-photo="service-corporate"]', photos.services.corporate.src, photos.services.corporate.alt);
-        loadImage('[data-photo="service-actor"]', photos.services.actor.src, photos.services.actor.alt);
+        loadImage('[data-photo="service-lawfirm"]', photos.services.lawfirm.src, photos.services.lawfirm.alt);
         loadImage('[data-photo="service-linkedin"]', photos.services.linkedin.src, photos.services.linkedin.alt);
       }
 
