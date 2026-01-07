@@ -11,12 +11,19 @@
 
     const policyMap = {
       'privacy-policy.html': 'privacyPolicy',
+      'privacy-policy': 'privacyPolicy',
       'tos.html': 'termsOfService',
+      'tos': 'termsOfService',
       'terms-of-service.html': 'termsOfService',
+      'terms-of-service': 'termsOfService',
       'website-accessibility-statement.html': 'accessibility',
+      'website-accessibility-statement': 'accessibility',
       'accessibility.html': 'accessibility',
+      'accessibility': 'accessibility',
       'disclaimer.html': 'disclaimer',
-      'copyright.html': 'copyright'
+      'disclaimer': 'disclaimer',
+      'copyright.html': 'copyright',
+      'copyright': 'copyright'
     };
 
     return policyMap[filename] || null;
