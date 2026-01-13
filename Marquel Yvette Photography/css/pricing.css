@@ -871,7 +871,8 @@
 }
 
 .modal-body iframe {
-    min-height: 600px;
+    min-height: 850px;
+    height: auto;
 }
 
 @media (max-width: 768px) {
