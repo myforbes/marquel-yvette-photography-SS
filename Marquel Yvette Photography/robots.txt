@@ -4,17 +4,19 @@
 User-agent: *
 Allow: /
 
-# Disallow crawling of server-side scripts and admin files
-Disallow: /js/
-Disallow: /css/
+# Allow CSS and JS for proper page rendering
+Allow: /css/
+Allow: /js/
+
+# Disallow crawling of config and data files
 Disallow: /config/
 Disallow: /data/
 Disallow: /components/
-Disallow: /*.js$
-Disallow: /*.json$
-Disallow: /photo-gallery.html
-Disallow: /site-gallery.html
-Disallow: /test.html
+
+# Disallow internal/utility pages
+Disallow: /photo-gallery
+Disallow: /site-gallery
+Disallow: /test
 Disallow: /thank-you-page
 
 # Allow images for Google Images
