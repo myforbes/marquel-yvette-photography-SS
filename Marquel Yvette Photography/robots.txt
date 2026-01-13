@@ -4,9 +4,10 @@
 User-agent: *
 Allow: /
 
-# Allow CSS and JS for proper page rendering
+# Allow CSS, JS, and fonts for proper page rendering
 Allow: /css/
 Allow: /js/
+Allow: /fonts/
 
 # Disallow crawling of config and data files
 Disallow: /config/
@@ -18,6 +19,23 @@ Disallow: /photo-gallery
 Disallow: /site-gallery
 Disallow: /test
 Disallow: /thank-you-page
+
+# Block ad landing pages
+Disallow: /headshots.html
+
+# Block backup files
+Disallow: /*-backup
+Disallow: /*.before-*
+Disallow: /*.with-*
+Disallow: /*.chattracss
+
+# Block development/deployment files
+Disallow: /cloudfront/
+Disallow: /new-site/
+Disallow: /*.md
+Disallow: /*.sh
+Disallow: /gtm-container-import.json
+Disallow: /photo-gallery-server.js
 
 # Allow images for Google Images
 User-agent: Googlebot-Image

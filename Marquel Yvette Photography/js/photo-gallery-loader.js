@@ -174,6 +174,22 @@
         });
       }
 
+      // Additional portfolio photos
+      if (photos.additionalPortfolio) {
+        Object.entries(photos.additionalPortfolio).forEach(([key, photo]) => {
+          // Skip the _comment field
+          if (key.startsWith('_')) return;
+
+          photoItems.push({
+            section: 'additionalPortfolio',
+            key: key,
+            src: photo.src,
+            alt: photo.alt,
+            location: 'Additional Portfolio'
+          });
+        });
+      }
+
       // Create photo items and add to gallery
       photoItems.forEach((photo, index) => {
         const photoItem = createPhotoItem(photo, index);

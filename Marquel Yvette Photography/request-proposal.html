@@ -29,15 +29,15 @@
     <link rel="icon" type="image/png" href="images/favicon.webp">
 
     <!-- Preload critical CSS for faster render -->
-    <link rel="preload" as="style" href="css/main.css">
+    <link rel="preload" as="style" href="css/main.min.css">
 
     <!-- CSS - Critical styles loaded immediately, non-critical deferred -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/pricing.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/menu.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/pricing.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/menu.min.css" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="css/pricing.css">
-        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/pricing.min.css">
+        <link rel="stylesheet" href="css/menu.min.css">
     </noscript>
 
     <!-- Page-specific styles -->
@@ -432,7 +432,7 @@
     
     <!-- Preload critical font file to eliminate chain -->
     <!-- Preload critical font weights to reduce chain length -->
-    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/fonts.min.css">
 
     <!-- Font Awesome - Deferred for non-critical icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -711,10 +711,10 @@
     <div id="footer-placeholder"></div>
 
     <!-- JavaScript - Deferred for performance -->
-    <script src="js/request-proposal-loader.js"></script>
-    <script src="js/meta-loader.js"></script>
-    <script src="js/menu.js" defer></script>
-    <script src="js/footer-loader.js" defer></script>
-    <script src="js/gtm-tracking.js" defer></script>
+    <script src="js/request-proposal-loader.min.js"></script>
+    <script src="js/meta-loader.min.js"></script>
+    <script src="js/menu.min.js" defer></script>
+    <script src="js/footer-loader.min.js" defer></script>
+    <script src="js/gtm-tracking.min.js" defer></script>
 </body>
 </html>
