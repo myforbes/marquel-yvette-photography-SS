@@ -233,6 +233,25 @@
   "erasHeadshotsPage": {
     "_pageName": "ERAS Headshots Page (eras-headshots.html)",
     "_description": "Medical student residency application headshots",
+    "examplePhotos": {
+      "_section": "ERAS Example Photos Grid (4 placeholders - need 600x600 square images)",
+      "photo1": {
+        "src": "/images/eras/eras-headshot-1.webp",
+        "alt": "ERAS headshot example - professional woman in navy blazer"
+      },
+      "photo2": {
+        "src": "/images/eras/eras-headshot-2.webp",
+        "alt": "ERAS headshot example - professional man in charcoal suit"
+      },
+      "photo3": {
+        "src": "/images/eras/eras-headshot-3.webp",
+        "alt": "ERAS headshot example - medical student professional portrait"
+      },
+      "photo4": {
+        "src": "/images/eras/eras-headshot-4.webp",
+        "alt": "ERAS headshot example - residency application photo"
+      }
+    },
     "mainImage": {
       "_section": "Main Example Photo",
       "image": {
