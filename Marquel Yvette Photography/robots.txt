@@ -23,6 +23,9 @@ Disallow: /thank-you-page
 # Block ad landing pages
 Disallow: /headshots.html
 
+# Block out-of-area location pages
+Disallow: /headshots-washington-dc
+
 # Block backup files
 Disallow: /*-backup
 Disallow: /*.before-*
