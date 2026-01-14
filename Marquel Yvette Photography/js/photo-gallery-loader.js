@@ -1,15 +1,15 @@
 // Photo Gallery Loader with Update Functionality
-// Allows users to preview photo changes and download updated config
+// Organizes photos by website page for easy management
 
 (function() {
   'use strict';
 
   let photosConfig = null;
   let hasUpdates = false;
-  const updatedPhotos = new Map(); // Track which photos have been updated
+  const updatedPhotos = new Map();
 
   // Load photos configuration
-  fetch('config/photos.json')
+  fetch('config/photos.json?v=' + Date.now())
     .then(response => response.json())
     .then(photos => {
       console.log('Loading photo gallery from config...');
@@ -24,193 +24,123 @@
       // Clear existing photos
       galleryGrid.innerHTML = '';
 
-      // Build gallery from all photos in config
-      const photoItems = [];
+      // Page order for display
+      const pageOrder = [
+        'homepage',
+        'headshots',
+        'ratesPage',
+        'workplaceHeadshotsPage',
+        'erasHeadshotsPage',
+        'locationPages',
+        'portfolioExtras'
+      ];
 
-      // Gallery photos (Homepage)
-      if (photos.gallery) {
-        Object.entries(photos.gallery).forEach(([key, photo]) => {
-          photoItems.push({
-            section: 'gallery',
-            key: key,
-            src: photo.src,
-            alt: photo.alt,
-            location: 'Homepage Gallery',
-            priority: photo.priority
+      let totalPhotos = 0;
+
+      // Process each page section
+      pageOrder.forEach(pageName => {
+        const pageData = photos[pageName];
+        if (!pageData) return;
+
+        // Create page section header
+        const pageHeader = createPageHeader(pageData._pageName || pageName, pageData._description);
+        galleryGrid.appendChild(pageHeader);
+
+        // Process sections within the page
+        const photoItems = extractPhotosFromPage(pageName, pageData);
+
+        if (photoItems.length > 0) {
+          // Create photo grid for this page
+          const pageGrid = document.createElement('div');
+          pageGrid.className = 'page-photo-grid';
+
+          photoItems.forEach(photo => {
+            const photoItem = createPhotoItem(photo);
+            pageGrid.appendChild(photoItem);
+            totalPhotos++;
           });
-        });
-      }
 
-      // Testimonial photos
-      if (photos.testimonials) {
-        Object.entries(photos.testimonials).forEach(([key, photo]) => {
-          photoItems.push({
-            section: 'testimonials',
-            key: key,
-            src: photo.src,
-            alt: photo.alt,
-            location: 'Testimonials'
-          });
-        });
-      }
-
-      // Service photos
-      if (photos.services) {
-        Object.entries(photos.services).forEach(([key, photo]) => {
-          photoItems.push({
-            section: 'services',
-            key: key,
-            src: photo.src,
-            alt: photo.alt,
-            location: 'Services Section'
-          });
-        });
-      }
-
-      // Team headshots
-      if (photos.teamHeadshots) {
-        Object.entries(photos.teamHeadshots).forEach(([key, photo]) => {
-          photoItems.push({
-            section: 'teamHeadshots',
-            key: key,
-            src: photo.src,
-            alt: photo.alt,
-            location: 'Team Headshots'
-          });
-        });
-      }
-
-      // About section photos
-      if (photos.about) {
-        Object.entries(photos.about).forEach(([key, photo]) => {
-          photoItems.push({
-            section: 'about',
-            key: key,
-            src: photo.src,
-            alt: photo.alt,
-            location: 'About Section'
-          });
-        });
-      }
-
-      // Additional services
-      if (photos.additionalServices) {
-        Object.entries(photos.additionalServices).forEach(([key, photo]) => {
-          photoItems.push({
-            section: 'additionalServices',
-            key: key,
-            src: photo.src,
-            alt: photo.alt,
-            location: 'Additional Services'
-          });
-        });
-      }
-
-      // Banner gallery photos (Rates page)
-      if (photos.bannerGallery) {
-        Object.entries(photos.bannerGallery).forEach(([key, photo]) => {
-          photoItems.push({
-            section: 'bannerGallery',
-            key: key,
-            src: photo.src,
-            alt: photo.alt,
-            location: 'Rates Page Banner'
-          });
-        });
-      }
-
-      // Rates testimonials
-      if (photos.ratesTestimonials) {
-        Object.entries(photos.ratesTestimonials).forEach(([key, photo]) => {
-          photoItems.push({
-            section: 'ratesTestimonials',
-            key: key,
-            src: photo.src,
-            alt: photo.alt,
-            location: 'Rates Testimonials'
-          });
-        });
-      }
-
-      // Contact page portfolio
-      if (photos.contactPortfolio) {
-        Object.entries(photos.contactPortfolio).forEach(([key, photo]) => {
-          photoItems.push({
-            section: 'contactPortfolio',
-            key: key,
-            src: photo.src,
-            alt: photo.alt,
-            location: 'Contact Page'
-          });
-        });
-      }
-
-      // Thank you page portfolio
-      if (photos.thankYouPortfolio) {
-        Object.entries(photos.thankYouPortfolio).forEach(([key, photo]) => {
-          photoItems.push({
-            section: 'thankYouPortfolio',
-            key: key,
-            src: photo.src,
-            alt: photo.alt,
-            location: 'Thank You Page'
-          });
-        });
-      }
-
-      // Workplace headshots page
-      if (photos.workplaceHeadshotsPage) {
-        Object.entries(photos.workplaceHeadshotsPage).forEach(([key, photo]) => {
-          // Skip the _comment field
-          if (key.startsWith('_')) return;
-
-          photoItems.push({
-            section: 'workplaceHeadshotsPage',
-            key: key,
-            src: photo.src,
-            alt: photo.alt,
-            location: photo.usedOn || 'Workplace Headshots Page'
-          });
-        });
-      }
-
-      // Additional portfolio photos
-      if (photos.additionalPortfolio) {
-        Object.entries(photos.additionalPortfolio).forEach(([key, photo]) => {
-          // Skip the _comment field
-          if (key.startsWith('_')) return;
-
-          photoItems.push({
-            section: 'additionalPortfolio',
-            key: key,
-            src: photo.src,
-            alt: photo.alt,
-            location: 'Additional Portfolio'
-          });
-        });
-      }
-
-      // Create photo items and add to gallery
-      photoItems.forEach((photo, index) => {
-        const photoItem = createPhotoItem(photo, index);
-        galleryGrid.appendChild(photoItem);
+          galleryGrid.appendChild(pageGrid);
+        }
       });
 
-      console.log(`✓ Photo gallery loaded with ${photoItems.length} photos`);
+      console.log(`✓ Photo gallery loaded with ${totalPhotos} photos`);
 
-      // Setup download button
+      // Setup deploy button
       setupDownloadButton();
     })
     .catch(error => {
       console.error('Error loading photo gallery:', error);
     });
 
-  // Helper function to create a photo item with update button
-  function createPhotoItem(photoData, index) {
+  // Create a page section header
+  function createPageHeader(pageName, description) {
+    const header = document.createElement('div');
+    header.className = 'page-section-header';
+
+    const title = document.createElement('h2');
+    title.className = 'page-section-title';
+    title.textContent = pageName;
+    header.appendChild(title);
+
+    if (description) {
+      const desc = document.createElement('p');
+      desc.className = 'page-section-description';
+      desc.textContent = description;
+      header.appendChild(desc);
+    }
+
+    return header;
+  }
+
+  // Extract all photos from a page section
+  function extractPhotosFromPage(pageName, pageData) {
+    const photos = [];
+
+    function processObject(obj, path, sectionName) {
+      if (!obj || typeof obj !== 'object') return;
+
+      // Check if this object is a photo (has src property)
+      if (obj.src && typeof obj.src === 'string') {
+        photos.push({
+          pageName: pageName,
+          path: path,
+          section: sectionName,
+          src: obj.src,
+          alt: obj.alt || '',
+          usedOn: obj.usedOn || null
+        });
+        return;
+      }
+
+      // Otherwise, recurse into nested objects
+      Object.entries(obj).forEach(([key, value]) => {
+        // Skip metadata fields
+        if (key.startsWith('_')) return;
+
+        // Determine section name from _section field or key
+        let newSection = sectionName;
+        if (value && value._section) {
+          newSection = value._section;
+        } else if (!sectionName) {
+          newSection = key;
+        }
+
+        const newPath = path ? `${path}.${key}` : key;
+        processObject(value, newPath, newSection);
+      });
+    }
+
+    processObject(pageData, '', null);
+    return photos;
+  }
+
+  // Create a photo item with update button
+  function createPhotoItem(photoData) {
     const div = document.createElement('div');
     div.className = 'photo-item';
-    div.dataset.section = photoData.section;
-    div.dataset.key = photoData.key;
+    div.dataset.page = photoData.pageName;
+    div.dataset.path = photoData.path;
 
     // Photo container
     const photoContainer = document.createElement('div');
@@ -220,19 +150,34 @@
     img.src = photoData.src;
     img.alt = photoData.alt;
     img.loading = 'lazy';
+    img.onerror = function() {
+      this.style.background = '#333';
+      this.style.minHeight = '150px';
+      this.alt = 'Image not found: ' + photoData.src;
+    };
 
     const overlay = document.createElement('div');
     overlay.className = 'photo-overlay';
 
-    const locationText = document.createElement('p');
-    locationText.className = 'photo-location';
-    locationText.textContent = photoData.location;
+    // Section info
+    const sectionText = document.createElement('p');
+    sectionText.className = 'photo-section';
+    sectionText.textContent = photoData.section || photoData.path;
 
+    // Path info
     const pathText = document.createElement('p');
     pathText.className = 'photo-path';
     pathText.textContent = photoData.src;
 
-    overlay.appendChild(locationText);
+    // Used on info (if applicable)
+    if (photoData.usedOn) {
+      const usedOnText = document.createElement('p');
+      usedOnText.className = 'photo-used-on';
+      usedOnText.textContent = 'Used on: ' + photoData.usedOn;
+      overlay.appendChild(usedOnText);
+    }
+
+    overlay.appendChild(sectionText);
     overlay.appendChild(pathText);
     photoContainer.appendChild(img);
     photoContainer.appendChild(overlay);
@@ -251,7 +196,6 @@
 
   // Handle update button click
   function handleUpdateClick(photoItem, photoData, imgElement) {
-    // Create hidden file input
     const fileInput = document.createElement('input');
     fileInput.type = 'file';
     fileInput.accept = 'image/*';
@@ -261,7 +205,6 @@
       const file = e.target.files[0];
       if (!file) return;
 
-      // Validate file type
       if (!file.type.startsWith('image/')) {
         alert('Please select an image file');
         return;
@@ -279,15 +222,13 @@
         folder = 'images/backgrounds/';
       }
 
-      // Upload photo to server
       const formData = new FormData();
       formData.append('photo', file);
-      formData.append('section', photoData.section);
-      formData.append('key', photoData.key);
+      formData.append('pageName', photoData.pageName);
+      formData.append('path', photoData.path);
       formData.append('folder', folder);
 
       try {
-        // Show loading state
         photoItem.style.opacity = '0.6';
 
         const response = await fetch('http://localhost:3000/api/upload-photo', {
@@ -305,32 +246,28 @@
           };
           reader.readAsDataURL(file);
 
-          // Update config in memory
-          if (photosConfig[photoData.section] && photosConfig[photoData.section][photoData.key]) {
-            photosConfig[photoData.section][photoData.key].src = result.path;
+          // Update config in memory using path
+          updateConfigByPath(photoData.pageName, photoData.path, 'src', result.path);
 
-            // Track the update
-            updatedPhotos.set(`${photoData.section}.${photoData.key}`, {
-              oldPath: result.oldPath,
-              newPath: result.path,
-              file: file
-            });
+          // Track the update
+          updatedPhotos.set(`${photoData.pageName}.${photoData.path}`, {
+            oldPath: result.oldPath,
+            newPath: result.path,
+            file: file
+          });
 
-            // Mark as updated
-            photoItem.classList.add('updated');
-            photoItem.style.opacity = '1';
-            hasUpdates = true;
+          photoItem.classList.add('updated');
+          photoItem.style.opacity = '1';
+          hasUpdates = true;
 
-            // Show deploy button and instructions
-            document.getElementById('deployBtn').classList.add('active');
-            document.getElementById('uploadInstructions').classList.add('active');
+          document.getElementById('deployBtn').classList.add('active');
+          document.getElementById('uploadInstructions').classList.add('active');
 
-            console.log(`✓ Photo uploaded and saved!`);
-            console.log(`  Section: ${photoData.section}.${photoData.key}`);
-            console.log(`  Old: ${result.oldPath}`);
-            console.log(`  New: ${result.path}`);
-            console.log(`  Location: ${photoData.location}`);
-          }
+          console.log(`✓ Photo uploaded and saved!`);
+          console.log(`  Page: ${photoData.pageName}`);
+          console.log(`  Path: ${photoData.path}`);
+          console.log(`  Old: ${result.oldPath}`);
+          console.log(`  New: ${result.path}`);
         } else {
           alert('Upload failed: ' + result.error);
           photoItem.style.opacity = '1';
@@ -342,8 +279,28 @@
       }
     };
 
-    // Trigger file selection
     fileInput.click();
+  }
+
+  // Update config value by path
+  function updateConfigByPath(pageName, path, property, value) {
+    const pathParts = path.split('.');
+    let current = photosConfig[pageName];
+
+    for (let i = 0; i < pathParts.length - 1; i++) {
+      if (current && current[pathParts[i]]) {
+        current = current[pathParts[i]];
+      } else {
+        return false;
+      }
+    }
+
+    const lastKey = pathParts[pathParts.length - 1];
+    if (current && current[lastKey]) {
+      current[lastKey][property] = value;
+      return true;
+    }
+    return false;
   }
 
   // Setup deploy button
@@ -360,13 +317,11 @@
         return;
       }
 
-      // Disable button and show loading
       deployBtn.disabled = true;
       deployBtn.textContent = 'Deploying...';
       deployBtn.style.opacity = '0.6';
 
       try {
-        // Collect all updated file paths
         const updatedFiles = Array.from(updatedPhotos.values()).map(update => update.newPath);
 
         const response = await fetch('http://localhost:3000/api/deploy', {

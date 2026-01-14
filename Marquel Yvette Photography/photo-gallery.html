@@ -96,8 +96,40 @@
         }
 
         .photo-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .page-section-header {
+            background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+            border-left: 4px solid #f4ca78;
+            padding: 20px 25px;
+            margin-top: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .page-section-header:first-child {
+            margin-top: 0;
+        }
+
+        .page-section-title {
+            color: #f4ca78;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .page-section-description {
+            color: #999;
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+
+        .page-photo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
         }
 
@@ -142,7 +174,8 @@
             opacity: 1;
         }
 
-        .photo-location {
+        .photo-location,
+        .photo-section {
             color: #f4ca78;
             font-size: 0.85rem;
             font-weight: 600;
@@ -155,6 +188,14 @@
             font-size: 0.7rem;
             margin-top: 5px;
             font-family: monospace;
+            word-break: break-all;
+        }
+
+        .photo-used-on {
+            color: #4CAF50;
+            font-size: 0.75rem;
+            margin-bottom: 5px;
+            font-style: italic;
         }
 
         .update-photo-btn {
@@ -196,13 +237,17 @@
         }
 
         @media (max-width: 768px) {
-            .photo-grid {
+            .page-photo-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
                 gap: 15px;
             }
 
             h1 {
                 font-size: 1.8rem;
+            }
+
+            .page-section-title {
+                font-size: 1.1rem;
             }
 
             .update-photo-btn {
@@ -236,7 +281,7 @@
     </div>
 
     <!-- Load photos from config -->
-    <script src="js/photo-gallery-loader.min.js"></script>
+    <script src="js/photo-gallery-loader.min.js?v=4"></script>
     <script src="js/gtm-tracking.min.js" defer></script>
 </body>
 </html>

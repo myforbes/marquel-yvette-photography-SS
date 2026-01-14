@@ -1,349 +1,398 @@
 {
-  "_comment": "Photo Configuration - Update photo paths here to change images across the entire website",
-  "_instructions": "To change a photo: 1) Upload new image to the appropriate folder, 2) Update the path below, 3) Refresh the website",
-  "logo": {
-    "header": "/images/logos/MarquelYvette_Gold+Dk+Grey+Logo+11-3-24.webp",
-    "footer": "/images/logos/MarquelYvette_Gold+White+Text+11-3-24.webp"
-  },
-  "gallery": {
-    "image1": {
-      "src": "images/portfolio/Sharma_Aryaman_481-MarquelYvette0352.webp",
-      "alt": "A professional woman with curly hair, smiling, dressed in a dark blazer and white top.",
-      "priority": "high"
+  "_comment": "Photo Configuration - Organized by Website Page",
+  "_instructions": "To change a photo: 1) Find the page section below, 2) Update the image path, 3) Refresh the website.",
+
+  "homepage": {
+    "_pageName": "Homepage (index.html)",
+    "_description": "Main landing page photos",
+    "heroGallery": {
+      "_section": "Hero Gallery - Top sliding gallery (10 photos)",
+      "image1": {
+        "src": "/images/portfolio/Sharma_Aryaman_481-MarquelYvette0352.webp",
+        "alt": "Professional woman with curly hair in dark blazer"
+      },
+      "image2": {
+        "src": "/images/portfolio/Dionne_Kindra_697-MarquelYvette0085.webp",
+        "alt": "Female headshot for non-profit c suite employee"
+      },
+      "image3": {
+        "src": "/images/portfolio/Moody_Fatimah_529-MarquelYvette0107(websize)-retouched.webp",
+        "alt": "Lawyer high-end headshot in MD, female"
+      },
+      "image4": {
+        "src": "/images/portfolio/Thongpia-hughes_Gift_495-MarquelYvette0107-ig.webp",
+        "alt": "Woman with long brown hair smiling in pink sleeveless top"
+      },
+      "image5": {
+        "src": "/images/portfolio/Glass_Mags_757-MarquelYvette0371.webp",
+        "alt": "Female lawyer in MD; premium headshot"
+      },
+      "image6": {
+        "src": "/images/portfolio/Corra_James_500-MarquelYvette0507-retouched.webp",
+        "alt": "Male corporate headshot"
+      },
+      "image7": {
+        "src": "/images/portfolio/Glynis.webp",
+        "alt": "African-American woman with gray curly hair"
+      },
+      "image8": {
+        "src": "/images/portfolio/Newman_Tamara_832-MarquelYvette0072-ig.webp",
+        "alt": "Woman with curly brown hair smiling"
+      },
+      "image9": {
+        "src": "/images/portfolio/Forbes_Lauryn_294-MarquelYvette0046.webp",
+        "alt": "Professional woman in striped shirt smiling"
+      },
+      "image10": {
+        "src": "/images/portfolio/Lee_Eric_612-MarquelYvette0007+1.webp",
+        "alt": "Man with glasses in professional suit"
+      }
     },
-    "image2": {
-      "src": "images/portfolio/Dionne_Kindra_697-MarquelYvette0085.webp",
-      "alt": "Female headshot for non-profit c suite employee",
-      "priority": "high"
+    "clientTestimonials": {
+      "_section": "Client Testimonials Section (4 photos)",
+      "featured": {
+        "src": "/images/portfolio/Dennis_Jennifer_161-MarquelYvette0063-retouched.webp",
+        "alt": "Jennifer Dennis professional headshot"
+      },
+      "cathy": {
+        "src": "/images/portfolio/Hovis_Catherine_403-MarquelYvette0013-original200px.webp",
+        "alt": "Cathy - Client testimonial"
+      },
+      "nancy": {
+        "src": "/images/portfolio/Nancy+(200px).webp",
+        "alt": "Nancy - Client testimonial"
+      },
+      "kahni": {
+        "src": "/images/portfolio/Kahni+(200px).webp",
+        "alt": "Kahni - Client testimonial"
+      }
     },
-    "image3": {
-      "src": "images/portfolio/Moody_Fatimah_529-MarquelYvette0107(websize)-retouched.webp",
-      "alt": "lawyer high-end headshot in MD, female",
-      "priority": "normal"
+    "serviceCards": {
+      "_section": "Service Cards - 3 cards showing service types",
+      "corporate": {
+        "src": "/images/portfolio/Willis_Chris_039-MarquelYvette0019-ig.webp",
+        "alt": "Corporate headshot example"
+      },
+      "lawFirm": {
+        "src": "/images/portfolio/Leonard_Taylor_331-MarquelYvette0050+500px.webp",
+        "alt": "Law firm headshot example"
+      },
+      "linkedin": {
+        "src": "/images/portfolio/Sireesha-Ganti-0103-(500px).webp",
+        "alt": "LinkedIn headshot example"
+      }
     },
-    "image4": {
-      "src": "/images/portfolio/Thongpia-hughes_Gift_495-MarquelYvette0107-ig.webp",
-      "alt": "A woman with long brown hair smiling, wearing a pink sleeveless top and a delicate necklace with a small pendant, against a dark background.",
-      "priority": "normal"
+    "teamHeadshots": {
+      "_section": "Team Headshots Section - Company examples",
+      "team1": {
+        "src": "/images/portfolio/VOF+-+5X4+Images+(14+x+8.5+in).webp",
+        "alt": "Virginia Outdoors Foundation team headshots"
+      },
+      "team2": {
+        "src": "/images/portfolio/LinkVisum+(1920+×+1080+px)+(1).webp",
+        "alt": "LinkVisum team headshots"
+      }
     },
-    "image5": {
-      "src": "/images/portfolio/Glass_Mags_757-MarquelYvette0371.webp",
-      "alt": "Female lawyer in MD; premium headshot",
-      "priority": "normal"
+    "aboutPhotographer": {
+      "_section": "About Section - Photographer photo",
+      "image": {
+        "src": "/images/portfolio/Marquel+Headshots9093+1.webp",
+        "alt": "Marquel Yvette, Professional Headshot Photographer"
+      }
     },
-    "image6": {
-      "src": "images/portfolio/Corra_James_500-MarquelYvette0507-retouched.webp",
-      "alt": "male corporate headshot in DC",
-      "priority": "normal"
+    "additionalServices": {
+      "_section": "Additional Services Cards",
+      "realtor": {
+        "src": "/images/portfolio/T-Fairfield-0297-(500px).jpg.webp",
+        "alt": "Realtor headshot example"
+      },
+      "attorney": {
+        "src": "/images/portfolio/James_Lia_397-MarquelYvette0012-ig.webp",
+        "alt": "Attorney headshot example"
+      },
+      "medical": {
+        "src": "/images/portfolio/Mccalla_Cheryl-lynne_485-MarquelYvette0066_1(websize)-retouched.webp",
+        "alt": "Medical professional headshot example"
+      }
     },
-    "image7": {
-      "src": "/images/portfolio/Glynis.webp",
-      "alt": "Close-up portrait of an African-American woman with gray curly hair, wearing a beige top, earrings, and lipstick, against a dark background.",
-      "priority": "normal"
-    },
-    "image8": {
-      "src": "/images/portfolio/Newman_Tamara_832-MarquelYvette0072-ig.webp",
-      "alt": "A woman with curly brown hair, wearing a black sleeveless top, smiling against a white background.",
-      "priority": "normal"
-    },
-    "image9": {
-      "src": "/images/portfolio/Forbes_Lauryn_294-MarquelYvette0046.webp",
-      "alt": "Professional woman in striped shirt smiling",
-      "priority": "normal"
-    },
-    "image10": {
-      "src": "/images/portfolio/Lee_Eric_612-MarquelYvette0007+1.webp",
-      "alt": "Man with glasses in professional suit",
-      "priority": "normal"
+    "studioLocation": {
+      "_section": "Studio Location Section",
+      "studio": {
+        "src": "/images/portfolio/Studio.webp",
+        "alt": "Marquel Yvette Photography Studio"
+      }
     }
   },
-  "testimonials": {
-    "featured": {
-      "src": "/images/portfolio/Dennis_Jennifer_161-MarquelYvette0063-retouched.webp",
-      "alt": "Jennifer Dennis professional headshot"
-    },
-    "testimonial1": {
-      "src": "/images/portfolio/Hovis_Catherine_403-MarquelYvette0013-original200px.webp",
-      "alt": "Catherine Hovis"
-    },
-    "testimonial2": {
-      "src": "/images/portfolio/Nancy+(200px).webp",
-      "alt": "Nancy"
-    },
-    "testimonial3": {
-      "src": "/images/portfolio/Kahni+(200px).webp",
-      "alt": "Kahni"
+
+  "headshots": {
+    "_pageName": "Headshots Page (headshots.html)",
+    "_description": "General headshots portfolio page",
+    "portfolioImages": {
+      "_section": "Portfolio Gallery Images",
+      "image1": {
+        "src": "/images/portfolio/James_Ryan_538-MarquelYvette0302-retouched.webp",
+        "alt": "Ryan James professional headshot"
+      },
+      "image2": {
+        "src": "/images/portfolio/Lee_Eric_612-MarquelYvette0048-retouched.webp",
+        "alt": "Eric Lee professional headshot"
+      },
+      "image3": {
+        "src": "/images/portfolio/Newman_Tamara_832-MarquelYvette0072-ig.webp",
+        "alt": "Tamara Newman professional headshot"
+      },
+      "image4": {
+        "src": "/images/portfolio/Leonard_Taylor_331-MarquelYvette0050+500px.webp",
+        "alt": "Taylor Leonard professional headshot"
+      },
+      "image5": {
+        "src": "/images/portfolio/Dennis_Jennifer_161-MarquelYvette0063-retouched.webp",
+        "alt": "Jennifer Dennis professional headshot"
+      }
     }
   },
-  "services": {
-    "corporate": {
-      "src": "/images/portfolio/Willis_Chris_039-MarquelYvette0019-ig.webp",
-      "alt": "Corporate headshot"
+
+  "ratesPage": {
+    "_pageName": "Rates Page (rates-2.html)",
+    "_description": "Pricing page photos",
+    "bannerGallery": {
+      "_section": "Top Banner Gallery - 8 scrolling headshots",
+      "headshot1": {
+        "src": "/images/banner-gallery/headshot-1.webp",
+        "alt": "Professional headshot example 1"
+      },
+      "headshot2": {
+        "src": "/images/banner-gallery/headshot-2.webp",
+        "alt": "Professional headshot example 2"
+      },
+      "headshot3": {
+        "src": "/images/banner-gallery/headshot-3.webp",
+        "alt": "Professional headshot example 3"
+      },
+      "headshot4": {
+        "src": "/images/banner-gallery/headshot-4.webp",
+        "alt": "Professional headshot example 4"
+      },
+      "headshot5": {
+        "src": "/images/banner-gallery/headshot-5.webp",
+        "alt": "Professional headshot example 5"
+      },
+      "headshot6": {
+        "src": "/images/banner-gallery/headshot-6.webp",
+        "alt": "Professional headshot example 6"
+      },
+      "headshot7": {
+        "src": "/images/banner-gallery/headshot-7.webp",
+        "alt": "Professional headshot example 7"
+      },
+      "headshot8": {
+        "src": "/images/banner-gallery/headshot-8.webp",
+        "alt": "Professional headshot example 8"
+      }
     },
-    "lawfirm": {
-      "src": "/images/portfolio/Leonard_Taylor_331-MarquelYvette0050+500px.webp",
-      "alt": "Law firm headshot"
-    },
-    "linkedin": {
-      "src": "/images/portfolio/Sireesha-Ganti-0103-(500px).webp",
-      "alt": "LinkedIn headshot"
+    "testimonials": {
+      "_section": "Testimonial Photos",
+      "testimonial1": {
+        "src": "/images/testimonials/zeigler.webp",
+        "alt": "E. Zeigler testimonial"
+      },
+      "testimonial2": {
+        "src": "/images/testimonials/dennis.webp",
+        "alt": "J. Dennis testimonial"
+      },
+      "testimonial3": {
+        "src": "/images/testimonials/everett.webp",
+        "alt": "C. Everett testimonial"
+      },
+      "testimonial4": {
+        "src": "/images/testimonials/Legrand_Zhayer_and_glynis_766-0108-ig.webp",
+        "alt": "Zhayer Legrand and Glynis testimonial"
+      }
     }
   },
-  "teamHeadshots": {
-    "team1": {
-      "src": "/images/portfolio/VOF+-+5X4+Images+(14+x+8.5+in).webp",
-      "alt": "Virginia Outdoors Foundation team headshots"
+
+  "workplaceHeadshotsPage": {
+    "_pageName": "Workplace Headshots Page (workplace-headshots.html)",
+    "_description": "Corporate team headshots page",
+    "heroImage": {
+      "_section": "Hero Section Image",
+      "image": {
+        "src": "/images/portfolio/CFLO.webp",
+        "alt": "Professional workplace headshots team grid"
+      }
     },
-    "team2": {
-      "src": "/images/portfolio/LinkVisum+(1920+×+1080+px)+(1).webp",
-      "alt": "LinkVisum team headshots"
+    "teamGridExample": {
+      "_section": "Team Grid Example",
+      "linkvisum": {
+        "src": "/images/portfolio/LinkVisum+(1920+×+1080+px)+(1).webp",
+        "alt": "LinkVisum professional team headshot grid"
+      }
     }
   },
-  "about": {
-    "photographer": {
-      "src": "/images/portfolio/Marquel+Headshots9093+1.webp",
-      "alt": "Marquel Yvette, Professional Headshot Photographer"
+
+  "erasHeadshotsPage": {
+    "_pageName": "ERAS Headshots Page (eras-headshots.html)",
+    "_description": "Medical student residency application headshots",
+    "mainImage": {
+      "_section": "Main Example Photo",
+      "image": {
+        "src": "/images/portfolio/Mccalla_Cheryl-lynne_485-MarquelYvette0066_1(websize)-retouched.webp",
+        "alt": "ERAS headshot example - medical professional"
+      }
+    },
+    "testimonial": {
+      "_section": "Testimonial Photo",
+      "image": {
+        "src": "/images/portfolio/Dennis_Jennifer_161-MarquelYvette0063-retouched.webp",
+        "alt": "Client testimonial photo"
+      }
     },
     "studio": {
-      "src": "/images/portfolio/Studio.webp",
-      "alt": "Professional photography studio"
+      "_section": "Studio Photo",
+      "image": {
+        "src": "/images/portfolio/Studio.webp",
+        "alt": "Photography studio"
+      }
     }
   },
-  "additionalServices": {
-    "branding": {
-      "src": "/images/portfolio/James_Lia_397-MarquelYvette0012-ig.webp",
-      "alt": "Branding photography"
+
+  "locationPages": {
+    "_pageName": "Location Pages",
+    "_description": "Ashburn, Reston, Leesburg, Fairfax, Tysons, Loudoun County pages share these photos",
+    "heroImages": {
+      "_section": "Hero/Main Photos",
+      "ashburnRestonLeesburgFairfaxTysons": {
+        "src": "/images/portfolio/Corra_James_500-MarquelYvette0507-retouched.webp",
+        "alt": "Professional headshot example",
+        "usedOn": "Ashburn, Reston, Leesburg, Fairfax, Tysons pages"
+      },
+      "loudounCounty": {
+        "src": "/images/portfolio/Dionne_Kindra_697-MarquelYvette0085.webp",
+        "alt": "Professional headshot example",
+        "usedOn": "Loudoun County page"
+      }
     },
-    "medical": {
-      "src": "/images/portfolio/Mccalla_Cheryl-lynne_485-MarquelYvette0066_1(websize)-retouched.webp",
-      "alt": "Medical professional headshot"
+    "serviceCards": {
+      "_section": "Service Cards - Same across all location pages",
+      "corporate": {
+        "src": "/images/portfolio/Willis_Chris_039-MarquelYvette0019-ig.webp",
+        "alt": "Corporate headshot"
+      },
+      "linkedin": {
+        "src": "/images/portfolio/Sireesha-Ganti-0103-(500px).webp",
+        "alt": "LinkedIn headshot"
+      },
+      "executive": {
+        "src": "/images/portfolio/James_Lia_397-MarquelYvette0012-ig.webp",
+        "alt": "Executive headshot"
+      }
     },
-    "eventCoverage": {
-      "src": "/images/portfolio/T-Fairfield-0297-(500px).jpg.webp",
-      "alt": "Event coverage photography"
+    "testimonial": {
+      "_section": "Testimonial Photo - Same across all location pages",
+      "image": {
+        "src": "/images/portfolio/Dennis_Jennifer_161-MarquelYvette0063-retouched.webp",
+        "alt": "Client testimonial"
+      }
     },
-    "virtualGallery": {
-      "src": "/images/portfolio/Kahni+(200px).webp",
-      "alt": "Virtual gallery of headshots"
+    "studio": {
+      "_section": "Studio Photo - Same across all location pages",
+      "image": {
+        "src": "/images/portfolio/Studio.webp",
+        "alt": "Photography studio"
+      }
+    },
+    "additionalImages": {
+      "_section": "Additional photos on specific location pages",
+      "loudounTysonsAreasServed": {
+        "src": "/images/portfolio/Glass_Mags_757-MarquelYvette0371.webp",
+        "alt": "Professional headshot example",
+        "usedOn": "Loudoun County, Tysons Corner pages"
+      }
     }
   },
-  "process": {
-    "icon1": {
-      "src": "/images/backgrounds/2622595_female_photographer_icon.webp",
-      "alt": "Professional photographer icon"
-    },
-    "icon2": {
-      "src": "/images/backgrounds/4365245_date_schedule_calendar_event_icon.webp",
-      "alt": "Schedule calendar icon"
-    },
-    "icon3": {
-      "src": "/images/backgrounds/7680845_desktop_monitor_download_screen_device_icon.webp",
-      "alt": "Digital delivery icon"
-    }
-  },
-  "bannerGallery": {
-    "headshot1": {
-      "src": "/images/banner-gallery/headshot-1.webp",
-      "alt": "Professional headshot by Marquel Yvette Photography"
-    },
-    "headshot2": {
-      "src": "/images/banner-gallery/headshot-2.webp",
-      "alt": "Professional headshot by Marquel Yvette Photography"
-    },
-    "headshot3": {
-      "src": "/images/banner-gallery/headshot-3.webp",
-      "alt": "Professional headshot by Marquel Yvette Photography"
-    },
-    "headshot4": {
-      "src": "/images/banner-gallery/headshot-4.webp",
-      "alt": "Professional headshot by Marquel Yvette Photography"
-    },
-    "headshot5": {
-      "src": "/images/banner-gallery/headshot-5.webp",
-      "alt": "Professional headshot by Marquel Yvette Photography"
-    },
-    "headshot6": {
-      "src": "/images/banner-gallery/headshot-6.webp",
-      "alt": "Professional headshot by Marquel Yvette Photography"
-    },
-    "headshot7": {
-      "src": "/images/banner-gallery/headshot-7.webp",
-      "alt": "Professional headshot by Marquel Yvette Photography"
-    },
-    "headshot8": {
-      "src": "/images/banner-gallery/headshot-8.webp",
-      "alt": "Professional headshot by Marquel Yvette Photography"
-    }
-  },
-  "ratesTestimonials": {
-    "testimonial1": {
-      "src": "/images/portfolio/Eonyu+Zeigler+-+insurance+Manager.webp",
-      "alt": "E. Zeigler"
-    },
-    "testimonial2": {
-      "src": "/images/testimonials/dennis.webp",
-      "alt": "J. Dennis"
-    },
-    "testimonial3": {
-      "src": "/images/testimonials/Legrand_Zhayer_and_glynis_766-0108-ig.webp",
-      "alt": "C. Everett"
-    }
-  },
-  "contactPortfolio": {
-    "image1": {
-      "src": "/images/portfolio/Dionne_Kindra_697-MarquelYvette0085.webp",
-      "alt": "Professional headshot"
-    },
-    "image2": {
-      "src": "images/portfolio/Johnson_Wynn_900-MarquelYvette0475bw(socmedia)-retouched.webp",
-      "alt": "Professional headshot"
-    },
-    "image3": {
-      "src": "images/portfolio/Augustine_Faith_044-MarquelYvette0522bw(socmedia)-retouched.webp",
-      "alt": "Professional headshot"
-    },
-    "image4": {
-      "src": "images/portfolio/Glass_Mags_757-MarquelYvette0371.webp",
-      "alt": "Professional headshot"
-    }
-  },
-  "thankYouPortfolio": {
-    "image1": {
-      "src": "images/portfolio/Greenidge_Stephen_453-MarquelYvette0138-ig.webp",
-      "alt": "Professional headshot"
-    },
-    "image2": {
-      "src": "/images/portfolio/Nakeisha+Neal+Jones-0134+(1).webp",
-      "alt": "Professional headshot"
-    },
-    "image3": {
-      "src": "/images/portfolio/Cerissa.webp",
-      "alt": "Professional headshot"
-    },
-    "image4": {
-      "src": "/images/portfolio/Thongpia-hughes_Gift_495-MarquelYvette0107-ig.webp",
-      "alt": "Professional headshot"
-    },
-    "image5": {
-      "src": "/images/portfolio/Milestone-Title-0116.webp",
-      "alt": "Professional headshot"
-    },
-    "image6": {
-      "src": "/images/portfolio/Hovis_Catherine_403-MarquelYvette0013-original200px.webp",
-      "alt": "Professional headshot"
-    }
-  },
-  "additionalPortfolio": {
-    "_comment": "Additional portfolio photos not used elsewhere on the site",
+
+  "portfolioExtras": {
+    "_pageName": "Additional Portfolio Photos",
+    "_description": "Extra photos not currently displayed on any page - available for swapping",
     "photo1": {
-      "src": "/images/portfolio/CFLO.webp",
-      "alt": "Professional corporate headshot"
-    },
-    "photo2": {
       "src": "/images/portfolio/CS-0205_500px.webp",
       "alt": "Professional headshot"
     },
-    "photo3": {
+    "photo2": {
       "src": "/images/portfolio/Coster_Emily_462-MarquelYvette0556-ig.webp",
       "alt": "Emily Coster professional headshot"
     },
-    "photo4": {
+    "photo3": {
       "src": "/images/portfolio/DrBess0561_eras_medical_loudoun_marquelyvette_500by500.webp",
       "alt": "Dr. Bess medical professional headshot"
     },
-    "photo5": {
+    "photo4": {
       "src": "/images/portfolio/Everett_Cara_headshot_loudoun.webp",
       "alt": "Cara Everett professional headshot"
     },
-    "photo6": {
+    "photo5": {
       "src": "/images/portfolio/Ikeliani_Camille_746-MarquelYvette0029-retouched.webp",
       "alt": "Camille Ikeliani professional headshot"
     },
-    "photo7": {
-      "src": "/images/portfolio/James_Ryan_538-MarquelYvette0302-retouched.webp",
-      "alt": "Ryan James professional headshot"
-    },
-    "photo8": {
+    "photo6": {
       "src": "/images/portfolio/L+Carroll-0146+1.webp",
       "alt": "L. Carroll professional headshot"
     },
-    "photo9": {
-      "src": "/images/portfolio/Lee_Eric_612-MarquelYvette0048-retouched.webp",
-      "alt": "Eric Lee professional headshot"
-    },
-    "photo10": {
+    "photo7": {
       "src": "/images/portfolio/Malatesta_John_148-MarquelYvette0038(socmedia)-retouched.webp",
       "alt": "John Malatesta professional headshot"
     },
-    "photo11": {
+    "photo8": {
       "src": "/images/portfolio/Mccalla_Cheryl-lynne_485-MarquelYvette0035 1.webp",
       "alt": "Cheryl-lynne Mccalla professional headshot"
     },
-    "photo12": {
+    "photo9": {
       "src": "/images/portfolio/Moody_Fatimah_529-MarquelYvette0107.webp",
       "alt": "Fatimah Moody professional headshot"
     },
-    "photo13": {
+    "photo10": {
       "src": "/images/portfolio/Rana_Navin_253-MarquelYvette0528 1-ig.webp",
       "alt": "Navin Rana professional headshot"
     },
-    "photo14": {
+    "photo11": {
       "src": "/images/portfolio/T+Howze-Edge-0255+1.webp",
       "alt": "T. Howze-Edge professional headshot"
     },
-    "photo15": {
+    "photo12": {
       "src": "/images/portfolio/Willis_Samira_937-MarquelYvette0083-ig+(1).webp",
       "alt": "Samira Willis professional headshot"
     },
-    "photo16": {
-      "src": "/images/portfolio/Mccalla_Cheryl-lynne_485-MarquelYvette0066_1(websize)-retouched.webp",
-      "alt": "Cheryl-lynne Mccalla professional headshot"
-    },
-    "photo17": {
+    "photo13": {
       "src": "/images/portfolio/Burton_Michele_695-MarquelYvette0027 1-ig.webp",
       "alt": "Burton Michele professional headshot"
-    }
-  },
-  "workplaceHeadshotsPage": {
-    "_comment": "Workplace headshots landing page images and placeholders",
-    "heroGrid": {
-      "src": "/images/portfolio/team-hero-grid-placeholder.webp",
-      "alt": "Example 12-person workplace headshots grid - Replace with your team photo",
-      "layout": "4x3",
-      "description": "Hero section workplace headshots grid placeholder (12 cells)",
-      "usedOn": "workplace-headshots.html - Hero section"
     },
-    "showcaseGrid1": {
-      "src": "/images/portfolio/team-grid-8person-1.webp",
-      "alt": "8-person workplace headshots grid - Professional services firm",
-      "layout": "4x2",
-      "company": "Professional Services Firm",
-      "description": "8-person workplace headshots grid example",
-      "usedOn": "workplace-headshots.html - Portfolio grid section"
+    "photo14": {
+      "src": "/images/portfolio/Nakeisha+Neal+Jones-0134+(1).webp",
+      "alt": "Nakeisha Neal Jones professional headshot"
     },
-    "showcaseGrid2": {
-      "src": "/images/portfolio/team-grid-8person-2.webp",
-      "alt": "Executive leadership workplace headshots grid - Tech startup",
-      "layout": "4x2",
-      "company": "Tech Startup",
-      "description": "Executive leadership workplace headshots example",
-      "usedOn": "workplace-headshots.html - Portfolio grid section"
+    "photo15": {
+      "src": "/images/portfolio/Cerissa.webp",
+      "alt": "Cerissa professional headshot"
     },
-    "showcaseGrid3": {
-      "src": "/images/portfolio/team-grid-8person-3.webp",
-      "alt": "Sales team workplace headshots grid - Real estate agency",
-      "layout": "4x2",
-      "company": "Real Estate Agency",
-      "description": "Sales team workplace headshots example",
-      "usedOn": "workplace-headshots.html - Portfolio grid section"
+    "photo16": {
+      "src": "/images/portfolio/Milestone-Title-0116.webp",
+      "alt": "Professional headshot"
     },
-    "showcaseGrid4": {
-      "src": "/images/portfolio/team-grid-8person-4.webp",
-      "alt": "Full department workplace headshots grid - Marketing agency",
-      "layout": "4x2",
-      "company": "Marketing Agency",
-      "description": "Full department workplace headshots example",
-      "usedOn": "workplace-headshots.html - Portfolio grid section"
+    "photo17": {
+      "src": "/images/portfolio/Eonyu+Zeigler+-+insurance+Manager.webp",
+      "alt": "Eonyu Zeigler professional headshot"
+    },
+    "photo18": {
+      "src": "/images/portfolio/Greenidge_Stephen_453-MarquelYvette0138-ig.webp",
+      "alt": "Stephen Greenidge professional headshot"
+    },
+    "photo19": {
+      "src": "/images/portfolio/Johnson_Wynn_900-MarquelYvette0475bw(socmedia)-retouched.webp",
+      "alt": "Wynn Johnson professional headshot"
+    },
+    "photo20": {
+      "src": "/images/portfolio/Augustine_Faith_044-MarquelYvette0522bw(socmedia)-retouched.webp",
+      "alt": "Faith Augustine professional headshot"
     }
   }
 }
