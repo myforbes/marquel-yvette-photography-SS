@@ -328,7 +328,7 @@
 
       .branding-feature-photo {
         width: 100%;
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 4 / 3;
         overflow: hidden;
       }
 
@@ -380,6 +380,64 @@
         content: "\2192";
         color: #f4ca78;
         font-weight: 700;
+      }
+
+      /* Photo + Packages Side by Side Section */
+      .photo-packages-section {
+        background: #fff;
+        padding: 70px 20px;
+      }
+
+      .photo-packages-inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: start;
+      }
+
+      .photo-packages-photos {
+        position: sticky;
+        top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .photo-packages-photo {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .photo-packages-photo img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .photo-packages-content h2 {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        color: #111;
+        margin-bottom: 10px;
+      }
+
+      .photo-packages-content .section-intro {
+        text-align: left;
+        margin-bottom: 30px;
+      }
+
+      .packages-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .packages-stack .package-card {
+        margin: 0;
       }
 
       /* Tips Section */
@@ -1080,6 +1138,26 @@
           max-width: 600px;
         }
 
+        .photo-packages-inner {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .photo-packages-photos {
+          position: relative;
+          top: auto;
+          max-width: 500px;
+          margin: 0 auto;
+        }
+
+        .photo-packages-content h2 {
+          text-align: center;
+        }
+
+        .photo-packages-content .section-intro {
+          text-align: center;
+        }
+
         .about-branding-grid {
           grid-template-columns: 1fr;
           gap: 30px;
@@ -1397,15 +1475,25 @@
       </div>
     </section>
 
-    <!-- Two Comprehensive Brand Experiences -->
-    <section class="packages-section">
-      <div class="container">
-        <h2 class="section-title">Two Comprehensive Brand Experiences</h2>
-        <p class="section-intro">
-          Choose the experience that matches where you are in your brand journey.
-        </p>
+    <!-- Photo + Packages Side by Side -->
+    <section class="photo-packages-section">
+      <div class="photo-packages-inner">
+        <div class="photo-packages-photos">
+          <div class="photo-packages-photo">
+            <img src="images/branding/branding-example-3.webp" alt="Professional woman on modern staircase - personal brand photography">
+          </div>
+          <div class="photo-packages-photo">
+            <img src="images/branding/branding-example-2.webp" alt="Executive in tan blazer with city skyline - personal brand photography">
+          </div>
+        </div>
 
-        <div class="packages-grid">
+        <div class="photo-packages-content">
+          <h2>Two Comprehensive Brand Experiences</h2>
+          <p class="section-intro">
+            Choose the experience that matches where you are in your brand journey.
+          </p>
+
+          <div class="packages-stack">
           <!-- Brand Session -->
           <div class="package-card">
             <h3>The Brand Session</h3>
@@ -1471,6 +1559,7 @@
             </div>
 
             <a href="rates-2" class="cta-button">Book Brand Immersion</a>
+          </div>
           </div>
         </div>
       </div>
