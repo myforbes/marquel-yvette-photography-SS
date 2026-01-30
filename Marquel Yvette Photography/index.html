@@ -254,10 +254,6 @@
     <!-- Preload LCP image for faster initial render -->
     <link rel="preload" as="image" href="images/portfolio/Sharma_Aryaman_481-MarquelYvette0352.webp" fetchpriority="high">
     <link rel="preload" as="image" href="images/portfolio/Dionne_Kindra_697-MarquelYvette0085.webp" fetchpriority="high">
-    <!-- Preload additional images based on screen size -->
-    <link rel="preload" as="image" href="images/portfolio/Cerissa.webp" media="(min-width: 769px)">
-    <link rel="preload" as="image" href="images/portfolio/Thongpia-hughes_Gift_495-MarquelYvette0107-ig.webp" media="(min-width: 769px)">
-    <link rel="preload" as="image" href="images/portfolio/Milestone-Title-0116.webp" media="(min-width: 1025px)">
 
     <!-- CSS - Critical styles loaded immediately, non-critical deferred -->
     <link rel="stylesheet" href="css/main.min.css">
@@ -272,9 +268,11 @@
     <link rel="preload" as="font" type="font/woff2" href="fonts/OpenSans-Regular.woff2" crossorigin>
     <link rel="stylesheet" href="css/fonts.min.css">
 
-    <!-- Font Awesome - Deferred for non-critical icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <!-- Inline SVG Icons (replaces Font Awesome CDN - saves ~150KB) -->
+    <style>
+      .fa-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.125em; fill: currentColor; }
+      .fa-icon-lg { width: 1.25em; height: 1.25em; }
+    </style>
 
 
     <!-- Analytics Scripts - Deferred to prevent forced reflows -->
@@ -361,7 +359,7 @@
 
             <nav class="header-menu">
                 <ul class="header-menu-nav">
-                    <li><a href="rates-2" class="cta-button">SEE RATES & AVAILABILITY</a></li>
+                    <li><a href="rates-2.html" class="cta-button">SEE RATES & AVAILABILITY</a></li>
                 </ul>
             </nav>
         </div>
@@ -373,59 +371,59 @@
             <div class="gallery-grid-wrapper">
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img data-photo="gallery-1" src="images/portfolio/Sharma_Aryaman_481-MarquelYvette0352.webp" alt="A professional woman with curly hair, smiling, dressed in a dark blazer and white top." loading="eager" width="1080" height="864">
+                        <img data-photo="gallery-1" src="images/portfolio/Sharma_Aryaman_481-MarquelYvette0352.webp" alt="A professional woman with curly hair, smiling, dressed in a dark blazer and white top." loading="eager" decoding="async" width="1080" height="864">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img data-photo="gallery-2" src="images/portfolio/Dionne_Kindra_697-MarquelYvette0085.webp" alt="Female headshot for non-profit c suite employee" loading="eager" width="1080" height="810">
+                        <img data-photo="gallery-2" src="images/portfolio/Dionne_Kindra_697-MarquelYvette0085.webp" alt="Female headshot for non-profit c suite employee" loading="eager" decoding="async" width="1080" height="810">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img data-photo="gallery-3" src="images/portfolio/Moody_Fatimah_529-MarquelYvette0107(websize)-retouched.webp" alt="lawyer high-end headshot in MD, female" loading="eager" width="1200" height="959">
+                        <img data-photo="gallery-3" src="images/portfolio/Moody_Fatimah_529-MarquelYvette0107(websize)-retouched.webp" alt="lawyer high-end headshot in MD, female" loading="eager" decoding="async" width="1200" height="959">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img data-photo="gallery-4" src="/images/portfolio/Thongpia-hughes_Gift_495-MarquelYvette0107-ig.webp" alt="A woman with long brown hair smiling, wearing a pink sleeveless top and a delicate necklace with a small pendant, against a dark background." loading="eager" width="1350" height="1080">
+                        <img data-photo="gallery-4" src="/images/portfolio/Thongpia-hughes_Gift_495-MarquelYvette0107-ig.webp" alt="A woman with long brown hair smiling, wearing a pink sleeveless top and a delicate necklace with a small pendant, against a dark background." loading="eager" decoding="async" width="1350" height="1080">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img data-photo="gallery-5" src="/images/portfolio/Glass_Mags_757-MarquelYvette0371.webp" alt="Female lawyer in MD; premium headshot" loading="eager" width="1080" height="864">
+                        <img data-photo="gallery-5" src="/images/portfolio/Glass_Mags_757-MarquelYvette0371.webp" alt="Female lawyer in MD; premium headshot" loading="lazy" width="1080" height="864">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img data-photo="gallery-6" src="images/portfolio/Corra_James_500-MarquelYvette0507-retouched.webp" alt="male corporate headshot in DC" loading="eager" width="1200" height="960">
+                        <img data-photo="gallery-6" src="images/portfolio/Corra_James_500-MarquelYvette0507-retouched.webp" alt="male corporate headshot in DC" loading="lazy" width="1200" height="960">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img data-photo="gallery-7" src="/images/portfolio/Glynis.webp" alt="Close-up portrait of an African-American woman with gray curly hair, wearing a beige top, earrings, and lipstick, against a dark background." loading="eager" width="1080" height="864">
+                        <img data-photo="gallery-7" src="/images/portfolio/Glynis.webp" alt="Close-up portrait of an African-American woman with gray curly hair, wearing a beige top, earrings, and lipstick, against a dark background." loading="lazy" width="1080" height="864">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img data-photo="gallery-8" src="/images/portfolio/Newman_Tamara_832-MarquelYvette0072-ig.webp" alt="A woman with curly brown hair, wearing a black sleeveless top, smiling against a white background." loading="eager" width="1350" height="1080">
+                        <img data-photo="gallery-8" src="/images/portfolio/Newman_Tamara_832-MarquelYvette0072-ig.webp" alt="A woman with curly brown hair, wearing a black sleeveless top, smiling against a white background." loading="lazy" width="1350" height="1080">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img data-photo="gallery-9" src="/images/portfolio/Forbes_Lauryn_294-MarquelYvette0046.webp" alt="Professional woman in striped shirt smiling" loading="eager" width="1080" height="864">
+                        <img data-photo="gallery-9" src="/images/portfolio/Forbes_Lauryn_294-MarquelYvette0046.webp" alt="Professional woman in striped shirt smiling" loading="lazy" width="1080" height="864">
                     </div>
                 </div>
                 <div class="gallery-grid-item">
                     <div class="gallery-grid-item-wrapper">
-                        <img data-photo="gallery-10" src="/images/portfolio/Lee_Eric_612-MarquelYvette0007+1.webp" alt="Man with glasses in professional suit" loading="eager" width="1080" height="864">
+                        <img data-photo="gallery-10" src="/images/portfolio/Lee_Eric_612-MarquelYvette0007+1.webp" alt="Man with glasses in professional suit" loading="lazy" width="1080" height="864">
                     </div>
                 </div>
             </div>
 
             <!-- Mobile CTA - Only visible on mobile devices -->
             <div class="mobile-gallery-cta">
-                <a href="rates-2" class="cta-button">SEE RATES & AVAILABILITY</a>
+                <a href="rates-2.html" class="cta-button">SEE RATES & AVAILABILITY</a>
             </div>
         </section>
 
@@ -457,7 +455,7 @@
         <!-- SECTION 4: CTA Button -->
         <section class="cta-section">
             <div class="container">
-                <a href="rates-2" class="cta-button cta-button-large">SEE RATES AND AVAILABILITY</a>
+                <a href="rates-2.html" class="cta-button cta-button-large">SEE RATES AND AVAILABILITY</a>
             </div>
         </section>
 
@@ -500,7 +498,7 @@
                     </div>
                 </div>
                 <div class="services-cta">
-                    <a href="rates-2" class="cta-button">SEE RATES AND AVAILABILITY</a>
+                    <a href="rates-2.html" class="cta-button">SEE RATES AND AVAILABILITY</a>
                 </div>
             </div>
         </section>
@@ -525,8 +523,126 @@
                 <p class="team-outro-sub">Need a headshot station at your company conference? Easy! Let me bring the studio to you!</p>
 
                 <div class="team-cta" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <a href="workplace-headshots" class="cta-button">EXPLORE WORKPLACE HEADSHOTS</a>
-                    <a href="request-proposal" class="cta-button">REQUEST A PROPOSAL</a>
+                    <a href="workplace-headshots.html" class="cta-button">EXPLORE WORKPLACE HEADSHOTS</a>
+                    <a href="request-proposal.html" class="cta-button">REQUEST A PROPOSAL</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Specialized Photography Services -->
+        <section class="specialized-services-section" style="background: #1a1a1a; padding: 80px 20px;">
+            <style>
+                .specialized-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 40px;
+                    max-width: 1000px;
+                    margin: 0 auto;
+                }
+                .specialized-card {
+                    background: #fff;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+                .specialized-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+                }
+                .specialized-card-image {
+                    height: 250px;
+                    overflow: hidden;
+                }
+                .specialized-card-image img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.3s ease;
+                }
+                .specialized-card:hover .specialized-card-image img {
+                    transform: scale(1.05);
+                }
+                .specialized-card-content {
+                    padding: 30px;
+                }
+                .specialized-card-eyebrow {
+                    font-size: 0.8rem;
+                    letter-spacing: 0.15em;
+                    text-transform: uppercase;
+                    color: #b9914d;
+                    margin-bottom: 8px;
+                }
+                .specialized-card h3 {
+                    font-size: 1.5rem;
+                    margin-bottom: 15px;
+                    color: #111;
+                }
+                .specialized-card p {
+                    color: #555;
+                    line-height: 1.6;
+                    margin-bottom: 25px;
+                }
+                .specialized-card-btn {
+                    display: inline-block;
+                    padding: 14px 28px;
+                    background: linear-gradient(135deg, #f4ca78 0%, #b9914d 100%);
+                    color: #000;
+                    font-weight: 600;
+                    text-decoration: none;
+                    border-radius: 6px;
+                    font-size: 0.9rem;
+                    letter-spacing: 0.05em;
+                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+                }
+                .specialized-card-btn:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 20px rgba(244, 202, 120, 0.4);
+                }
+                @media (max-width: 768px) {
+                    .specialized-grid {
+                        grid-template-columns: 1fr;
+                        gap: 30px;
+                        max-width: 500px;
+                    }
+                    .specialized-card-image {
+                        height: 200px;
+                    }
+                    .specialized-card-content {
+                        padding: 25px;
+                    }
+                }
+            </style>
+            <div class="container">
+                <h2 class="section-title" style="color: #fff; margin-bottom: 15px;">Specialized Photography Services</h2>
+                <p style="text-align: center; color: #ccc; max-width: 700px; margin: 0 auto 50px; font-size: 1.1rem;">Beyond traditional headshots, I offer specialized photography for specific needs.</p>
+
+                <div class="specialized-grid">
+                    <!-- ERAS Headshots Card -->
+                    <div class="specialized-card">
+                        <div class="specialized-card-image">
+                            <img src="images/portfolio/Mccalla_Cheryl-lynne_485-MarquelYvette0066_1(websize)-retouched.webp" alt="ERAS headshot for medical student" loading="lazy">
+                        </div>
+                        <div class="specialized-card-content">
+                            <p class="specialized-card-eyebrow">For Medical Students</p>
+                            <h3>ERAS Headshots</h3>
+                            <p>Professional headshots specifically designed for residency applications. Stand out in ERAS, MATCH, and medical program applications.</p>
+                            <a href="eras-headshots.html" class="specialized-card-btn">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Brand Photography Card -->
+                    <div class="specialized-card">
+                        <div class="specialized-card-image">
+                            <img src="images/branding/branding-hero.webp" alt="Professional brand photography session" loading="lazy">
+                        </div>
+                        <div class="specialized-card-content">
+                            <p class="specialized-card-eyebrow">For Entrepreneurs & Business Owners</p>
+                            <h3>Brand Photography</h3>
+                            <p>Complete visual brand library for your website, social media, and marketing. Lifestyle imagery that tells your business story.</p>
+                            <a href="branding.html" class="specialized-card-btn">Learn More</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -540,7 +656,7 @@
                     <p class="gift-card-description">Our photography gift cards can be applied to any headshot session or photography service. Whether it's for a friend starting a new career, a recent graduate, or a colleague who needs to update their LinkedIn profile—give them the confidence that comes with a professional headshot.</p>
 
                     <div style="text-align: center; margin: 40px 0;">
-                        <a href="gift-cards" class="cta-button cta-button-large">🎁 PURCHASE GIFT CARD 🎁</a>
+                        <a href="gift-cards.html" class="cta-button cta-button-large">🎁 PURCHASE GIFT CARD 🎁</a>
                     </div>
 
                     <p class="gift-card-benefits"><strong>Gift cards never expire</strong> and can be redeemed for any photography service. Delivered instantly via email—perfect for last-minute gifts!</p>
@@ -681,11 +797,11 @@
                         <!-- NAP Block for Local SEO -->
                         <div class="nap-block" style="background: var(--color-bg-light); padding: 25px; margin-bottom: 25px; border-left: 4px solid var(--color-gold-dark);">
                             <p style="font-size: 1.2rem; font-weight: 600; color: var(--color-dark-primary); margin-bottom: 10px;">Marquel Yvette Photography</p>
-                            <p style="margin-bottom: 5px;"><i class="fas fa-map-marker-alt" style="color: var(--color-gold-dark); width: 20px;"></i> South Riding, VA</p>
-                            <p style="margin-bottom: 5px;"><i class="fas fa-phone" style="color: var(--color-gold-dark); width: 20px;"></i> <a href="tel:+17039570643" style="color: var(--color-dark-primary);">(703) 957-0643</a></p>
-                            <p><i class="fas fa-envelope" style="color: var(--color-gold-dark); width: 20px;"></i> <a href="mailto:info@marquelyvette.com" style="color: var(--color-dark-primary);">info@marquelyvette.com</a></p>
+                            <p style="margin-bottom: 5px;"><svg class="fa-icon" style="color: var(--color-gold-dark); width: 20px;" viewBox="0 0 384 512"><path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg> South Riding, VA</p>
+                            <p style="margin-bottom: 5px;"><svg class="fa-icon" style="color: var(--color-gold-dark); width: 20px;" viewBox="0 0 512 512"><path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> <a href="tel:+17039570643" style="color: var(--color-dark-primary);">(703) 957-0643</a></p>
+                            <p><svg class="fa-icon" style="color: var(--color-gold-dark); width: 20px;" viewBox="0 0 512 512"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg> <a href="mailto:info@marquelyvette.com" style="color: var(--color-dark-primary);">info@marquelyvette.com</a></p>
                         </div>
-                        <p>My studio is located in <strong>South Riding, VA</strong> in the heart of <a href="headshots-loudoun-county" style="color: var(--color-gold-dark); text-decoration: underline;">Loudoun County</a>. Clients come to me from across Northern Virginia including <a href="headshots-ashburn-va" style="color: var(--color-gold-dark); text-decoration: underline;">Ashburn</a>, <a href="headshots-reston-va" style="color: var(--color-gold-dark); text-decoration: underline;">Reston</a>, <a href="headshots-tysons-corner" style="color: var(--color-gold-dark); text-decoration: underline;">Tysons Corner</a>, <a href="headshots-fairfax-va" style="color: var(--color-gold-dark); text-decoration: underline;">Fairfax</a>, and <a href="headshots-leesburg-va" style="color: var(--color-gold-dark); text-decoration: underline;">Leesburg</a>.</p>
+                        <p>My studio is located in <strong>South Riding, VA</strong> in the heart of <a href="headshots-loudoun-county.html" style="color: var(--color-gold-dark); text-decoration: underline;">Loudoun County</a>. Clients come to me from across Northern Virginia including <a href="headshots-ashburn-va.html" style="color: var(--color-gold-dark); text-decoration: underline;">Ashburn</a>, <a href="headshots-reston-va.html" style="color: var(--color-gold-dark); text-decoration: underline;">Reston</a>, <a href="headshots-tysons-corner.html" style="color: var(--color-gold-dark); text-decoration: underline;">Tysons Corner</a>, <a href="headshots-fairfax-va.html" style="color: var(--color-gold-dark); text-decoration: underline;">Fairfax</a>, and <a href="headshots-leesburg-va.html" style="color: var(--color-gold-dark); text-decoration: underline;">Leesburg</a>.</p>
                         <p>I am less than a mile from Route 50, which you can reach via Route 606 as it runs behind Dulles Airport. If you are coming from Fairfax, the most direct route is Route 66 to Route 50.</p>
                         <p>Nearby landmarks include Dulles Airport, Stone Springs Hospital, Pleasant Valley Golf Club, and Salamander Resort and Spa.</p>
                     </div>
@@ -808,15 +924,15 @@
                 <div class="footer-column footer-contact">
                     <h3>Get In Touch</h3>
                     <div class="footer-contact-item">
-                        <i class="fas fa-phone"></i>
+                        <svg class="fa-icon" viewBox="0 0 512 512"><path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
                         <a href="tel:+17039570643">(703) 957-0643</a>
                     </div>
                     <div class="footer-contact-item">
-                        <i class="fas fa-envelope"></i>
+                        <svg class="fa-icon" viewBox="0 0 512 512"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
                         <a href="mailto:info@marquelyvette.com">info@marquelyvette.com</a>
                     </div>
                     <div class="footer-contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <svg class="fa-icon" viewBox="0 0 384 512"><path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
                         <span>South Riding, VA 20152</span>
                     </div>
                 </div>
@@ -824,19 +940,19 @@
                 <div class="footer-column footer-cta">
                     <h3>Ready to Book?</h3>
                     <p>Professional headshots for Loudoun County and Northern Virginia professionals</p>
-                    <a href="rates-2" class="cta-button">BOOK SESSION</a>
+                    <a href="rates-2.html" class="cta-button">BOOK SESSION</a>
                 </div>
             </div>
 
             <div class="social-links">
                 <a href="https://www.instagram.com/marquelyvettephoto" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
+                    <svg class="fa-icon fa-icon-lg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
                 </a>
                 <a href="https://www.facebook.com/marquelyvettephotography" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
+                    <svg class="fa-icon fa-icon-lg" viewBox="0 0 320 512"><path fill="currentColor" d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
                 </a>
                 <a href="https://www.linkedin.com/in/marquelforbes" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
+                    <svg class="fa-icon fa-icon-lg" viewBox="0 0 448 512"><path fill="currentColor" d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
                 </a>
             </div>
 
@@ -844,21 +960,21 @@
                 <div class="footer-legal">
                     <p>&copy; 2026 Marquel Yvette Photography LLC - All Rights Reserved</p>
                     <div class="footer-links">
-                        <a href="privacy-policy">Privacy Policy</a>
-                        <a href="tos">Terms of Service</a>
-                        <a href="copyright">Copyright Notice</a>
-                        <a href="disclaimer">Professional Services Disclaimer</a>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="tos.html">Terms of Service</a>
+                        <a href="copyright.html">Copyright Notice</a>
+                        <a href="disclaimer.html">Professional Services Disclaimer</a>
                         <a href="website-accessibility-statement">Website Accessibility Statement</a>
-                        <a href="site-gallery">Portfolio</a>
+                        <a href="site-gallery.html">Portfolio</a>
                     </div>
                     <div class="footer-service-areas" style="margin-top: 15px;">
                         <span style="color: var(--color-gold-light); font-size: 0.85rem;">Service Areas:</span>
-                        <a href="headshots-loudoun-county">Loudoun County</a>
-                        <a href="headshots-ashburn-va">Ashburn</a>
-                        <a href="headshots-reston-va">Reston</a>
-                        <a href="headshots-tysons-corner">Tysons Corner</a>
-                        <a href="headshots-fairfax-va">Fairfax</a>
-                        <a href="headshots-leesburg-va">Leesburg</a>
+                        <a href="headshots-loudoun-county.html">Loudoun County</a>
+                        <a href="headshots-ashburn-va.html">Ashburn</a>
+                        <a href="headshots-reston-va.html">Reston</a>
+                        <a href="headshots-tysons-corner.html">Tysons Corner</a>
+                        <a href="headshots-fairfax-va.html">Fairfax</a>
+                        <a href="headshots-leesburg-va.html">Leesburg</a>
                     </div>
                 </div>
             </div>
@@ -872,19 +988,8 @@
     <script src="js/home-content-loader.min.js" defer></script>
     <script src="js/gtm-tracking.min.js" defer></script>
 
-    <!-- Chatra Live Chat Widget -->
+    <!-- Chatra Live Chat Widget - Deferred until user interaction -->
     <script>
-        (function(d, w, c) {
-            w.ChatraID = 'Jdyz8KgGoTXWwL6qx';
-            var s = d.createElement('script');
-            w[c] = w[c] || function() {
-                (w[c].q = w[c].q || []).push(arguments);
-            };
-            s.async = true;
-            s.src = 'https://call.chatra.io/chatra.js';
-            if (d.head) d.head.appendChild(s);
-        })(document, window, 'Chatra');
-
         // Configure Chatra settings
         window.ChatraSetup = {
             colors: {
@@ -893,6 +998,31 @@
             },
             disabledOnMobile: true
         };
+
+        // Defer Chatra loading until user interacts with page
+        var chatraLoaded = false;
+        function loadChatra() {
+            if (chatraLoaded) return;
+            chatraLoaded = true;
+            (function(d, w, c) {
+                w.ChatraID = 'Jdyz8KgGoTXWwL6qx';
+                var s = d.createElement('script');
+                w[c] = w[c] || function() {
+                    (w[c].q = w[c].q || []).push(arguments);
+                };
+                s.async = true;
+                s.src = 'https://call.chatra.io/chatra.js';
+                if (d.head) d.head.appendChild(s);
+            })(document, window, 'Chatra');
+        }
+
+        // Load on first user interaction
+        ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'].forEach(function(event) {
+            window.addEventListener(event, loadChatra, { once: true, passive: true });
+        });
+
+        // Also load after 5 seconds as fallback
+        setTimeout(loadChatra, 5000);
     </script>
     <!-- End Chatra -->
 
