@@ -1,0 +1,43 @@
+name: Weekly Site Audit
+
+on:
+  schedule:
+    # Every Monday at 8 AM ET (1 PM UTC)
+    - cron: '0 13 * * 1'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chrome dependencies
+        run: npx puppeteer browsers install chrome
+
+      - name: Run site audit
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          SEND_EMAIL: 'true'
+        run: npm run audit
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-report-${{ github.run_number }}
+          path: audit/report/latest-report.html
+          retention-days: 90
