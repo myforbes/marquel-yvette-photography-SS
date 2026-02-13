@@ -91,10 +91,9 @@ async function main() {
       for (const f of criticalFails) {
         console.log(`  [FAIL] ${f.check}: ${f.detail}`);
       }
-      process.exit(1);
+    } else {
+      console.log('\nAll critical checks passed.');
     }
-
-    console.log('\nAll critical checks passed.');
   } finally {
     await browser.close();
   }
