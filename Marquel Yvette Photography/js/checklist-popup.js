@@ -42,9 +42,16 @@
                             <li><i class="fas fa-check"></i> Hair & makeup tips</li>
                             <li><i class="fas fa-check"></i> Day-of preparation guide</li>
                         </ul>
-                        <form id="checklist-popup-form" class="checklist-popup-form">
-                            <input type="text" name="firstName" placeholder="First Name" required class="checklist-popup-input">
-                            <input type="email" name="email" placeholder="Email Address" required class="checklist-popup-input">
+                        <form id="checklist-popup-form" class="checklist-popup-form" novalidate>
+                            <div class="checklist-popup-field">
+                                <input type="text" name="name" placeholder="Name" required class="checklist-popup-input" autocomplete="name">
+                                <span class="checklist-popup-field-error">Please enter your name (at least 2 characters).</span>
+                            </div>
+                            <div class="checklist-popup-field">
+                                <input type="email" name="email" placeholder="Email Address" required class="checklist-popup-input" autocomplete="email">
+                                <span class="checklist-popup-field-error">Please enter a valid email address.</span>
+                            </div>
+                            <p class="checklist-popup-error" id="checklist-submit-error">We couldn't reach our server. Please check your connection and try again.</p>
                             <button type="submit" class="checklist-popup-cta">
                                 <span class="btn-text">GET YOUR FREE CHECKLIST</span>
                                 <span class="btn-loading" style="display: none;">
@@ -61,10 +68,10 @@
                         <div class="checklist-popup-icon checklist-popup-icon-success">
                             <i class="fas fa-check"></i>
                         </div>
-                        <h2>You're All Set!</h2>
+                        <h2>Thank You!</h2>
                         <h3>Check Your Inbox</h3>
-                        <p>Your Perfect Headshot Checklist is on its way! Check your email in the next few minutes.</p>
-                        <p class="checklist-popup-success-note">Don't forget to check your spam folder if you don't see it.</p>
+                        <p>Your Perfect Headshot Checklist is on its way. Check your email in the next few minutes.</p>
+                        <p class="checklist-popup-success-note">Don't see it? Check your spam or promotions folder.</p>
                         <button class="checklist-popup-cta checklist-popup-close-btn">CLOSE</button>
                     </div>
                 </div>
@@ -297,8 +304,25 @@
                     margin-top: 10px;
                 }
 
+                /* Field wrapper */
+                .checklist-popup-field {
+                    position: relative;
+                }
+
+                .checklist-popup-field-error {
+                    color: #e74c3c;
+                    font-size: 0.8rem;
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                    display: none;
+                }
+
+                .checklist-popup-field.has-error .checklist-popup-field-error {
+                    display: block;
+                }
+
                 /* Error state */
-                .checklist-popup-input.error {
+                .checklist-popup-field.has-error .checklist-popup-input {
                     border-color: #e74c3c;
                 }
 
@@ -306,7 +330,9 @@
                     color: #e74c3c;
                     font-size: 0.85rem;
                     margin-top: 10px;
+                    margin-bottom: 0;
                     display: none;
+                    text-align: center;
                 }
 
                 .checklist-popup-error.visible {
@@ -390,44 +416,81 @@
             successView.style.display = 'block';
         }
 
+        // Clear field error on input
+        form.addEventListener('input', function(e) {
+            const field = e.target.closest('.checklist-popup-field');
+            if (field) field.classList.remove('has-error');
+            var submitError = document.getElementById('checklist-submit-error');
+            if (submitError) submitError.classList.remove('visible');
+        });
+
+        // Validate form fields
+        function validatePopupForm() {
+            var valid = true;
+            var nameInput = form.querySelector('input[name="name"]');
+            var emailInput = form.querySelector('input[name="email"]');
+
+            if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+                nameInput.closest('.checklist-popup-field').classList.add('has-error');
+                valid = false;
+            }
+
+            var emailVal = emailInput.value.trim();
+            if (!emailVal || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+                emailInput.closest('.checklist-popup-field').classList.add('has-error');
+                valid = false;
+            }
+
+            return valid;
+        }
+
         // Form submission
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
 
+            // Validate
+            if (!validatePopupForm()) {
+                var firstErr = form.querySelector('.has-error input');
+                if (firstErr) firstErr.focus();
+                return;
+            }
+
             const submitBtn = form.querySelector('.checklist-popup-cta');
             const btnText = submitBtn.querySelector('.btn-text');
             const btnLoading = submitBtn.querySelector('.btn-loading');
-            const firstName = form.querySelector('input[name="firstName"]').value.trim();
+            const submitError = document.getElementById('checklist-submit-error');
+            const name = form.querySelector('input[name="name"]').value.trim();
             const email = form.querySelector('input[name="email"]').value.trim();
 
             // Disable button and show loading
             submitBtn.disabled = true;
             btnText.style.display = 'none';
             btnLoading.style.display = 'inline';
+            submitError.classList.remove('visible');
 
             try {
-                // Submit to webhook
                 const response = await fetch(WEBHOOK_URL, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        firstName: firstName,
+                        name: name,
                         email: email,
                         source: 'headshot_checklist_popup'
                     })
                 });
 
-                // Show success regardless of response (webhook may not return proper CORS headers)
+                // Treat network success as delivered (CORS may block reading the response body)
                 showSuccess();
                 markPopupShown();
 
             } catch (error) {
-                // Even on error, show success (CORS issues are common with webhooks)
-                console.log('Webhook submitted (CORS may block response)');
-                showSuccess();
-                markPopupShown();
+                // Network failure — show error, let user retry
+                submitError.classList.add('visible');
+                submitBtn.disabled = false;
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
             }
         });
 

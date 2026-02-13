@@ -159,7 +159,15 @@
         }
 
         .proposal-form-wrapper .form-subtitle {
-            display: none;
+            font-size: 1rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .proposal-form-wrapper iframe {
+            min-height: 600px;
         }
 
         /* Process Section - Matching rates page */
@@ -597,30 +605,26 @@
                 <!-- Right: Form -->
                 <div class="proposal-form-wrapper">
                     <h2>Request Your Proposal</h2>
-                    <p class="form-subtitle">Fill out the form below and I'll send you a detailed proposal within 24 hours.</p>
+                    <p class="form-subtitle">Share a few details and I'll send you a personalized proposal within 24 hours.</p>
 
-                    <!-- GHL Embedded Form -->
-                    <div style="min-height: 600px;">
-                        <iframe
-                            src="https://api.leadconnectorhq.com/widget/form/bV3K1OgeSUUvy4S1Qtsf"
-                            style="width:100%;height:100%;min-height:600px;border:none;border-radius:3px"
-                            id="inline-bV3K1OgeSUUvy4S1Qtsf"
-                            data-layout="{'id':'INLINE'}"
-                            data-trigger-type="alwaysShow"
-                            data-trigger-value=""
-                            data-activation-type="alwaysActivated"
-                            data-activation-value=""
-                            data-deactivation-type="neverDeactivate"
-                            data-deactivation-value=""
-                            data-form-name="Team Headshot Form"
-                            data-height="undefined"
-                            data-layout-iframe-id="inline-bV3K1OgeSUUvy4S1Qtsf"
-                            data-form-id="bV3K1OgeSUUvy4S1Qtsf"
-                            title="Team Headshot Form"
-                        >
-                        </iframe>
-                        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-                    </div>
+                    <iframe
+                        src="https://api.leadconnectorhq.com/widget/form/bV3K1OgeSUUvy4S1Qtsf"
+                        style="width:100%;height:100%;border:none;border-radius:3px"
+                        id="inline-bV3K1OgeSUUvy4S1Qtsf"
+                        data-layout="{'id':'INLINE'}"
+                        data-trigger-type="alwaysShow"
+                        data-trigger-value=""
+                        data-activation-type="alwaysActivated"
+                        data-activation-value=""
+                        data-deactivation-type="neverDeactivate"
+                        data-deactivation-value=""
+                        data-form-name="Workplace Headshots Request Form"
+                        data-height="undefined"
+                        data-layout-iframe-id="inline-bV3K1OgeSUUvy4S1Qtsf"
+                        data-form-id="bV3K1OgeSUUvy4S1Qtsf"
+                        title="Workplace Headshots Request Form"
+                    ></iframe>
+                    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
                 </div>
             </div>
         </section>
@@ -711,10 +715,11 @@
     <div id="footer-placeholder"></div>
 
     <!-- JavaScript - Deferred for performance -->
-    <script src="js/request-proposal-loader.min.js"></script>
     <script src="js/meta-loader.min.js"></script>
     <script src="js/menu.min.js" defer></script>
     <script src="js/footer-loader.min.js" defer></script>
     <script src="js/gtm-tracking.min.js" defer></script>
+    <script src="js/button-click-tracking.min.js" defer></script>
+
 </body>
 </html>

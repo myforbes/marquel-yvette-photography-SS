@@ -784,16 +784,30 @@
           </ul>
         </div>
         <div class="lead-form">
-          <form data-lead-form id="checklist-form" method="POST" action="https://services.leadconnectorhq.com/hooks/QqzMbs9W02wuc63zjyYB/webhook-trigger/887bd4a2-60fc-4ac1-90b5-8f163edb13d5">
-            <label for="name">First Name</label>
-            <input id="name" type="text" name="name" placeholder="First name" required>
-            <label for="email">Email</label>
-            <input id="email" type="email" name="email" placeholder="name@email.com" required>
-            <button data-lead-submit type="submit" class="cta-button">Email Me The Checklist</button>
+          <form data-lead-form id="checklist-form" novalidate method="POST" action="https://services.leadconnectorhq.com/hooks/QqzMbs9W02wuc63zjyYB/webhook-trigger/887bd4a2-60fc-4ac1-90b5-8f163edb13d5">
+            <div class="lead-field">
+              <label for="lead-name">Name</label>
+              <input id="lead-name" type="text" name="name" placeholder="Your name" required autocomplete="name">
+              <span class="lead-field-error">Please enter your name (at least 2 characters).</span>
+            </div>
+            <div class="lead-field">
+              <label for="lead-email">Email</label>
+              <input id="lead-email" type="email" name="email" placeholder="name@email.com" required autocomplete="email">
+              <span class="lead-field-error">Please enter a valid email address.</span>
+            </div>
+            <p class="lead-submit-error" id="lead-submit-error" style="display:none;color:#e74c3c;font-size:0.9rem;text-align:center;margin:10px 0 0;">We couldn't reach our server. Please check your connection and try again.</p>
+            <button data-lead-submit type="submit" class="cta-button">
+              <span class="btn-text">Email Me The Checklist</span>
+              <span class="btn-loading" style="display:none;">Sending...</span>
+            </button>
             <p data-lead-disclaimer class="disclaimer">
               By submitting, you agree to receive occasional emails with headshot tips and studio updates. You can unsubscribe at any time.
             </p>
           </form>
+          <div class="lead-form-success" id="lead-form-success" style="display:none;text-align:center;padding:20px 0;">
+            <h3 style="color:#1a1a1a;margin-bottom:10px;">Thank You! Check Your Inbox.</h3>
+            <p style="color:#555;line-height:1.6;">Your checklist is on its way. Don't see it? Check your spam or promotions folder.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -841,38 +855,100 @@
     </footer>
 
     <!-- Form submission handler -->
+    <style>
+      .lead-field { margin-bottom: 5px; }
+      .lead-field-error { color: #e74c3c; font-size: 0.85rem; display: none; margin-top: 4px; }
+      .lead-field.has-error input { border-color: #e74c3c; }
+      .lead-field.has-error .lead-field-error { display: block; }
+      .lead-form input[type="text"],
+      .lead-form input[type="email"] { min-height: 44px; font-size: 16px; }
+      .lead-form .cta-button { min-height: 44px; }
+    </style>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        const form = document.querySelector('[data-lead-form]');
-        if (form) {
-          form.addEventListener('submit', function(e) {
-            e.preventDefault();
+        var form = document.querySelector('[data-lead-form]');
+        if (!form) return;
 
-            const formData = new FormData(form);
-            const submitButton = form.querySelector('[data-lead-submit]');
-            const originalText = submitButton.textContent;
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
+        var submitError = document.getElementById('lead-submit-error');
+        var successEl = document.getElementById('lead-form-success');
 
-            fetch(form.action, {
-              method: 'POST',
-              body: formData
+        // Clear field errors on input
+        form.addEventListener('input', function(e) {
+          var field = e.target.closest('.lead-field');
+          if (field) field.classList.remove('has-error');
+          if (submitError) submitError.style.display = 'none';
+        });
+
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+
+          // Validate
+          var valid = true;
+          var nameInput = document.getElementById('lead-name');
+          var emailInput = document.getElementById('lead-email');
+
+          if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+            nameInput.closest('.lead-field').classList.add('has-error');
+            valid = false;
+          }
+
+          var emailVal = emailInput.value.trim();
+          if (!emailVal || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+            emailInput.closest('.lead-field').classList.add('has-error');
+            valid = false;
+          }
+
+          if (!valid) {
+            var firstErr = form.querySelector('.has-error input');
+            if (firstErr) firstErr.focus();
+            return;
+          }
+
+          // Loading state
+          var btn = form.querySelector('[data-lead-submit]');
+          var btnText = btn.querySelector('.btn-text');
+          var btnLoading = btn.querySelector('.btn-loading');
+          btn.disabled = true;
+          btnText.style.display = 'none';
+          btnLoading.style.display = 'inline';
+          submitError.style.display = 'none';
+
+          fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: nameInput.value.trim(),
+              email: emailInput.value.trim(),
+              source: 'headshot_checklist_inline'
             })
-            .then(response => {
-              // Redirect to thank you page regardless of response
-              window.location.href = '/thank-you-page.html';
-            })
-            .catch(error => {
-              // Still redirect even if there's an error
-              window.location.href = '/thank-you-page.html';
-            });
+          })
+          .then(function() {
+            // Network success — show inline success
+            form.style.display = 'none';
+            successEl.style.display = 'block';
+
+            if (typeof gtag === 'function') {
+              gtag('event', 'form_submission', {
+                event_category: 'Lead Capture',
+                event_label: 'Headshot Checklist Inline',
+                button_location: window.location.pathname
+              });
+            }
+          })
+          .catch(function() {
+            // Network failure — show error, re-enable form
+            submitError.style.display = 'block';
+            btn.disabled = false;
+            btnText.style.display = 'inline';
+            btnLoading.style.display = 'none';
           });
-        }
+        });
       });
     </script>
 
     <!-- GTM Event Tracking -->
     <script src="js/gtm-tracking.min.js" defer></script>
+    <script src="js/button-click-tracking.min.js" defer></script>
 
   </body>
 </html>
