@@ -22,30 +22,37 @@ async function audit(pageDataList, browser) {
   }
 
   // 2. Non-www redirects to www with 301
-  try {
-    const resp = await axios.get(config.nonWwwUrl, {
-      maxRedirects: 0,
-      validateStatus: () => true,
-      timeout: config.requestTimeout,
-    });
-    const location = resp.headers.location || '';
-    const is301 = resp.status === 301;
-    const redirectsToWww = location.startsWith(config.baseUrl);
-    results.push({
-      category: 'functionality',
-      check: 'Non-www redirects to www',
-      status: is301 && redirectsToWww ? 'pass' : 'fail',
-      severity: 'critical',
-      detail: `Status ${resp.status}, Location: ${location}`,
-    });
-  } catch (err) {
-    results.push({
-      category: 'functionality',
-      check: 'Non-www redirects to www',
-      status: 'fail',
-      severity: 'critical',
-      detail: err.message,
-    });
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const resp = await axios.get(config.nonWwwUrl, {
+        maxRedirects: 0,
+        validateStatus: () => true,
+        timeout: config.requestTimeout,
+      });
+      const location = resp.headers.location || '';
+      const is301 = resp.status === 301;
+      const redirectsToWww = location.startsWith(config.baseUrl);
+      results.push({
+        category: 'functionality',
+        check: 'Non-www redirects to www',
+        status: is301 && redirectsToWww ? 'pass' : 'fail',
+        severity: 'critical',
+        detail: `Status ${resp.status}, Location: ${location}`,
+      });
+      break;
+    } catch (err) {
+      if (attempt < 3) {
+        await new Promise(r => setTimeout(r, 2000));
+        continue;
+      }
+      results.push({
+        category: 'functionality',
+        check: 'Non-www redirects to www',
+        status: 'fail',
+        severity: 'critical',
+        detail: err.message,
+      });
+    }
   }
 
   // 3. Collect all links and images from page data
